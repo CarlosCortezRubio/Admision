@@ -25,8 +25,6 @@ Route::get('/', function () {
 });
 
 Auth::routes(['register'=>false]);
-//este es una prueba de alvaro
-//te devuelvo el mensaje alvaro
 Route::get('inscripcion/solicitud','SolicitudController@index')->name('register');
 Route::post('inscripcion/solicitud','SolicitudController@store');
 
