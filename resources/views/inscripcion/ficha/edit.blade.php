@@ -22,12 +22,13 @@
                <div class="card-header"><strong>Datos generales</strong></div>
                <div class="card-body">
 
-                  <div class="form-group row">
+                  {{--<div class="form-group row">
                      <label for="nume_expe_pos" class="col-lg-3 col-md-12 text-lg-right">N&ordm; Expediente:</label>
                      <div class="col-lg-3 col-md-6 col-sm-6">
                         <input type="text" id="nume_expe_pos" class="form-control font-weight-bolder" value="{{ $new ? '' : $ficha->nume_expe_pos }}" readonly>
                      </div>
-                  </div>
+                  </div>--}}
+                  
                   <div class="form-group row">
                      <label for="desc_tabl_det" class="col-lg-3 col-md-12 text-lg-right">Secci&oacute;n a la que postula:</label>
                      <div class="col-lg-9 col-md-12">
@@ -241,7 +242,7 @@
                </div>
             @endif
          </div>
-
+   
          <!-- Fotos -->
          <div class="col-md-3 col-sm-12">
             <div class="row">
@@ -310,7 +311,37 @@
                </div>
             </div>
          </div>
-      </div>
+         </div>
+
+         <!----------------------------------------------------------------------->
+         <!--Se agregó el código para colocar si el participante cuenta con discapacidad--->
+                     <!----Discapacidad----->   
+                     <div class="card card-primary card-outline elevation-2">
+            <div class="card-header"><strong>Datos adicionales</strong></div>
+            <div class="card-body">
+               <div class="row">
+                  <div class="col-sm-6 col-xs-12">
+                     <div class="form-group row">
+                        <label for="nume_docu_apd" class="col-lg-6 col-md-12 text-lg-right">Cuenta con alguna discapacidad:</label>
+                        <div class="col-lg-6 col-md-12">
+                           <input type="radio" name="cb-disc" id="si" value=""> Si<br>
+                           <input type="radio" name="cb-disc" id="no" value=""> No<br>               
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="form-group row">
+                  <label for="apel_nomb_apd" class="col-lg-3 col-md-12 text-lg-right">Describa</label>
+                  <div class="col-lg-9 col-md-12">
+                     <input class="form-control text-uppercase" type="text" disabled name="disc_post_apd" id="disc_post_apd" value="" autocomplete="nope">
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <!----------------------------------------------------------------------->
+
+
 	  <!-- 2021  -->
       <!--
       <hr>
@@ -373,8 +404,21 @@
 </div>
 
 @section('scripts')
+   
    <script src="{{ asset('js/bootstrap-toggle.min.js') }}"></script>
    <script src="{{ asset('js/bootstrap-select.min.js') }}"></script>
    <script src="{{ asset('js/datatables.min.js') }}"></script>
    <script src="{{ asset('js/ficha-registro.js') }}"></script>
+   <script>
+      $(document).ready(function() { 
+	
+	$("#si").click(function(){ 
+		$("#disc_post_apd").prop("disabled", false); 
+		}); 
+		
+	$("#no").click(function(){ 
+		$("#disc_post_apd").prop("disabled", true); 
+		}); 
+}); 
+   </script>
 @endsection
