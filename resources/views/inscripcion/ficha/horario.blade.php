@@ -18,7 +18,7 @@
                     <div class="card-columns">
                         <div class="card">
                             <div class="card-body">
-                                <i class="fa fa-calendar" aria-hidden="true"> Fecha de resolucion:</i>
+                                <i class="fa fa-calendar" aria-hidden="true"> Fecha de resoluci&oacute;n:</i>
                                 <p class="card-text">2021/01/13</p>
                             </div>
                         </div>
@@ -30,7 +30,7 @@
                         </div>
                         <div class="card">
                             <div class="card-body">
-                                <i class="fa fa-circle-o-notch" aria-hidden="true"> Tiempo de resolucion:</i>
+                                <i class="fa fa-circle-o-notch" aria-hidden="true"> Tiempo de resoluci&oacute;n:</i>
                                 <p class="card-text">150 min.</p>
                             </div>
                         </div>
@@ -84,7 +84,7 @@
                         <div class="card-columns">
                             <div class="card">
                                 <div class="card-body">
-                                    <i class="fa fa-calendar" aria-hidden="true"> Fecha de resolucion:</i>
+                                    <i class="fa fa-calendar" aria-hidden="true"> Fecha de resoluci&oacute;n:</i>
                                     <p class="card-text">2021/01/16</p>
                                 </div>
                             </div>
@@ -96,7 +96,7 @@
                             </div>
                             <div class="card">
                                 <div class="card-body">
-                                    <i class="fa fa-circle-o-notch" aria-hidden="true"> Tiempo de resolucion:</i>
+                                    <i class="fa fa-circle-o-notch" aria-hidden="true"> Tiempo de resoluci&oacute;n:</i>
                                     <p class="card-text">120 min.</p>
                                 </div>
                             </div>
