@@ -9,7 +9,6 @@
 
    @include('partials.email-action-button', ['link'=>$enlace, 'label'=>'Ingrese aquí'])
 
-   <p>Este enlace estará disponible por 60 minutos desde su recepción.</p>
 @endsection
 
 @section('signature')
