@@ -7,11 +7,11 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class MensajeConfirmacion extends Mailable implements ShouldQueue
+class MensajeIngresantes extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
 
-    public $subject = 'Confirma tu correo electrónico';
+    public $subject = 'Confirmación de ingresante';
 
     public $enlace;
 
