@@ -39,7 +39,7 @@ Route::middleware(['auth'])->group(function() {
   Route::post('inscripcion/ficha','FichaController@store');
   Route::post('/fichaPDF','ReporteController@generatePDF')->name('fichaPDF');
 });
-
+//
 Route::get('/{slug}', function () {
   if (Auth::check()) {
       return redirect()->route('inscription');

@@ -181,6 +181,44 @@
                   </div>
 
                   <div class="form-group row">
+                     <label for="tipo_prep_pos" class="col-lg-3 col-md-12 text-lg-right">Nivel académico donde se encuentra:</label>
+                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <select  class="custom-select" name="tipo_gra_esc" id="tipo_gra_esc" required autocomplete="nope">
+                           <option value="">Seleccionar...</option>
+                           <option value="I"  Id="val_ini" {{ 'I'==($new ? old('tipo_gra_esc') : $ficha->tipo_gra_esc) ? 'selected' : '' }}>
+                              INICIAL
+                           </option>
+                           <option value="P" {{ 'P'==($new ? old('tipo_gra_esc') : $ficha->tipo_gra_esc) ? 'selected' : '' }}>
+                              PRIMARIA
+                           </option>
+                           <option value="S" {{ 'S'==($new ? old('tipo_gra_esc') : $ficha->tipo_gra_esc) ? 'selected' : '' }}>
+                              SECUNDARIA
+                           </option>
+                           <option value="U" Id="val_sup" {{ 'U'==($new ? old('tipo_gra_esc') : $ficha->tipo_gra_esc) ? 'selected' : '' }}>
+                              SUPERIOR
+                           </option>
+                        </select>
+                     </div>
+                  </div>
+                  
+
+                  <div id="grad" class="col-sm-6 col-xs-12">
+                        <div class="form-group row">
+                           <label for="telf_celu_per" class="col-lg-6 col-md-12 text-lg-right">Grado:</label>
+                           <div class="col-lg-6 col-md-12">
+                              <select id="seleccione_dis" class="form-control">
+                                 <option class="disc" value="PRIMERO" >PRIMERO</option>
+                                 <option class="disc" value="SEGUNDO" >SEGUNDO</option>
+                                 <option class="disc" value="TERCERO" >TERCERO</option>
+                                 <option class="disc" value="CUARTO" >CUARTO</option>
+                                 <option class="disc" value="QUINTO" >QUINTO</option>
+                                 <option class="disc" id="gra-sex" value="SEXTO" >SEXTO</option>
+                              </select>
+                           </div>
+                        </div>
+                  </div>
+
+                  <div class="form-group row">
                      <label for="desc_prep_pos" class="col-lg-3 col-md-12 text-lg-right">Especialidad / Profesor:</label>
                      <div class="col-lg-9 col-md-12">
                         <input class="form-control text-uppercase" type="text" name="desc_prep_pos" id="desc_prep_pos" value="{{ $new ? old('desc_prep_pos') : $ficha->desc_prep_pos }}" autocomplete="nope" required>
@@ -314,9 +352,9 @@
          </div>
 
          <!----------------------------------------------------------------------->
-         <!--Se agregó el código para colocar si el participante cuenta con discapacidad--->
+         <!--Se agregó el código para colocar si el participante cuenta con discapacidad en el formulario de rellenar datos--->
                      <!----Discapacidad----->   
-                     <div class="card card-primary card-outline elevation-2">
+         <div class="card card-primary card-outline elevation-2" id="Discapacidad">
             <div class="card-header"><strong>Datos adicionales</strong></div>
             <div class="card-body">
                <div class="row">
@@ -324,18 +362,31 @@
                      <div class="form-group row">
                         <label for="nume_docu_apd" class="col-lg-6 col-md-12 text-lg-right">Cuenta con alguna discapacidad:</label>
                         <div class="col-lg-6 col-md-12">
-                           <input type="radio" name="cb-disc" id="si" value=""> Si<br>
-                           <input type="radio" name="cb-disc" id="no" value=""> No<br>               
+                           <input type="radio" name="cb-disc" id="si" value=""> <label for="si">Si</label><br>
+                           <input type="radio" name="cb-disc" id="no" value=""> <label for="no">No</label><br>             
                         </div>
                      </div>
                   </div>
                </div>
-               <div class="form-group row">
-                  <label for="apel_nomb_apd" class="col-lg-3 col-md-12 text-lg-right">Describa</label>
-                  <div class="col-lg-9 col-md-12">
-                     <input class="form-control text-uppercase" type="text" disabled name="disc_post_apd" id="disc_post_apd" value="" autocomplete="nope">
+               
+                  <div id="selec_disc" class="form-group row">
+                     <label for="apel_nomb_apd" class="col-lg-3 col-md-12 text-lg-right">Seleccione Discapacidad</label>
+                     <div class="col-lg-9 col-md-12">
+                        <select id="seleccione_dis" class="form-control">
+                           <option class="disc" value="VIDENTE" >VIDENTE</option>
+                           <option class="disc" value="AUTISTA" >AUTISTA</option>
+                           <option class="disc" id="v_otros" value="OTROS" >OTROS</option>
+                        </select>
+                     </div>
                   </div>
-               </div>
+            
+                  <div id="descripcion" class="form-group row">
+                     <label for="apel_nomb_apd" class="col-lg-3 col-md-12 text-lg-right">Describa</label>
+                     <div class="col-lg-9 col-md-12">
+                        <input class="form-control text-uppercase " type="text" name="disc_post_apd" id="disc_post_apd" value="" autocomplete="nope">
+                     </div>
+                  </div>
+               
             </div>
          </div>
 
@@ -411,14 +462,55 @@
    <script src="{{ asset('js/ficha-registro.js') }}"></script>
    <script>
       $(document).ready(function() { 
-	
-	$("#si").click(function(){ 
-		$("#disc_post_apd").prop("disabled", false); 
-		}); 
-		
-	$("#no").click(function(){ 
-		$("#disc_post_apd").prop("disabled", true); 
-		}); 
-}); 
+            $("#selec_disc").hide();
+            $("#descripcion").hide();
+         
+         $("#si").click(function(){          
+            if($("#seleccione_dis").val()=="OTROS"){
+               $("#descripcion").show();
+            } else{
+               $("#descripcion").hide();
+            }
+            $("#selec_disc").show(); 
+            });
+
+            $("#seleccione_dis").click(function(){ 
+               if($("#seleccione_dis").val()=="OTROS"){
+               $("#descripcion").show();
+            } else {
+               $("#descripcion").hide();
+            }
+            });
+
+            $("#no").click(function(){ 
+            $("#selec_disc").hide(); 
+         }); 
+
+         //------------------------------------------------------------------------------
+         //Validar seccion y grado
+         //------------------------------------------------------------------------------
+   
+         $("#grad").hide();
+
+         $("#tipo_gra_esc").change(function(){
+           
+         if($("#tipo_gra_esc").val()=="I" || $("#tipo_gra_esc").val()=="U"){
+               $("#grad").hide();
+            } else{
+              if($("#tipo_gra_esc").val()=="S"){
+               $("#gra-sex").hide();
+              } else{
+               $("#gra-sex").show();
+              }
+               $("#grad").show();
+            }
+         });
+
+         
+            
+            
+          
+
+      }); 
    </script>
 @endsection
