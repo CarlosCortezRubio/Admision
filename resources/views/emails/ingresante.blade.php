@@ -6,7 +6,7 @@
 
 @section('content')
    <p>Usted a logrado pasar satisfactoriamente la etapa de evaluación de ingreso</p>
-   <p>Para culminar con el proceso de inscripción pulse en el botón de continuar:</p>
+   <p>Para culminar con el proceso de inscripción pulse en el botón "Continuar":</p>
    @include('partials.email-action-button', ['link'=>$enlace, 'label'=>'Continuar'])
 
 @endsection
