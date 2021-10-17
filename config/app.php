@@ -54,6 +54,7 @@ return [
 
     'url' => env('APP_URL', 'http://localhost'),
     'url_pasarela' => env('URL_PASARELA', ''),
+    'email_soporte' => env('EMAIL_SOPORTE', ''),
 
     'asset_url' => env('ASSET_URL', null),
 

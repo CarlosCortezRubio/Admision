@@ -23,7 +23,7 @@ Route::get('/', function () {
       return redirect()->route('register');
    }
 });
-
+Route::get('Ingresante/Simulacion', 'IngresanteController@SimularIngresante')->name('simularingresante');
 Auth::routes(['register'=>false]);
 Route::get('inscripcion/solicitud','SolicitudController@index')->name('register');
 Route::post('inscripcion/solicitud','SolicitudController@store');
