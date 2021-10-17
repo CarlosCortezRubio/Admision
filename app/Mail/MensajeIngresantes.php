@@ -32,6 +32,6 @@ class MensajeIngresantes extends Mailable implements ShouldQueue
      */
     public function build()
     {
-        return $this->view('emails.confirmacion');
+        return $this->view('emails.ingresante');
     }
 }
