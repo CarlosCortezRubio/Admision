@@ -35,32 +35,33 @@
             @include('inscripcion.ficha.edit', ['new'=>false])
 
          @else
-
-            @include('inscripcion.ficha.horario')
-            {{--<div class="container d-flex justify-content-center align-items-center" style="height:200px;">
-               <div class="card card-primary card-outline text-center mx-auto elevation-2">
-                  <div class="card-body">
-                     <h5>
-                        @if (session()->has('success'))
-                           Tu ficha de incripci&oacute;n ha sido enviada con éxito. Puedes visualizarla desde el siguiente enlace:
-                        @else
-                           Tu ficha de incripci&oacute;n ya ha sido enviada. Puedes visualizarla desde el siguiente enlace:
-                        @endif
-                        <br><br>
-                        <form action="{{ route('fichaPDF') }}" method="POST" target="_blank">
-                           @csrf
-                           <input type="hidden" name="codi_post_pos" value="{{ $ficha->codi_post_pos }}">
-                           <div class="form-group">
-                              <button class="btn btn-primary" type="submit">
-                                 <i class="far fa-address-book pr-2"></i>Visualizar ficha de inscripci&oacute;n
-                              </button>
-                           </div>
-                        </form>
-                     </h5>
+            @if ($ficha->esta_post_pos == 'V')
+               @include('inscripcion.ficha.horario')
+            @else
+               <div class="container d-flex justify-content-center align-items-center" style="height:200px;">
+                  <div class="card card-primary card-outline text-center mx-auto elevation-2">
+                     <div class="card-body">
+                        <h5>
+                           @if (session()->has('success'))
+                              Tu ficha de incripci&oacute;n ha sido enviada con éxito. Puedes visualizarla desde el siguiente enlace:
+                           @else
+                              Tu ficha de incripci&oacute;n ya ha sido enviada. Puedes visualizarla desde el siguiente enlace:
+                           @endif
+                           <br><br>
+                           <form action="{{ route('fichaPDF') }}" method="POST" target="_blank">
+                              @csrf
+                              <input type="hidden" name="codi_post_pos" value="{{ $ficha->codi_post_pos }}">
+                              <div class="form-group">
+                                 <button class="btn btn-primary" type="submit">
+                                    <i class="far fa-address-book pr-2"></i>Visualizar ficha de inscripci&oacute;n
+                                 </button>
+                              </div>
+                           </form>
+                        </h5>
+                     </div>
                   </div>
                </div>
-            </div>--}}
-            
+            @endif
          @endif
       @else
          @include('inscripcion.ficha.edit', ['new'=>true])
