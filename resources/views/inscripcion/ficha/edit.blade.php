@@ -493,8 +493,8 @@
          $("#grad").hide();
 
          $("#tipo_gra_esc").change(function(){
-           
-         if($("#tipo_gra_esc").val()=="I" || $("#tipo_gra_esc").val()=="U"){
+            $("#grad").prop("selected", false);
+            if($("#tipo_gra_esc").val()=="I" || $("#tipo_gra_esc").val()=="U"){
                $("#grad").hide();
             } else{
               if($("#tipo_gra_esc").val()=="S"){
@@ -505,12 +505,6 @@
                $("#grad").show();
             }
          });
-
-         
-            
-            
-          
-
       }); 
    </script>
 @endsection
