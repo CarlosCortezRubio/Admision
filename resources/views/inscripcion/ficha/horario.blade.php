@@ -125,7 +125,7 @@
                 </div>
                 <form>
                     <div style="padding-bottom: 20px" class='centrar-content'>
-                        <a type="submit" class="btn btn-success" href="{{-- route('BeginExamen') --}}">Ingresar</a>
+                      {{-- - "btn btn-success" href="{{ route('BeginExamen') }}">Ingresar</a>--}}
                         <a type="submit" class="btn btn-success" href="https://academica360-beta.unm.edu.pe/MOCUNM/PHP/VISTA/Examen.php">Ingresar</a>
                     </div>
                 </form>
