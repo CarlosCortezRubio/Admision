@@ -10,6 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+use Illuminate\Routing\Route;
+use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Auth;
+
 Route::get('/limpiar', function () {
    echo Artisan::call('config:clear');
    echo Artisan::call('config:cache');
