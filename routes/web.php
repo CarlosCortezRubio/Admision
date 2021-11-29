@@ -45,4 +45,3 @@ Route::get('/{slug}', function () {
       return redirect()->route('register');
    }
 });
-este cambio se ve 
