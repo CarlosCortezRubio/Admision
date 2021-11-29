@@ -158,6 +158,7 @@ class PagoController extends Controller
    {
       $especialidadesArray = [];
 
+      
       if($request->ajax()) {
          $seccion = $request->get('seccion');
          $i = 0;
