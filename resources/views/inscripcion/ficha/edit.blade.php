@@ -375,6 +375,7 @@
                         <select id="seleccione_dis" class="form-control">
                            <option class="disc" value="VIDENTE" >VIDENTE</option>
                            <option class="disc" value="AUTISTA" >AUTISTA</option>
+                           <option class="disc" value="AUTISTA" >AUDITIVA</option>
                            <option class="disc" id="v_otros" value="OTROS" >OTROS</option>
                         </select>
                      </div>

@@ -11,6 +11,8 @@ use App\Models\FichaTrabajo;
 use App\Models\Solicitud;
 use App\Http\Requests\FichaFormRequest;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Intervention\Image\ImageManagerStatic as Image;
 use Illuminate\Support\Facades\Redirect;
 
@@ -96,7 +98,11 @@ class FichaController extends Controller
 
          $paises = $this->getTables('15', '%', 'S');
          $ubigeo = $this->getUbigeo('%');
-         $horarios=[];
+         /////////////////////////
+         $horarios=DB::table('admision.adm_postulante as ps')
+                     ->join('admision.adm_programacion_examen as pe','pe.id_programacion_examen','ps.id_programacion_examen')
+                     ->where('nume_docu_sol',Auth::user()->ndocumento)->get();
+         /////////////////////////
          //2021 No envia trabajos ni repertorio a vista inscripcion.ficha.index
          /* return view('inscripcion.ficha.index', ['proceso'=>$proceso, 'ficha'=>$ficha, 'seccion'=>$seccion, 'especialidad'=>$especialidad, 'tdocumento'=>$tdocumento, 'ndocumento'=>$ndocumento, 'fnacimiento'=>$fnacimiento, 'edad'=>$edad, 'ubigeoDom'=>$ubigeoDom, 'repertorio'=>$repertorio, 'trabajos'=>$trabajos, 'ubigeo'=>$ubigeo, 'paises'=>$paises]); */
          return view('inscripcion.ficha.index', ['proceso'=>$proceso, 'ficha'=>$ficha, 'seccion'=>$seccion, 'especialidad'=>$especialidad, 'tdocumento'=>$tdocumento, 'ndocumento'=>$ndocumento, 'fnacimiento'=>'1998/09/28','edad'=>$edad, 'ubigeoDom'=>$ubigeoDom, 'ubigeo'=>$ubigeo, 'paises'=>$paises,'horarios'=>$horarios]);
