@@ -9,7 +9,6 @@
             </div>
          </div>
         @else
-        asdasd
             @foreach ($horarios as $k => $v)
                 <div class="col card card-primary card-outline elevation-2">
                     <div id='title'>
