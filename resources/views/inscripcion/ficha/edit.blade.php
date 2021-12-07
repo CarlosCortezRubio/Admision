@@ -395,30 +395,24 @@
 
 
 	  <!-- 2021  -->
-      <!--
       <hr>
-	  -->
 	  <!-- 2021  -->
 
-      <!-- Detalle  -->
+       Detalle 
 	  
       <!-- 2021  -->
-      <!--
       <h5><strong>Ficha de Repertorio:</strong></h5>
-      -->
       <!-- 2021  -->
       <div class="row">
          <div class="col-12">
             <!-- 2021 -->
-            <!--
             <div class="card card-primary card-outline elevation-2">
                <div class="card-header"><strong>T&eacute;cnica: Escalas y estudios</strong></div>
                <div class="card-body">
                   <textarea class="form-control" rows="3" name="tecn_post_pos" autocomplete="nope">{{ $new ? old('tecn_post_pos') : $ficha->tecn_post_pos }}</textarea>
                </div>
-            </div>            
-            -->
-            <!-- 2021 -->
+            </div>     
+            <!-- 2021 --> 
 
             <div class="card card-primary card-outline elevation-2">
                <div class="card-body">

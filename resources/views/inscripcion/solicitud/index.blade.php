@@ -92,14 +92,14 @@
 @endsection
 
 @section('scripts')
-   <script src="https://www.google.com/recaptcha/api.js?render={{ config('app.captcha_key') }}"></script>
+   {{-- <scriptsrc="https://www.google.com/recaptcha/api.js?render=config('app.captcha_key') }}"></script>
    <script>
       grecaptcha.ready(function() {
           grecaptcha.execute("{{ config('app.captcha_key') }}", {action: '/'}).then(function(token) {
 
           });
       });
-   </script>
+   </script> --}}
    <script type="text/javascript">
       function setGuia(){
          var seccion = $('#guiaSeccion').val();

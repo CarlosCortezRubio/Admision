@@ -112,7 +112,7 @@
 		@endif
 </table>
 <!-- 2021 -->
-{{--
+
 <p style="page-break-before:always;"></p>
 <h3>FICHA DE REPERTORIO Y/O TRABAJOS A PRESENTAR</h3>
 <table border="0">
@@ -196,7 +196,6 @@
 	</tr>
 	@endforeach
 </table>
---}}
 <!-- 2021 -->
 @endsection
 @section('footer')
