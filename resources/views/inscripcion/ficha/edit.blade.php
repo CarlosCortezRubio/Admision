@@ -406,6 +406,7 @@
       <div class="row">
          <div class="col-12">
             <!-- 2021 -->
+            {{--@include('inscripcion.ficha.edit-repertory')--}}                       
             <div class="card card-primary card-outline elevation-2">
                <div class="card-header"><strong>T&eacute;cnica: Escalas y estudios</strong></div>
                <div class="card-body">
