@@ -180,10 +180,10 @@
                      </div>
                   </div>
 
-                  <div class="form-group row" id="docentesdiv" @if ($ficha &&$ficha->tipo_prep_pos!='C') style="display:none;" @endif >
+                  <div class="form-group row" id="docentesdiv" @if ($ficha && $ficha->tipo_prep_pos!='C') style="display:none;" @endif >
                      <label for="desc_prep_pos" class="col-lg-3 col-md-12 text-lg-right">Profesor:</label>
-                     <div class="col-lg-9 col-md-12">
-                        <select name="profesor" id="profesor">
+                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <select  class="custom-select" name="profesor" id="profesor">
                            @foreach ($docentes as $k => $doc)
                               <option value="{{ $doc->codi_pers_per }}">{{ $doc->nomb_comp_per }}</option>
                            @endforeach
