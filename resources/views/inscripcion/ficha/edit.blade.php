@@ -180,19 +180,19 @@
                      </div>
                   </div>
 
-                  <div class="form-group row" id="docentes1div" @if (isset($ficha->tipo_prep_pos) && $ficha->tipo_prep_pos=='C') style="display:none;" @endif >
+                  <div class="form-group row" id="docentes1div" @if (isset($ficha->tipo_prep_pos) && $ficha->tipo_prep_pos!='C') style="display:none;" @endif >
                      <label for="desc_prep_pos" class="col-lg-3 col-md-12 text-lg-right">Especialidad / Profesor:</label>
-                     <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-xs-12">
-                        <select  class="selectpicker form-control" name="codi_pers_per" id="codi_pers_per" data-live-search="true" autocomplete="nope">
-                           @foreach ($docentes as $k => $doc)
-                              <option value="{{ $doc->codi_pers_per }}">{{ $doc->nomb_comp_per }}</option>
-                           @endforeach
-                        </select>
-                     </div>
                      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-12">
                         <select  class="selectpicker form-control" name="codi_espe_cex" id="codi_espe_cex" data-live-search="true" autocomplete="nope">
                            @foreach ($especialidades as $k => $espe)
                               <option value="{{ $espe->codi_espe_esp }}">{{ $espe->desc_espe_esp }}</option>
+                           @endforeach
+                        </select>
+                     </div>
+                     <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-xs-12">
+                        <select  class="selectpicker form-control" name="codi_pers_per" id="codi_pers_per" data-live-search="true" autocomplete="nope">
+                           @foreach ($docentes as $k => $doc)
+                              <option value="{{ $doc->codi_pers_per }}">{{ $doc->nomb_comp_per }}</option>
                            @endforeach
                         </select>
                      </div>
