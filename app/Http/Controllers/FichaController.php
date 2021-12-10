@@ -99,7 +99,7 @@ class FichaController extends Controller
          $especialidades = Seccion_Especialidad::where('codi_secc_sec', $solicitud->codi_secc_sec)
                            ->orderBy('desc_espe_esp', 'asc')
                            ->get();
-         return $especialidades;
+         
          $docentes=DB::table('bdsig.persona')->where('flag_trab_per','S')->where('tipo_trab_per','03001')->get();
          $paises = $this->getTables('15', '%', 'S');
          $ubigeo = $this->getUbigeo('%');
