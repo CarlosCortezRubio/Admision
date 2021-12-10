@@ -180,7 +180,7 @@
                      </div>
                   </div>
 
-                  <div class="form-group row" id="docentes1div" @if (isset($ficha->tipo_prep_pos) && $ficha->tipo_prep_pos!='C') style="display:none;" @endif >
+                  <div class="form-group row" id="docentes1div" @if (isset($ficha->tipo_prep_pos) && $ficha->tipo_prep_pos!='C') style="display:none !important;" @endif >
                      <label for="desc_prep_pos" class="col-lg-3 col-md-12 text-lg-right">Especialidad / Profesor:</label>
                      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-12">
                         <select  class="selectpicker form-control" name="codi_espe_cex" id="codi_espe_cex" data-live-search="true" autocomplete="nope">
@@ -198,7 +198,7 @@
                      </div>
                   </div>
 
-                  <div class="form-group row" id="docentes2div" @if (isset($ficha->tipo_prep_pos)) style="display:none;" @endif>
+                  <div class="form-group row" id="docentes2div" @if (isset($ficha->tipo_prep_pos)) style="display:none !important;" @endif>
                      <label for="desc_prep_pos" class="col-lg-3 col-md-12 text-lg-right">Especialidad / Profesor:</label>
                      <div class="col-lg-9 col-md-12">
                         <input class="form-control text-uppercase" type="text" name="desc_prep_pos" id="desc_prep_pos" value="{{ $new ? old('desc_prep_pos') : $ficha->desc_prep_pos }}" autocomplete="nope">
