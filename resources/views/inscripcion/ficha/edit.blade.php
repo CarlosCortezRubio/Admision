@@ -192,7 +192,7 @@
                      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-12">
                         <select  class="selectpicker form-control" name="codi_espe_cex" id="codi_espe_cex" data-live-search="true" autocomplete="nope">
                            @foreach ($especialidades as $k => $espe)
-                              <option value="{{ $espe->codi_espe_cex }}">{{ $espe->desc_tabl_det }}</option>
+                              <option value="{{ $espe->codi_espe_esp }}">{{ $espe->desc_espe_esp }}</option>
                            @endforeach
                         </select>
                      </div>
