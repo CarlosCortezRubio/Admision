@@ -214,12 +214,12 @@
                format: 'DD/MM/YYYY'
             }
          }, function(start, end, label) {
-            //var fcalc = moment("");
-            //var edad = fcalc.diff(start, 'years');
+            var fcalc = moment("");
+            var edad = fcalc.diff(start, 'years');
 
             $('#nacimiento').val(start.format('DD/MM/YYYY'));
             $('#fech_naci_pos').val(start.format('YYYY-MM-DD'));
-            $('#edad_calc_pos').val(17);
+            $('#edad_calc_pos').val(edad);
          });
 
          // Filtrar especialidades
