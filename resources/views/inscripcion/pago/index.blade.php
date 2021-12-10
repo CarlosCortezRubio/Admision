@@ -220,6 +220,7 @@
             $('#nacimiento').val(start.format('DD/MM/YYYY'));
             $('#fech_naci_pos').val(start.format('YYYY-MM-DD'));
             $('#edad_calc_pos').val(edad);
+            alert(edad);
          });
 
          // Filtrar especialidades
