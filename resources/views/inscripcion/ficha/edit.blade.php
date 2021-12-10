@@ -180,21 +180,28 @@
                      </div>
                   </div>
 
-                  <div class="form-group row" id="docentesdiv" @if ($ficha && $ficha->tipo_prep_pos!='C') style="display:none;" @endif >
+                  <div class="form-group row" id="docentes1div" @if (isset($ficha->tipo_prep_pos) && $ficha->tipo_prep_pos=='C') style="display:none;" @endif >
                      <label for="desc_prep_pos" class="col-lg-3 col-md-12 text-lg-right">Profesor:</label>
-                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                        <select  class="selectpicker form-control" name="profesor" id="profesor" data-live-search="true" autocomplete="nope">
+                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <select  class="selectpicker form-control" name="codi_pers_per" id="codi_pers_per" data-live-search="true" autocomplete="nope">
                            @foreach ($docentes as $k => $doc)
                               <option value="{{ $doc->codi_pers_per }}">{{ $doc->nomb_comp_per }}</option>
                            @endforeach
                         </select>
                      </div>
+                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <select  class="selectpicker form-control" name="codi_espe_cex" id="codi_espe_cex" data-live-search="true" autocomplete="nope">
+                           @foreach ($especialidades as $k => $espe)
+                              <option value="{{ $espe->codi_espe_cex }}">{{ $espe->desc_tabl_det }}</option>
+                           @endforeach
+                        </select>
+                     </div>
                   </div>
 
-                  <div class="form-group row">
+                  <div class="form-group row" id="docentes2div" @if (isset($ficha->tipo_prep_pos) && $ficha->tipo_prep_pos!='C') style="display:none;" @endif>
                      <label for="desc_prep_pos" class="col-lg-3 col-md-12 text-lg-right">Especialidad / Profesor:</label>
                      <div class="col-lg-9 col-md-12">
-                        <input class="form-control text-uppercase" type="text" name="desc_prep_pos" id="desc_prep_pos" value="{{ $new ? old('desc_prep_pos') : $ficha->desc_prep_pos }}" autocomplete="nope" required>
+                        <input class="form-control text-uppercase" type="text" name="desc_prep_pos" id="desc_prep_pos" value="{{ $new ? old('desc_prep_pos') : $ficha->desc_prep_pos }}" autocomplete="nope">
                      </div>
                   </div>
 
@@ -359,7 +366,7 @@
          </div>
 
          <!----------------------------------------------------------------------->
-         <!--Se agregó el código para colocar si el participante cuenta con discapacidad en el formulario de rellenar datos--->
+         <!--Se agregó el campo para colocar si el participante cuenta con discapacidad en el formulario de rellenar datos--->
                      <!----Discapacidad----->   
          <div class="card card-primary card-outline elevation-2" id="Discapacidad">
             <div class="card-header"><strong>Datos adicionales</strong></div>
@@ -489,6 +496,25 @@
             $("#no").click(function(){ 
             $("#selec_disc").hide(); 
          }); 
+         //------------------------------------------------------------------------------
+         //Validar Docente - Especialidad
+         //------------------------------------------------------------------------------
+
+         $("#tipo_prep_pos").change(function(){
+            $("#codi_pers_per").prop("selected", false);
+            $("#codi_espe_cex").prop("selected", false);
+            if($("#tipo_prep_pos").val()=="C"){
+               $("#docentes2div").hide();
+               $("#docentes1div").show();
+            } else if($("#tipo_prep_pos").val()=="A" || $("#tipo_prep_pos").val()=="O"){
+               $("#docentes1div").hide();
+               $("#docentes2div").show();
+            }else{
+               $("#docentes2div").hide();
+               $("#docentes1div").hide();
+            }
+            
+         });
 
          //------------------------------------------------------------------------------
          //Validar seccion y grado

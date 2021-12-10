@@ -10,6 +10,7 @@ use App\Models\FichaRepertorio;
 use App\Models\FichaTrabajo;
 use App\Models\Solicitud;
 use App\Http\Requests\FichaFormRequest;
+use App\Models\Seccion_Especialidad;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -95,6 +96,9 @@ class FichaController extends Controller
             $trabajos = collect([]); 
             //2021
          }
+         $especialidades = Seccion_Especialidad::where('codi_secc_sec', $solicitud->codi_secc_sec)
+                           ->orderBy('desc_espe_esp', 'asc')
+                           ->get();
          $docentes=DB::table('bdsig.persona')->where('flag_trab_per','S')->where('tipo_trab_per','03001')->get();
          $paises = $this->getTables('15', '%', 'S');
          $ubigeo = $this->getUbigeo('%');
@@ -106,7 +110,7 @@ class FichaController extends Controller
          /////////////////////////
          //2021 No envia trabajos ni repertorio a vista inscripcion.ficha.index
          /* return view('inscripcion.ficha.index', ['proceso'=>$proceso, 'ficha'=>$ficha, 'seccion'=>$seccion, 'especialidad'=>$especialidad, 'tdocumento'=>$tdocumento, 'ndocumento'=>$ndocumento, 'fnacimiento'=>$fnacimiento, 'edad'=>$edad, 'ubigeoDom'=>$ubigeoDom, 'repertorio'=>$repertorio, 'trabajos'=>$trabajos, 'ubigeo'=>$ubigeo, 'paises'=>$paises]); */
-         return view('inscripcion.ficha.index', ['proceso'=>$proceso, 'ficha'=>$ficha, 'seccion'=>$seccion, 'especialidad'=>$especialidad, 'tdocumento'=>$tdocumento, 'ndocumento'=>$ndocumento, 'fnacimiento'=>'1998/09/28', 'edad'=>$edad, 'ubigeoDom'=>$ubigeoDom, 'repertorio'=>$repertorio, 'trabajos'=>$trabajos, 'ubigeo'=>$ubigeo, 'paises'=>$paises,'horarios'=>$horarios,'docentes'=>$docentes]); 
+         return view('inscripcion.ficha.index', ['proceso'=>$proceso, 'ficha'=>$ficha, 'seccion'=>$seccion, 'especialidad'=>$especialidad, 'tdocumento'=>$tdocumento, 'ndocumento'=>$ndocumento, 'fnacimiento'=>'1998/09/28', 'edad'=>$edad, 'ubigeoDom'=>$ubigeoDom, 'repertorio'=>$repertorio, 'trabajos'=>$trabajos, 'ubigeo'=>$ubigeo, 'paises'=>$paises,'horarios'=>$horarios,'docentes'=>$docentes,'especialidades'=>$especialidades]); 
          //return view('inscripcion.ficha.index', ['proceso'=>$proceso, 'ficha'=>$ficha, 'seccion'=>$seccion, 'especialidad'=>$especialidad, 'tdocumento'=>$tdocumento, 'ndocumento'=>$ndocumento, 'fnacimiento'=>'1998/09/28','edad'=>$edad, 'ubigeoDom'=>$ubigeoDom, 'ubigeo'=>$ubigeo, 'paises'=>$paises,'horarios'=>$horarios]);
          //2021
 		 
