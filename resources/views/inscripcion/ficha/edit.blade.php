@@ -387,7 +387,7 @@
                      <label for="apel_nomb_apd" class="col-lg-3 col-md-12 text-lg-right">Seleccione Discapacidad</label>
                      <div class="col-lg-9 col-md-12">
                         <select id="seleccione_dis" class="form-control">
-                           <option class="disc" value="VIDENTE" >VIDENTE</option>
+                           <option class="disc" value="VIDENTE" >VISUAL</option>
                            <option class="disc" value="AUTISTA" >AUTISTA</option>
                            <option class="disc" value="AUTISTA" >AUDITIVA</option>
                            <option class="disc" id="v_otros" value="OTROS" >OTROS</option>
