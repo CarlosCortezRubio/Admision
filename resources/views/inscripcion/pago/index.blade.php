@@ -214,23 +214,25 @@
                format: 'DD/MM/YYYY'
             }
          }, function(start, end, label) {
-            var fcalc = moment();
-            var edad = fcalc.diff(start, 'years');
-            $('#nacimiento').val(start.format('DD/MM/YYYY'));
-            $('#fech_naci_pos').val(start.format('YYYY-MM-DD'));
-            $('#edad_calc_pos').val(edad);
+               var fcalc = moment();
+               var edad = fcalc.diff(start, 'years');
+               $('#nacimiento').val(start.format('DD/MM/YYYY'));
+               $('#fech_naci_pos').val(start.format('YYYY-MM-DD'));
+               $('#edad_calc_pos').val(edad);
 
-         // Filtrar especialidades
-         $('#s_seccion').change(function() {
-            getEspecialidades();
-         });
+               // Filtrar especialidades
+               $('#s_seccion').change(function() {
+                  getEspecialidades();
+               });
 
-         // Especialidad
-         $('#s_especialidad').change(function() {
-            $('#edad_mini_adm').val($('#s_especialidad option:selected').data('edad_mini'));
-            $('#edad_maxi_adm').val($('#s_especialidad option:selected').data('edad_maxi'));
-            $('#requ_estu_adm').val($('#s_especialidad option:selected').data('flag_estu'));
-         });
+            // Especialidad
+               $('#s_especialidad').change(function() {
+                  $('#edad_mini_adm').val($('#s_especialidad option:selected').data('edad_mini'));
+                  $('#edad_maxi_adm').val($('#s_especialidad option:selected').data('edad_maxi'));
+                  $('#requ_estu_adm').val($('#s_especialidad option:selected').data('flag_estu'));
+               });
+            }
+         );
       });
-   </script>
+      </script>
 @endsection
