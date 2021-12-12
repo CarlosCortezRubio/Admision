@@ -95,7 +95,8 @@ class FichaController extends Controller
              $repertorio = collect([]);
             $trabajos = collect([]); 
             //2021
-           // return $solicitud;
+            echo $solicitud;
+            return $fnacimiento;
          }
          $especialidades = Seccion_Especialidad::where('codi_secc_sec', $solicitud->codi_secc_sec)
                            ->orderBy('desc_espe_esp', 'asc')
