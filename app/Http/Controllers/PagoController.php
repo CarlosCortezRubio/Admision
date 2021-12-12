@@ -93,7 +93,7 @@ class PagoController extends Controller
 	  	  
       $solicitud->codi_secc_sec = $request->get('codi_secc_sec');
       $solicitud->codi_espe_esp = $request->get('codi_espe_esp');
-     // $solicitud->fech_naci_pos = $request->get('fech_naci_pos');
+      $solicitud->fech_naci_pos = $request->get('fech_naci_pos');
       $solicitud->edad_calc_pos = $request->get('edad_calc_pos');
 	  $solicitud->codi_moda_mod = $request->get('codi_moda_mod');
 	  //2021
