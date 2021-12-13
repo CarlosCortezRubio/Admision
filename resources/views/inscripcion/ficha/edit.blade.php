@@ -198,7 +198,7 @@
                      </div>
                   </div>
 
-                  <div class="form-group row" id="docentes2div" {{ 'A'!=($new ? old('tipo_prep_pos') : $ficha->tipo_prep_pos) ? 'style="display:none !important;"' : '' }}>
+                  <div class="form-group row" id="docentes2div" {{ 'A'!=($new ? old('tipo_prep_pos') : $ficha->tipo_prep_pos) ?  "style=display:none" : '' }}>
                      <label for="desc_prep_pos" class="col-lg-3 col-md-12 text-lg-right">Especialidad / Profesor:</label>
                      <div class="col-lg-9 col-md-12">
                         <input class="form-control text-uppercase" type="text" name="desc_prep_pos" id="desc_prep_pos" value="{{ $new ? old('desc_prep_pos') : $ficha->desc_prep_pos }}" autocomplete="nope">
@@ -221,7 +221,7 @@
                   </div>
                   
 
-                  <div id="grad" class="col-sm-6 col-xs-12" @if (!isset($ficha->nive_estu_adm)) style="display:none !important;" @endif>
+                  <div id="grad" class="col-sm-6 col-xs-12" @if (!isset($ficha->nive_estu_adm))  style=display:none @endif>
                         <div class="form-group row">
                            <label for="telf_celu_per" class="col-lg-6 col-md-12 text-lg-right">Grado:</label>
                            <div class="col-lg-6 col-md-12">
@@ -231,7 +231,7 @@
                                  <option class="disc" value="3" {{ '3'==($new ? old('grad_estu_adm') : $ficha->grad_estu_adm) ? 'selected' : '' }} >TERCERO</option>
                                  <option class="disc" value="4" {{ '4'==($new ? old('grad_estu_adm') : $ficha->grad_estu_adm) ? 'selected' : '' }} >CUARTO</option>
                                  <option class="disc" value="5" {{ '5'==($new ? old('grad_estu_adm') : $ficha->grad_estu_adm) ? 'selected' : '' }} >QUINTO</option>
-                                 <option class="disc" id="gra-sex" value="6" {{ '6'==($new ? old('grad_estu_adm') : $ficha->grad_estu_adm) ? 'selected' : '' }}  {{ 'A'!=($new ? old('nive_estu_adm') : $ficha->nive_estu_adm) ? 'style="display:none !important;"' : '' }} >SEXTO</option>
+                                 <option class="disc" id="gra-sex" value="6" {{ '6'==($new ? old('grad_estu_adm') : $ficha->grad_estu_adm) ? 'selected' : '' }}  {{ 'A'!=($new ? old('nive_estu_adm') : $ficha->nive_estu_adm) ?  "style=display:none" : '' }} >SEXTO</option>
                               </select>
                            </div>
                         </div>
