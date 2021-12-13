@@ -44,7 +44,11 @@ class Ficha extends Model
       'edad_calc_pos',
       'flag_corr_pos',
       'term_regi_aud',
-      'term_actu_aud'
+      'term_actu_aud',
+      'codi_doce_adm',
+      'codi_espe_adm',
+      'nive_estu_adm',
+      'grad_estu_adm'
    ];
 
    protected $dates=[
