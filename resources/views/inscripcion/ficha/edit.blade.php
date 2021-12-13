@@ -208,7 +208,7 @@
                   <div class="form-group row">
                      <label for="tipo_prep_pos" class="col-lg-3 col-md-12 text-lg-right">Nivel de Estudio:</label>
                      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                        <select  class="custom-select" name="nive_estu_adm" id="tipo_gra_esc" required autocomplete="nope">
+                        <select  class="custom-select" name="nive_estu_adm" id="tipo_gra_esc" data-live-search="true" required autocomplete="nope">
                            <option value="">Seleccionar...</option>
                            <option value="P" {{ 'P'==($new ? old('nive_estu_adm') : $ficha->nive_estu_adm) ? 'selected' : '' }}>
                               PRIMARIA
