@@ -378,8 +378,8 @@
                      <div class="form-group row">
                         <label for="nume_docu_apd" class="col-lg-6 col-md-12 text-lg-right">Cuenta con alguna discapacidad:</label>
                         <div class="col-lg-6 col-md-12">
-                           <input required type="radio" name="flag_disc_adm" id="si" value=""> <label for="si">Si</label><br>
-                           <input required type="radio" name="flag_disc_adm" id="no" value=""> <label for="no">No</label><br>             
+                           <input required type="radio" name="flag_disc_adm" id="si" value="S" {{ 'S'==($new ? old('flag_disc_adm') : $ficha->flag_disc_adm) ? 'checked' : '' }} > <label for="si">Si</label><br>
+                           <input required type="radio" name="flag_disc_adm" id="no" value="N" {{ 'N'==($new ? old('flag_disc_adm') : $ficha->flag_disc_adm) ? 'checked' : '' }}> <label for="no">No</label><br>             
                         </div>
                      </div>
                   </div>
@@ -389,20 +389,14 @@
                      <label for="apel_nomb_apd" class="col-lg-3 col-md-12 text-lg-right">Seleccione Discapacidad</label>
                      <div class="col-lg-9 col-md-12">
                         <select id="seleccione_dis" name="disc_soli_adm" class="form-control">
-                           <option class="disc" value="VIDENTE" >VISUAL</option>
-                           <option class="disc" value="AUTISTA" >AUTISTA</option>
-                           <option class="disc" value="AUTISTA" >AUDITIVA</option>
-                           <option class="disc" id="v_otros" value="OTROS" >OTROS</option>
+                           <option class="disc" value="VIDENTE" {{ 'VIDENTE'==($new ? old('disc_soli_adm') : $ficha->disc_soli_adm) ? 'selected' : '' }} >VISUAL</option>
+                           <option class="disc" value="AUTISTA" {{ 'AUTISTA'==($new ? old('disc_soli_adm') : $ficha->disc_soli_adm) ? 'selected' : '' }}>AUTISTA</option>
+                           <option class="disc" value="AUTISTA" {{ 'AUTISTA'==($new ? old('disc_soli_adm') : $ficha->disc_soli_adm) ? 'selected' : '' }}>AUDITIVA</option>
+                           <option class="disc" id="v_otros" value="OTROS" {{ 'OTROS'==($new ? old('disc_soli_adm') : $ficha->disc_soli_adm) ? 'selected' : '' }}>OTROS</option>
                         </select>
                      </div>
                   </div>
             
-                  <div id="descripcion" class="form-group row">
-                     <label for="apel_nomb_apd" class="col-lg-3 col-md-12 text-lg-right">Describa:</label>
-                     <div class="col-lg-9 col-md-12">
-                        <input class="form-control text-uppercase " type="text" name="disc_post_apd" id="disc_post_apd" value="" autocomplete="nope">
-                     </div>
-                  </div>
                
             </div>
          </div>
