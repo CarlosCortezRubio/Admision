@@ -47,13 +47,13 @@ class FichaController extends Controller
                return view('inscripcion.ficha.mensaje', ['proceso'=>$proceso,
                      'message'=> 'solicitud_no_pagada']);
             }
-            return $solicitud;
+            
          } else {
 
             return view('inscripcion.ficha.mensaje', ['proceso'=>$proceso,
                      'message'=> 'solicitud_no_exists']);
          }
-
+         return $solicitud;
          $ficha = Ficha::where('tipo_docu_per', auth()->user()->tdocumento)
                      ->where('nume_docu_per', auth()->user()->ndocumento)
                      ->where('codi_proc_adm',$proceso->codi_proc_adm)
