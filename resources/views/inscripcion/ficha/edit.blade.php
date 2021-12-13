@@ -204,7 +204,7 @@
                         <input class="form-control text-uppercase" type="text" name="desc_prep_pos" id="desc_prep_pos" value="{{ $new ? old('desc_prep_pos') : $ficha->desc_prep_pos }}" autocomplete="nope">
                      </div>
                   </div>
-            @if ( $ficha->codi_secc_sec!='05001')
+          {{-- @if($ficha->codi_secc_sec!='05001') --}}
    
 
                   <div class="form-group row">
@@ -223,7 +223,7 @@
                   </div>
                   
 
-                  <div id="grad" class="col-sm-6 col-xs-12"{{ null==($new ? old('nive_estu_adm') : $ficha->nive_estu_adm) ?  "style=display:none" : '' }}>
+                  <div id="grad" class="col-sm-6 col-xs-12"{{-- null==($new?old('nive_estu_adm'):$ficha->nive_estu_adm)?"style=display:none":'' --}}>
                         <div class="form-group row">
                            <label for="telf_celu_per" class="col-lg-6 col-md-12 text-lg-right">Grado:</label>
                            <div class="col-lg-6 col-md-12">
@@ -240,7 +240,7 @@
                   </div>
 
                   
-                  @endif
+                  {{-- @endif --}}
                   <!-- 2021 -->
                   <!-- <div class="form-group row">
                      <label for="flag_corr_pos" class="col-lg-3 col-md-12 text-lg-right">&#191;Requiere correpetidor&#63;:</label>
