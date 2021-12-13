@@ -183,16 +183,16 @@
                   <div class="form-group row" id="docentes1div" @if (!isset($ficha->tipo_prep_pos) || $ficha->tipo_prep_pos!='C') style="display:none !important;" @endif >
                      <label for="desc_prep_pos" class="col-lg-3 col-md-12 text-lg-right">Especialidad / Profesor:</label>
                      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <select  class="selectpicker form-control" name="codi_espe_cex" id="codi_espe_cex" data-live-search="true" autocomplete="nope">
+                        <select  class="selectpicker form-control" name="codi_espe_adm" id="codi_espe_cex" data-live-search="true" autocomplete="nope">
                            @foreach ($especialidades as $k => $espe)
-                              <option value="{{ $espe->codi_espe_esp }}">{{ $espe->desc_espe_esp }}</option>
+                              <option value="{{ $espe->codi_espe_esp }}" {{ $espe->codi_espe_esp==($new ? old('codi_espe_adm') : $ficha->codi_espe_adm) ? 'selected' : '' }} >{{ $espe->desc_espe_esp }}</option>
                            @endforeach
                         </select>
                      </div>
                      <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-xs-12">
-                        <select  class="selectpicker form-control" name="codi_pers_per" id="codi_pers_per" data-live-search="true" autocomplete="nope">
+                        <select  class="selectpicker form-control" name="codi_doce_adm" id="codi_pers_per" data-live-search="true" autocomplete="nope">
                            @foreach ($docentes as $k => $doc)
-                              <option value="{{ $doc->codi_pers_per }}">{{ $doc->nomb_comp_per }}</option>
+                              <option value="{{ $doc->codi_pers_per }}" {{ $espe->codi_pers_per==($new ? old('codi_doce_adm') : $ficha->codi_doce_adm) ? 'selected' : '' }} >{{ $doc->nomb_comp_per }}</option>
                            @endforeach
                         </select>
                      </div>
@@ -208,12 +208,12 @@
                   <div class="form-group row">
                      <label for="tipo_prep_pos" class="col-lg-3 col-md-12 text-lg-right">Nivel de Estudio:</label>
                      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                        <select  class="custom-select" name="tipo_gra_esc" id="tipo_gra_esc" required autocomplete="nope">
+                        <select  class="custom-select" name="nive_estu_adm" id="tipo_gra_esc" required autocomplete="nope">
                            <option value="">Seleccionar...</option>
-                           <option value="P" {{ 'P'==($new ? old('tipo_gra_esc') : $ficha->tipo_gra_esc) ? 'selected' : '' }}>
+                           <option value="P" {{ 'P'==($new ? old('nive_estu_adm') : $ficha->nive_estu_adm) ? 'selected' : '' }}>
                               PRIMARIA
                            </option>
-                           <option value="S" {{ 'S'==($new ? old('tipo_gra_esc') : $ficha->tipo_gra_esc) ? 'selected' : '' }}>
+                           <option value="S" {{ 'S'==($new ? old('nive_estu_adm') : $ficha->nive_estu_adm) ? 'selected' : '' }}>
                               SECUNDARIA
                            </option>
                         </select>
@@ -221,17 +221,17 @@
                   </div>
                   
 
-                  <div id="grad" class="col-sm-6 col-xs-12">
+                  <div id="grad" class="col-sm-6 col-xs-12" @if (!isset($ficha->nive_estu_adm)) style="display:none !important;" @endif>
                         <div class="form-group row">
                            <label for="telf_celu_per" class="col-lg-6 col-md-12 text-lg-right">Grado:</label>
                            <div class="col-lg-6 col-md-12">
                               <select id="seleccione_dis" class="form-control">
-                                 <option class="disc" value="PRIMERO" >PRIMERO</option>
-                                 <option class="disc" value="SEGUNDO" >SEGUNDO</option>
-                                 <option class="disc" value="TERCERO" >TERCERO</option>
-                                 <option class="disc" value="CUARTO" >CUARTO</option>
-                                 <option class="disc" value="QUINTO" >QUINTO</option>
-                                 <option class="disc" id="gra-sex" value="SEXTO" >SEXTO</option>
+                                 <option class="disc" value="1" {{ '1'==($new ? old('grad_estu_adm') : $ficha->grad_estu_adm) ? 'selected' : '' }} >PRIMERO</option>
+                                 <option class="disc" value="2" {{ '2'==($new ? old('grad_estu_adm') : $ficha->grad_estu_adm) ? 'selected' : '' }} >SEGUNDO</option>
+                                 <option class="disc" value="3" {{ '3'==($new ? old('grad_estu_adm') : $ficha->grad_estu_adm) ? 'selected' : '' }} >TERCERO</option>
+                                 <option class="disc" value="4" {{ '4'==($new ? old('grad_estu_adm') : $ficha->grad_estu_adm) ? 'selected' : '' }} >CUARTO</option>
+                                 <option class="disc" value="5" {{ '5'==($new ? old('grad_estu_adm') : $ficha->grad_estu_adm) ? 'selected' : '' }} >QUINTO</option>
+                                 <option class="disc" id="gra-sex" value="6" {{ '6'==($new ? old('grad_estu_adm') : $ficha->grad_estu_adm) ? 'selected' : '' }}  @if (!isset($ficha->nive_estu_adm) && $ficha->nive_estu_adm!='A') style="display:none !important;" @endif >SEXTO</option>
                               </select>
                            </div>
                         </div>
@@ -376,8 +376,8 @@
                      <div class="form-group row">
                         <label for="nume_docu_apd" class="col-lg-6 col-md-12 text-lg-right">Cuenta con alguna discapacidad:</label>
                         <div class="col-lg-6 col-md-12">
-                           <input type="radio" name="cb-disc" id="si" value=""> <label for="si">Si</label><br>
-                           <input type="radio" name="cb-disc" id="no" value=""> <label for="no">No</label><br>             
+                           <input required type="radio" name="cb-disc" id="si" value=""> <label for="si">Si</label><br>
+                           <input required type="radio" name="cb-disc" id="no" value=""> <label for="no">No</label><br>             
                         </div>
                      </div>
                   </div>
@@ -396,7 +396,7 @@
                   </div>
             
                   <div id="descripcion" class="form-group row">
-                     <label for="apel_nomb_apd" class="col-lg-3 col-md-12 text-lg-right">Describa</label>
+                     <label for="apel_nomb_apd" class="col-lg-3 col-md-12 text-lg-right">Describa:</label>
                      <div class="col-lg-9 col-md-12">
                         <input class="form-control text-uppercase " type="text" name="disc_post_apd" id="disc_post_apd" value="" autocomplete="nope">
                      </div>
@@ -520,19 +520,16 @@
          //Validar seccion y grado
          //------------------------------------------------------------------------------
    
-         $("#grad").hide();
-
          $("#tipo_gra_esc").change(function(){
             $("#grad").prop("selected", false);
-            if($("#tipo_gra_esc").val()=="I" || $("#tipo_gra_esc").val()=="U"){
-               $("#grad").hide();
-            } else{
-              if($("#tipo_gra_esc").val()=="S"){
-               $("#gra-sex").hide();
-              } else{
-               $("#gra-sex").show();
-              }
+            if($("#tipo_gra_esc").val()=="S"){
                $("#grad").show();
+               $("#gra-sex").hide();
+            } else if($("#tipo_gra_esc").val()=="P"){
+               $("#grad").show();
+               $("#gra-sex").show();
+            } else{
+               $("#grad").hide();
             }
          });
       }); 
