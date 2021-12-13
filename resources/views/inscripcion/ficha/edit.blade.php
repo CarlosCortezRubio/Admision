@@ -205,42 +205,36 @@
                      </div>
                   </div>
           {{-- @if($ficha->codi_secc_sec!='05001') --}}
-   
-
-                  <div class="form-group row">
-                     <label for="tipo_prep_pos" class="col-lg-3 col-md-12 text-lg-right">Nivel de Estudio:</label>
-                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                        <select  class="custom-select" name="nive_estu_adm" id="tipo_gra_esc" required autocomplete="nope">
-                           <option value="">Seleccionar...</option>
-                           <option value="P" {{ 'P'==($new ? old('nive_estu_adm') : $ficha->nive_estu_adm) ? 'selected' : '' }}>
-                              PRIMARIA
-                           </option>
-                           <option value="S" {{ 'S'==($new ? old('nive_estu_adm') : $ficha->nive_estu_adm) ? 'selected' : '' }}>
-                              SECUNDARIA
-                           </option>
-                        </select>
-                     </div>
+               <div class="form-group row">
+                  <label for="tipo_prep_pos" class="col-lg-3 col-md-12 text-lg-right">Nivel de Estudio:</label>
+                  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                     <select  class="custom-select" name="nive_estu_adm" id="tipo_gra_esc" required autocomplete="nope">
+                        <option value="">Seleccionar...</option>
+                        <option value="P" {{ 'P'==($new ? old('nive_estu_adm') : $ficha->nive_estu_adm) ? 'selected' : '' }}>
+                           PRIMARIA
+                        </option>
+                        <option value="S" {{ 'S'==($new ? old('nive_estu_adm') : $ficha->nive_estu_adm) ? 'selected' : '' }}>
+                           SECUNDARIA
+                        </option>
+                     </select>
                   </div>
-                  
-
-                  <div id="grad" class="col-sm-6 col-xs-12"{{-- null==($new?old('nive_estu_adm'):$ficha->nive_estu_adm)?"style=display:none":'' --}}>
-                        <div class="form-group row">
-                           <label for="telf_celu_per" class="col-lg-6 col-md-12 text-lg-right">Grado:</label>
-                           <div class="col-lg-6 col-md-12">
-                              <select id="seleccione_dis" name="grad_estu_adm" class="form-control">
-                                 <option class="disc" value="1" {{ '1'==($new ? old('grad_estu_adm') : $ficha->grad_estu_adm) ? 'selected' : '' }} >PRIMERO</option>
-                                 <option class="disc" value="2" {{ '2'==($new ? old('grad_estu_adm') : $ficha->grad_estu_adm) ? 'selected' : '' }} >SEGUNDO</option>
-                                 <option class="disc" value="3" {{ '3'==($new ? old('grad_estu_adm') : $ficha->grad_estu_adm) ? 'selected' : '' }} >TERCERO</option>
-                                 <option class="disc" value="4" {{ '4'==($new ? old('grad_estu_adm') : $ficha->grad_estu_adm) ? 'selected' : '' }} >CUARTO</option>
-                                 <option class="disc" value="5" {{ '5'==($new ? old('grad_estu_adm') : $ficha->grad_estu_adm) ? 'selected' : '' }} >QUINTO</option>
-                                 <option class="disc" id="gra-sex" value="6" {{ '6'==($new ? old('grad_estu_adm') : $ficha->grad_estu_adm) ? 'selected' : '' }}  {{ 'A'!=($new ? old('nive_estu_adm') : $ficha->nive_estu_adm) ?  "style=display:none" : '' }} >SEXTO</option>
-                              </select>
-                           </div>
+               </div>
+               <div id="grad" class="col-sm-6 col-xs-12"{{-- null==($new?old('nive_estu_adm'):$ficha->nive_estu_adm)?"style=display:none":'' --}}>
+                     <div class="form-group row">
+                        <label for="telf_celu_per" class="col-lg-6 col-md-12 text-lg-right">Grado:</label>
+                        <div class="col-lg-6 col-md-12">
+                           <select id="seleccione_dis" name="grad_estu_adm" class="form-control">
+                              <option class="disc" value="1" {{ '1'==($new ? old('grad_estu_adm') : $ficha->grad_estu_adm) ? 'selected' : '' }} >PRIMERO</option>
+                              <option class="disc" value="2" {{ '2'==($new ? old('grad_estu_adm') : $ficha->grad_estu_adm) ? 'selected' : '' }} >SEGUNDO</option>
+                              <option class="disc" value="3" {{ '3'==($new ? old('grad_estu_adm') : $ficha->grad_estu_adm) ? 'selected' : '' }} >TERCERO</option>
+                              <option class="disc" value="4" {{ '4'==($new ? old('grad_estu_adm') : $ficha->grad_estu_adm) ? 'selected' : '' }} >CUARTO</option>
+                              <option class="disc" value="5" {{ '5'==($new ? old('grad_estu_adm') : $ficha->grad_estu_adm) ? 'selected' : '' }} >QUINTO</option>
+                              <option class="disc" id="gra-sex" value="6" {{ '6'==($new ? old('grad_estu_adm') : $ficha->grad_estu_adm) ? 'selected' : '' }}  {{ 'A'!=($new ? old('nive_estu_adm') : $ficha->nive_estu_adm) ?  "style=display:none" : '' }} >SEXTO</option>
+                           </select>
                         </div>
-                  </div>
-
-                  
-                  {{-- @endif --}}
+                     </div>
+               </div>
+            {{-- @endif --}}
                   <!-- 2021 -->
                   <!-- <div class="form-group row">
                      <label for="flag_corr_pos" class="col-lg-3 col-md-12 text-lg-right">&#191;Requiere correpetidor&#63;:</label>
