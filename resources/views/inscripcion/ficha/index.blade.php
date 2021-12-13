@@ -64,7 +64,7 @@
             @endif
          @endif
       @else
-         @include('inscripcion.ficha.edit', ['new'=>true])
+         {{-- @include('inscripcion.ficha.edit',['new'=>true]) --}}
       @endif
    @endif   
 @endsection
