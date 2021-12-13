@@ -171,8 +171,8 @@ class FichaController extends Controller
          $ficha->codi_espe_adm = $request->get('codi_espe_adm');
          $ficha->nive_estu_adm = $request->get('nive_estu_adm');  
          $ficha->grad_estu_adm = $request->get('grad_estu_adm');
-         //$ficha->flag_disc_adm = $request->get('flag_disc_adm');
-         //$ficha->disc_soli_adm = $request->get('disc_soli_adm');
+         $ficha->flag_disc_adm = $request->get('flag_disc_adm');
+         $ficha->disc_soli_adm = $request->get('disc_soli_adm');
          $ficha->esta_post_pos = $request->get('submit') == 'E' ? 'E' : 'R';
 
          if (Input::hasFile('foto_post_per')){

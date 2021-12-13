@@ -378,8 +378,8 @@
                      <div class="form-group row">
                         <label for="nume_docu_apd" class="col-lg-6 col-md-12 text-lg-right">Cuenta con alguna discapacidad:</label>
                         <div class="col-lg-6 col-md-12">
-                           <input required type="radio" name="flag_disc_adm" id="si" value="S" {{ 'S'==($new ? old('flag_disc_adm') : $ficha->flag_disc_adm) ? 'checked' : '' }} > <label for="si">Si</label><br>
-                           <input required type="radio" name="flag_disc_adm" id="no" value="N" {{ 'N'==($new ? old('flag_disc_adm') : $ficha->flag_disc_adm) ? 'checked' : '' }}> <label for="no">No</label><br>             
+                           <input required type="radio" name="flag_disc_adm" id="si" value="S" {{-- 'S'==($new?old('flag_disc_adm'):$ficha->flag_disc_adm)?'checked':'' --}} > <label for="si">Si</label><br>
+                           <input required type="radio" name="flag_disc_adm" id="no" value="N" {{-- 'N'==($new?old('flag_disc_adm'):$ficha->flag_disc_adm)?'checked':'' --}}> <label for="no">No</label><br>             
                         </div>
                      </div>
                   </div>
