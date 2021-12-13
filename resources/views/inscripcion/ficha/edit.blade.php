@@ -378,8 +378,8 @@
                      <div class="form-group row">
                         <label for="nume_docu_apd" class="col-lg-6 col-md-12 text-lg-right">Cuenta con alguna discapacidad:</label>
                         <div class="col-lg-6 col-md-12">
-                           <input required type="radio" name="cb-disc" id="si" value=""> <label for="si">Si</label><br>
-                           <input required type="radio" name="cb-disc" id="no" value=""> <label for="no">No</label><br>             
+                           <input required type="radio" name="flag_disc_adm" id="si" value=""> <label for="si">Si</label><br>
+                           <input required type="radio" name="flag_disc_adm" id="no" value=""> <label for="no">No</label><br>             
                         </div>
                      </div>
                   </div>
@@ -388,7 +388,7 @@
                   <div id="selec_disc" class="form-group row">
                      <label for="apel_nomb_apd" class="col-lg-3 col-md-12 text-lg-right">Seleccione Discapacidad</label>
                      <div class="col-lg-9 col-md-12">
-                        <select id="seleccione_dis" class="form-control">
+                        <select id="seleccione_dis" name="disc_soli_adm" class="form-control">
                            <option class="disc" value="VIDENTE" >VISUAL</option>
                            <option class="disc" value="AUTISTA" >AUTISTA</option>
                            <option class="disc" value="AUTISTA" >AUDITIVA</option>
