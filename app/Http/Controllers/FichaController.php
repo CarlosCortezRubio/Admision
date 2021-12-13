@@ -34,6 +34,7 @@ class FichaController extends Controller
                                  ->where('tipo_docu_sol', auth()->user()->tdocumento)
                                  ->where('nume_docu_sol', auth()->user()->ndocumento)
                                  ->first();
+      return "estoy aqui";
          
          if ($solicitud) {
             if ( $solicitud->esta_pago_sol == 'G' && $solicitud->fech_expi_pag > Carbon::now()){
@@ -56,7 +57,6 @@ class FichaController extends Controller
                      ->where('codi_proc_adm',$proceso->codi_proc_adm)
                      ->first();
 		//dd($ficha);exit;
-      return "estoy aqui";
 
          if ($ficha) {
             $seccion = $this->getTables('05', $ficha->codi_secc_sec, '%');
