@@ -48,7 +48,9 @@ class Ficha extends Model
       'codi_doce_adm',
       'codi_espe_adm',
       'nive_estu_adm',
-      'grad_estu_adm'
+      'grad_estu_adm',
+      'flag_disc_adm',
+      'disc_soli_adm'
    ];
 
    protected $dates=[
