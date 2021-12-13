@@ -225,7 +225,7 @@
                         <div class="form-group row">
                            <label for="telf_celu_per" class="col-lg-6 col-md-12 text-lg-right">Grado:</label>
                            <div class="col-lg-6 col-md-12">
-                              <select id="seleccione_dis" class="form-control">
+                              <select id="seleccione_dis" name="grad_estu_adm" class="form-control">
                                  <option class="disc" value="1" {{ '1'==($new ? old('grad_estu_adm') : $ficha->grad_estu_adm) ? 'selected' : '' }} >PRIMERO</option>
                                  <option class="disc" value="2" {{ '2'==($new ? old('grad_estu_adm') : $ficha->grad_estu_adm) ? 'selected' : '' }} >SEGUNDO</option>
                                  <option class="disc" value="3" {{ '3'==($new ? old('grad_estu_adm') : $ficha->grad_estu_adm) ? 'selected' : '' }} >TERCERO</option>
