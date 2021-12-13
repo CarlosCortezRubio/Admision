@@ -53,12 +53,13 @@ class FichaController extends Controller
             return view('inscripcion.ficha.mensaje', ['proceso'=>$proceso,
                      'message'=> 'solicitud_no_exists']);
          }
+
+         return $solicitud;
          $ficha = Ficha::where('tipo_docu_per', auth()->user()->tdocumento)
                      ->where('nume_docu_per', auth()->user()->ndocumento)
                      ->where('codi_proc_adm',$proceso->codi_proc_adm)
                      ->first();
-		//dd($ficha);exit;
-      return $solicitud;
+      
 
          if ($ficha) {
             $seccion = $this->getTables('05', $ficha->codi_secc_sec, '%');
