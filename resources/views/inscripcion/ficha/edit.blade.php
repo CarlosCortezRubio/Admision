@@ -231,7 +231,7 @@
                                  <option class="disc" value="3" {{ '3'==($new ? old('grad_estu_adm') : $ficha->grad_estu_adm) ? 'selected' : '' }} >TERCERO</option>
                                  <option class="disc" value="4" {{ '4'==($new ? old('grad_estu_adm') : $ficha->grad_estu_adm) ? 'selected' : '' }} >CUARTO</option>
                                  <option class="disc" value="5" {{ '5'==($new ? old('grad_estu_adm') : $ficha->grad_estu_adm) ? 'selected' : '' }} >QUINTO</option>
-                                 <option class="disc" id="gra-sex" value="6" {{ '6'==($new ? old('grad_estu_adm') : $ficha->grad_estu_adm) ? 'selected' : '' }}  @if (!isset($ficha->nive_estu_adm) && $ficha->nive_estu_adm!='A') style="display:none !important;" @endif >SEXTO</option>
+                                 <option class="disc" id="gra-sex" value="6" {{ '6'==($new ? old('grad_estu_adm') : $ficha->grad_estu_adm) ? 'selected' : '' }}  {{ 'A'!=($new ? old('nive_estu_adm') : $ficha->nive_estu_adm) ? 'style="display:none !important;"' : '' }} >SEXTO</option>
                               </select>
                            </div>
                         </div>
