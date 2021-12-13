@@ -29,7 +29,6 @@ class FichaController extends Controller
    public function index()
    {
       $proceso = $this->getProceso('V');
-		return "estoy aqui";
       if ($proceso) {
          $solicitud = Solicitud::where('codi_proc_adm', $proceso->codi_proc_adm)
                                  ->where('tipo_docu_sol', auth()->user()->tdocumento)
@@ -109,6 +108,7 @@ class FichaController extends Controller
          $horarios=DB::table('admision.adm_postulante as ps')
                      ->join('admision.adm_programacion_examen as pe','pe.id_programacion_examen','ps.id_programacion_examen')
                      ->where('nume_docu_sol',Auth::user()->ndocumento)->get();
+		return "estoy aqui";
          
          /////////////////////////
          //2021 No envia trabajos ni repertorio a vista inscripcion.ficha.index
