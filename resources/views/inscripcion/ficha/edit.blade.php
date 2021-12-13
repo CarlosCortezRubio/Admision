@@ -180,7 +180,7 @@
                      </div>
                   </div>
 
-                  <div class="form-group row" id="docentes1div" {{ 'C'!=($new ? old('tipo_prep_pos') : $ficha->tipo_prep_pos) ? 'style="display:none !important;"' : '' }} >
+                  <div class="form-group row" id="docentes1div" {{ 'C'!=($new ? old('tipo_prep_pos') : $ficha->tipo_prep_pos) ? 'style="display:none"' : '' }} >
                      <label for="desc_prep_pos" class="col-lg-3 col-md-12 text-lg-right">Especialidad / Profesor:</label>
                      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-12">
                         <select  class="selectpicker form-control" name="codi_espe_adm" id="codi_espe_cex" data-live-search="true" autocomplete="nope">
