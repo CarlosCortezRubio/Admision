@@ -32,7 +32,7 @@
       @if (isset($ficha))
 
          @if ($ficha->esta_post_pos == 'R')
-           {{-- @include('inscripcion.ficha.edit',['new'=>false]) --}}
+           @include('inscripcion.ficha.edit',['new'=>false])
 
          @else
             @if ($ficha->esta_post_pos == 'V')
@@ -64,7 +64,7 @@
             @endif
          @endif
       @else
-         {{-- @include('inscripcion.ficha.edit',['new'=>true]) --}}
+          @include('inscripcion.ficha.edit',['new'=>true]) 
       @endif
    @endif   
 @endsection

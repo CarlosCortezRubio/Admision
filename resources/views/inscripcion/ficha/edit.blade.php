@@ -204,7 +204,7 @@
                         <input class="form-control text-uppercase" type="text" name="desc_prep_pos" id="desc_prep_pos" value="{{ $new ? old('desc_prep_pos') : $ficha->desc_prep_pos }}" autocomplete="nope">
                      </div>
                   </div>
-          {{-- @if($ficha->codi_secc_sec!='05001') --}}
+           @if($ficha->codi_secc_sec!='05001') 
                <div class="form-group row">
                   <label for="tipo_prep_pos" class="col-lg-3 col-md-12 text-lg-right">Nivel de Estudio:</label>
                   <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
@@ -219,7 +219,7 @@
                      </select>
                   </div>
                </div>
-               <div id="grad" class="col-sm-6 col-xs-12"{{-- null==($new?old('nive_estu_adm'):$ficha->nive_estu_adm)?"style=display:none":'' --}}>
+               <div id="grad" class="col-sm-6 col-xs-12"{{null==($new?old('nive_estu_adm'):$ficha->nive_estu_adm)?"style=display:none":'' }}>
                      <div class="form-group row">
                         <label for="telf_celu_per" class="col-lg-6 col-md-12 text-lg-right">Grado:</label>
                         <div class="col-lg-6 col-md-12">
@@ -234,7 +234,7 @@
                         </div>
                      </div>
                </div>
-            {{-- @endif --}}
+            {{ @endif }}
                   <!-- 2021 -->
                   <!-- <div class="form-group row">
                      <label for="flag_corr_pos" class="col-lg-3 col-md-12 text-lg-right">&#191;Requiere correpetidor&#63;:</label>
@@ -372,8 +372,8 @@
                      <div class="form-group row">
                         <label for="nume_docu_apd" class="col-lg-6 col-md-12 text-lg-right">Cuenta con alguna discapacidad:</label>
                         <div class="col-lg-6 col-md-12">
-                           <input required type="radio" name="flag_disc_adm" id="si" value="S" {{-- 'S'==($new?old('flag_disc_adm'):$ficha->flag_disc_adm)?'checked':'' --}} > <label for="si">Si</label><br>
-                           <input required type="radio" name="flag_disc_adm" id="no" value="N" {{-- 'N'==($new?old('flag_disc_adm'):$ficha->flag_disc_adm)?'checked':'' --}}> <label for="no">No</label><br>             
+                           <input required type="radio" name="flag_disc_adm" id="si" value="S" {{ 'S'==($new?old('flag_disc_adm'):$ficha->flag_disc_adm)?'checked':'' }} > <label for="si">Si</label><br>
+                           <input required type="radio" name="flag_disc_adm" id="no" value="N" {{ 'N'==($new?old('flag_disc_adm'):$ficha->flag_disc_adm)?'checked':'' }}> <label for="no">No</label><br>             
                         </div>
                      </div>
                   </div>
@@ -383,10 +383,10 @@
                      <label for="apel_nomb_apd" class="col-lg-3 col-md-12 text-lg-right">Seleccione Discapacidad</label>
                      <div class="col-lg-9 col-md-12">
                         <select id="seleccione_dis" name="disc_soli_adm" class="form-control">
-                           <option class="disc" value="VIDENTE" {{-- 'VIDENTE'==($new?old('disc_soli_adm'):$ficha->disc_soli_adm)?'selected':'' --}} >VISUAL</option>
-                           <option class="disc" value="AUTISTA" {{-- 'AUTISTA'==($new?old('disc_soli_adm'):$ficha->disc_soli_adm)?'selected':'' --}}>AUTISTA</option>
-                           <option class="disc" value="AUTISTA" {{-- 'AUTISTA'==($new?old('disc_soli_adm'):$ficha->disc_soli_adm)?'selected':'' --}}>AUDITIVA</option>
-                           <option class="disc" id="v_otros" value="OTROS" {{-- 'OTROS'==($new?old('disc_soli_adm'):$ficha->disc_soli_adm)?'selected':'' --}}>OTROS</option>
+                           <option class="disc" value="VIDENTE" {{ 'VIDENTE'==($new?old('disc_soli_adm'):$ficha->disc_soli_adm)?'selected':'' }} >VISUAL</option>
+                           <option class="disc" value="AUTISTA" {{ 'AUTISTA'==($new?old('disc_soli_adm'):$ficha->disc_soli_adm)?'selected':'' }}>AUTISTA</option>
+                           <option class="disc" value="AUTISTA" {{ 'AUTISTA'==($new?old('disc_soli_adm'):$ficha->disc_soli_adm)?'selected':'' }}>AUDITIVA</option>
+                           <option class="disc" id="v_otros" value="OTROS" {{ 'OTROS'==($new?old('disc_soli_adm'):$ficha->disc_soli_adm)?'selected':'' }}>OTROS</option>
                         </select>
                      </div>
                   </div>

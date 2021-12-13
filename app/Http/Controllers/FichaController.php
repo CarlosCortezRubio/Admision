@@ -54,7 +54,6 @@ class FichaController extends Controller
                      'message'=> 'solicitud_no_exists']);
          }
 
-         return $solicitud;
          $ficha = Ficha::where('tipo_docu_per', auth()->user()->tdocumento)
                      ->where('nume_docu_per', auth()->user()->ndocumento)
                      ->where('codi_proc_adm',$proceso->codi_proc_adm)
