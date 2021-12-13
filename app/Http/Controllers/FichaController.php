@@ -56,6 +56,7 @@ class FichaController extends Controller
                      ->where('codi_proc_adm',$proceso->codi_proc_adm)
                      ->first();
 		//dd($ficha);exit;
+      return "estoy aqui";
 
          if ($ficha) {
             $seccion = $this->getTables('05', $ficha->codi_secc_sec, '%');
@@ -76,7 +77,6 @@ class FichaController extends Controller
                                     ->get();
             
             //2021
-            return "estoy aqui";
 
          } else {
             // $solicitud = Solicitud::where('codi_proc_adm', $proceso->codi_proc_adm)
