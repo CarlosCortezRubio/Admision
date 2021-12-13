@@ -221,7 +221,7 @@
                   </div>
                   
 
-                  <div id="grad" class="col-sm-6 col-xs-12" @if (!isset($ficha->nive_estu_adm))  style=display:none @endif>
+                  <div id="grad" class="col-sm-6 col-xs-12"{{ null==($new ? old('nive_estu_adm') : $ficha->nive_estu_adm) ?  "style=display:none" : '' }}>
                         <div class="form-group row">
                            <label for="telf_celu_per" class="col-lg-6 col-md-12 text-lg-right">Grado:</label>
                            <div class="col-lg-6 col-md-12">
