@@ -204,6 +204,8 @@
                         <input class="form-control text-uppercase" type="text" name="desc_prep_pos" id="desc_prep_pos" value="{{ $new ? old('desc_prep_pos') : $ficha->desc_prep_pos }}" autocomplete="nope">
                      </div>
                   </div>
+            @if ( $ficha->codi_secc_sec!='05001')
+   
 
                   <div class="form-group row">
                      <label for="tipo_prep_pos" class="col-lg-3 col-md-12 text-lg-right">Nivel de Estudio:</label>
@@ -238,7 +240,7 @@
                   </div>
 
                   
-
+                  @endif
                   <!-- 2021 -->
                   <!-- <div class="form-group row">
                      <label for="flag_corr_pos" class="col-lg-3 col-md-12 text-lg-right">&#191;Requiere correpetidor&#63;:</label>
