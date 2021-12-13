@@ -34,7 +34,7 @@ class FichaController extends Controller
                                  ->where('tipo_docu_sol', auth()->user()->tdocumento)
                                  ->where('nume_docu_sol', auth()->user()->ndocumento)
                                  ->first();
-      return $solicitud;
+     
          
          if ($solicitud) {
             if ( $solicitud->esta_pago_sol == 'G' && $solicitud->fech_expi_pag > Carbon::now()){
@@ -47,7 +47,9 @@ class FichaController extends Controller
                return view('inscripcion.ficha.mensaje', ['proceso'=>$proceso,
                      'message'=> 'solicitud_no_pagada']);
             }
+            return $solicitud;
          } else {
+
             return view('inscripcion.ficha.mensaje', ['proceso'=>$proceso,
                      'message'=> 'solicitud_no_exists']);
          }
