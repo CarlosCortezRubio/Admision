@@ -180,7 +180,7 @@
                      </div>
                   </div>
 
-                  <div class="form-group row" id="docentes1div" @if (!isset($ficha->tipo_prep_pos) || $ficha->tipo_prep_pos!='C') style="display:none !important;" @endif >
+                  <div class="form-group row" id="docentes1div" {{ 'C'!=($new ? old('tipo_prep_pos') : $ficha->tipo_prep_pos) ? 'style="display:none !important;"' : '' }} >
                      <label for="desc_prep_pos" class="col-lg-3 col-md-12 text-lg-right">Especialidad / Profesor:</label>
                      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-12">
                         <select  class="selectpicker form-control" name="codi_espe_adm" id="codi_espe_cex" data-live-search="true" autocomplete="nope">
@@ -198,7 +198,7 @@
                      </div>
                   </div>
 
-                  <div class="form-group row" id="docentes2div" @if (!isset($ficha->tipo_prep_pos) || $ficha->tipo_prep_pos!='A' || $ficha->tipo_prep_pos!='O') style="display:none !important;" @endif>
+                  <div class="form-group row" id="docentes2div" {{ 'A'!=($new ? old('tipo_prep_pos') : $ficha->tipo_prep_pos) ? 'style="display:none !important;"' : '' }}>
                      <label for="desc_prep_pos" class="col-lg-3 col-md-12 text-lg-right">Especialidad / Profesor:</label>
                      <div class="col-lg-9 col-md-12">
                         <input class="form-control text-uppercase" type="text" name="desc_prep_pos" id="desc_prep_pos" value="{{ $new ? old('desc_prep_pos') : $ficha->desc_prep_pos }}" autocomplete="nope">
@@ -208,7 +208,7 @@
                   <div class="form-group row">
                      <label for="tipo_prep_pos" class="col-lg-3 col-md-12 text-lg-right">Nivel de Estudio:</label>
                      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                        <select  class="custom-select" name="nive_estu_adm" id="tipo_gra_esc" data-live-search="true" required autocomplete="nope">
+                        <select  class="custom-select" name="nive_estu_adm" id="tipo_gra_esc" required autocomplete="nope">
                            <option value="">Seleccionar...</option>
                            <option value="P" {{ 'P'==($new ? old('nive_estu_adm') : $ficha->nive_estu_adm) ? 'selected' : '' }}>
                               PRIMARIA
