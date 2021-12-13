@@ -234,7 +234,7 @@
                         </div>
                      </div>
                </div>
-            {{ @endif }}
+             @endif 
                   <!-- 2021 -->
                   <!-- <div class="form-group row">
                      <label for="flag_corr_pos" class="col-lg-3 col-md-12 text-lg-right">&#191;Requiere correpetidor&#63;:</label>
