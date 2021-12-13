@@ -184,6 +184,7 @@
                      <label for="desc_prep_pos" class="col-lg-3 col-md-12 text-lg-right">Especialidad / Profesor:</label>
                      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-12">
                         <select  class="selectpicker form-control" name="codi_espe_adm" id="codi_espe_cex" data-live-search="true" autocomplete="nope">
+                           <option value="">Seleccionar...</option>
                            @foreach ($especialidades as $k => $espe)
                               <option value="{{ $espe->codi_espe_esp }}" {{ $espe->codi_espe_esp==($new ? old('codi_espe_adm') : $ficha->codi_espe_adm) ? 'selected' : '' }} >{{ $espe->desc_espe_esp }}</option>
                            @endforeach
@@ -191,6 +192,7 @@
                      </div>
                      <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-xs-12">
                         <select  class="selectpicker form-control" name="codi_doce_adm" id="codi_pers_per" data-live-search="true" autocomplete="nope">
+                           <option value="">Seleccionar...</option>
                            @foreach ($docentes as $k => $doc)
                               <option value="{{ $doc->codi_pers_per}}" {{ $doc->codi_pers_per==($new ? old('codi_doce_adm') : $ficha->codi_doce_adm) ? 'selected' : '' }} >{{ $doc->nomb_comp_per }}</option>
                            @endforeach
@@ -224,6 +226,7 @@
                         <label for="telf_celu_per" class="col-lg-6 col-md-12 text-lg-right">Grado:</label>
                         <div class="col-lg-6 col-md-12">
                            <select id="seleccione_dis" name="grad_estu_adm" class="form-control">
+                              <option value="">Seleccionar...</option>
                               <option class="disc" value="1" {{ '1'==($new ? old('grad_estu_adm') : $ficha->grad_estu_adm) ? 'selected' : '' }} >PRIMERO</option>
                               <option class="disc" value="2" {{ '2'==($new ? old('grad_estu_adm') : $ficha->grad_estu_adm) ? 'selected' : '' }} >SEGUNDO</option>
                               <option class="disc" value="3" {{ '3'==($new ? old('grad_estu_adm') : $ficha->grad_estu_adm) ? 'selected' : '' }} >TERCERO</option>
@@ -383,6 +386,7 @@
                      <label for="apel_nomb_apd" class="col-lg-3 col-md-12 text-lg-right">Seleccione Discapacidad</label>
                      <div class="col-lg-9 col-md-12">
                         <select id="seleccione_dis" name="disc_soli_adm" class="form-control">
+                           <option value="">Seleccionar...</option>
                            <option class="disc" value="VISUAL" {{ 'VISUAL'==($new?old('disc_soli_adm'):$ficha->disc_soli_adm)?'selected':'' }} >VISUAL</option>
                            <option class="disc" value="AUTISTA" {{ 'AUTISTA'==($new?old('disc_soli_adm'):$ficha->disc_soli_adm)?'selected':'' }}>AUTISTA</option>
                            <option class="disc" value="AUDITIVA" {{ 'AUDITIVA'==($new?old('disc_soli_adm'):$ficha->disc_soli_adm)?'selected':'' }}>AUDITIVA</option>
