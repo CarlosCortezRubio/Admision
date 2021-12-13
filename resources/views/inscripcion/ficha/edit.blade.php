@@ -383,9 +383,9 @@
                      <label for="apel_nomb_apd" class="col-lg-3 col-md-12 text-lg-right">Seleccione Discapacidad</label>
                      <div class="col-lg-9 col-md-12">
                         <select id="seleccione_dis" name="disc_soli_adm" class="form-control">
-                           <option class="disc" value="VIDENTE" {{ 'VIDENTE'==($new?old('disc_soli_adm'):$ficha->disc_soli_adm)?'selected':'' }} >VISUAL</option>
+                           <option class="disc" value="VISUAL" {{ 'VISUAL'==($new?old('disc_soli_adm'):$ficha->disc_soli_adm)?'selected':'' }} >VISUAL</option>
                            <option class="disc" value="AUTISTA" {{ 'AUTISTA'==($new?old('disc_soli_adm'):$ficha->disc_soli_adm)?'selected':'' }}>AUTISTA</option>
-                           <option class="disc" value="AUTISTA" {{ 'AUTISTA'==($new?old('disc_soli_adm'):$ficha->disc_soli_adm)?'selected':'' }}>AUDITIVA</option>
+                           <option class="disc" value="AUDITIVA" {{ 'AUDITIVA'==($new?old('disc_soli_adm'):$ficha->disc_soli_adm)?'selected':'' }}>AUDITIVA</option>
                            <option class="disc" id="v_otros" value="OTROS" {{ 'OTROS'==($new?old('disc_soli_adm'):$ficha->disc_soli_adm)?'selected':'' }}>OTROS</option>
                         </select>
                      </div>
