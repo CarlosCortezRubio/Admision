@@ -192,7 +192,7 @@
                      <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-xs-12">
                         <select  class="selectpicker form-control" name="codi_doce_adm" id="codi_pers_per" data-live-search="true" autocomplete="nope">
                            @foreach ($docentes as $k => $doc)
-                              <option value="{{ $doc->codi_pers_per }}" {{ $espe->codi_pers_per==($new ? old('codi_doce_adm') : $ficha->codi_doce_adm) ? 'selected' : '' }} >{{ $doc->nomb_comp_per }}</option>
+                              <option value="{{ $doc->codi_pers_per --- $ficha->codi_doce_adm }}" {{ $espe->codi_pers_per==($new ? old('codi_doce_adm') : $ficha->codi_doce_adm) ? 'selected' : '' }} >{{ $doc->nomb_comp_per }}</option>
                            @endforeach
                         </select>
                      </div>
