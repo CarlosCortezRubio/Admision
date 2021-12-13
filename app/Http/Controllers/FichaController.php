@@ -167,6 +167,10 @@ class FichaController extends Controller
          $ficha->nume_docu_apd = $request->get('nume_docu_apd');
          $ficha->telf_fijo_apd = $request->get('telf_fijo_apd');
          $ficha->tecn_post_pos = $request->get('tecn_post_pos');
+         $ficha->codi_doce_adm = $request->get('codi_doce_adm');
+         $ficha->codi_espe_adm = $request->get('codi_espe_adm');
+         $ficha->nive_estu_adm = $request->get('nive_estu_adm');  
+         $ficha->grad_estu_adm = $request->get('grad_estu_adm');
          $ficha->esta_post_pos = $request->get('submit') == 'E' ? 'E' : 'R';
 
          if (Input::hasFile('foto_post_per')){
