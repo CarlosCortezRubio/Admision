@@ -23,6 +23,11 @@ class ReporteController extends Controller
          $id = $request->get('codi_post_pos');
 
          $postulacion = DB::table('ad_postulacion AS a')
+                  ////////////////////////////////////////////////////////////
+                  ->join('bdsig.persona AS p', 'a.codi_doce_adm', 'p.codi_pers_per')
+                  ->join('bdsig.ttablas_det AS ed', 'a.codi_espe_adm', 'ed.codi_tabl_det')
+
+                  ////////////////////////////////////////////////////////////
                   ->join('bdsig.ttablas_det AS b', 'b.codi_tabl_det', 'a.codi_espe_esp')
                   ->join('bdsig.ttablas_det AS c', 'c.codi_tabl_det', 'a.codi_secc_sec')
                   ->join('bdsig.ttablas_det AS d', 'd.codi_tabl_det', 'a.codi_pais_per')
