@@ -122,7 +122,7 @@
 	</tr>
 	<tr>
 		<td class="td-right">Nº Expediente:</td>
-		<td>{{ $postulacion->nume_expe_exp }}</td>
+		<td>{{-- $postulacion->nume_expe_exp --}}</td>
 	</tr>
 	<tr>
 		<td class="td-right">Lugar dónde se preparó:</td>
