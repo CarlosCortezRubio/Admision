@@ -101,11 +101,11 @@
 		
 		<tr>
 			<td class="td-right">Nivel de Estudio:</td>
-			<td colspan="3">@if($postulacion->nive_estu_adm=='P') Primaria @elseif($postulacion->nive_estu_adm=='S') Secundaria @endif  </td>
+			<td colspan="3"> @if($postulacion->nive_estu_adm=='P') Primaria @elseif($postulacion->nive_estu_adm=='S') Secundaria @endif  </td>
 		</tr>
 		<tr>
 			<td class="td-right">Grado de Estudio:</td>
-			<td colspan="3">@switch($postulacion->grad_estu_adm)
+			<td colspan="3"> @switch($postulacion->grad_estu_adm)
 								@case(1)	Primero	@break 
 								@case(2)	Segundo @break 
 								@case(3)	Tercero	@break 
@@ -113,8 +113,7 @@
 								@case(5)	Quinto @break
 								@case(6)	Sexto @break
 							@endswitch
-			Grado 
-		</td>
+			Grado </td>
 		</tr>
 		@if ($postulacion->edad_calc_pos < 18)
 			<tr>
