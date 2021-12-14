@@ -23,7 +23,7 @@
 				<td class="td-right">Nº Expediente:</td>
 				<td rowspan="3"></td>
 				<td>
-				{{	{{ $postulacion->nume_expe_exp }} }}
+					{{ $postulacion->nume_expe_exp }} 
 				</td>
 		</tr>
 		<tr>
