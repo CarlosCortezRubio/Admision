@@ -116,7 +116,7 @@
 			<tr>
 				<td class="td-right">Grado de Estudio:</td>
 				<td colspan="3">
-					@switch($type)
+					@switch($postulacion->grad_estu_adm)
 					@case(1)
 						Primero
 						@break
