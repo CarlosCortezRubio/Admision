@@ -87,10 +87,18 @@
 				<td class="td-right">Lugar dónde se preparó:</td>
 				<td colspan="3">{{ $postulacion->tipo_prep_pos == 'C' ? 'Cursos de extensión' : ($postulacion->tipo_prep_pos == 'A' ? 'Academia' : 'Otro') }}</td>
 		</tr>
+		@if ($postulacion->tipo_prep_pos == 'C')
 		<tr>
-				<td class="td-right">Especialidad / profesor:</td>
-				<td colspan="3">{{ $postulacion->desc_prep_pos }}</td>
+			<td class="td-right">Especialidad / profesor:</td>
+			<td colspan="3">{{ $postulacion->especialidad_estudio.' / '.$postulacion->profesor }}</td>
 		</tr>
+		@else
+		<tr>
+			<td class="td-right">Especialidad / profesor:</td>
+			<td colspan="3">{{ $postulacion->desc_prep_pos }}</td>
+		</tr>
+		@endif
+		
 		<tr>
 			<td class="td-right">Nivel de Estudio:</td>
 			<td colspan="3">@if($postulacion->nive_estu_adm=='P') Primaria @elseif($postulacion->nive_estu_adm=='S') Secundaria @endif  </td>

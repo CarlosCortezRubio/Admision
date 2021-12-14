@@ -43,8 +43,10 @@ class ReporteController extends Controller
                           'c.desc_tabl_det AS seccion', 
                           'd.desc_tabl_det AS pais', 
                           'e.nume_proc_adm AS proceso', 
-                          't.abre_tabl_det AS abre_tipo_doc'
-                          ,DB::raw("DECODE(a.codi_secc_sec, '05001', 'S', '05002', 'P', 'E')||substr(e.nume_proc_adm, 3)||trim(to_char(a.nume_expe_pos, '0000')) AS nume_expe_exp")
+                          't.abre_tabl_det AS abre_tipo_doc',
+                          'ed.desc_tabl_det AS especialidad_estudio', 
+                          'p.nomb_comp_per AS profesor', 
+                          DB::raw("DECODE(a.codi_secc_sec, '05001', 'S', '05002', 'P', 'E')||substr(e.nume_proc_adm, 3)||trim(to_char(a.nume_expe_pos, '0000')) AS nume_expe_exp")
                           )
                   ->first();
 
