@@ -206,7 +206,7 @@
                         <input class="form-control text-uppercase" type="text" name="desc_prep_pos" id="desc_prep_pos" value="{{ $new ? old('desc_prep_pos') : $ficha->desc_prep_pos }}" autocomplete="nope">
                      </div>
                   </div>
-           @if(isset($ficha)||$ficha->codi_secc_sec!='05001') 
+           @if(isset($ficha) && $ficha->codi_secc_sec!='05001') 
                <div class="form-group row">
                   <label for="tipo_prep_pos" class="col-lg-3 col-md-12 text-lg-right">Nivel de Estudio:</label>
                   <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
