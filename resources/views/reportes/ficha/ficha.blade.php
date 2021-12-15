@@ -90,7 +90,7 @@
 		<tr>
 				<td class="td-right">Especialidad / profesor:</td>
 		@if ($postulacion->tipo_prep_pos == 'C')
-				<td colspan="3">{{ $postulacion->especialidad_estudio.' / '.$postulacion->profesor }}</td>
+				<td colspan="3">{{ $especialidad_estudio.' / '.$profesor }}</td>
 		@else
 				<td colspan="3">{{ $postulacion->desc_prep_pos }}</td>
 		@endif

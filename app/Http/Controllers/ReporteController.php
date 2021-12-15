@@ -23,11 +23,6 @@ class ReporteController extends Controller
          $id = $request->get('codi_post_pos');
 
          $postulacion = DB::table('ad_postulacion AS a')
-                  ////////////////////////////////////////////////////////////
-                  ->join('bdsig.persona AS p', 'a.codi_doce_adm', 'p.codi_pers_per')
-                  ->join('bdsig.ttablas_det AS ed', 'a.codi_espe_adm', 'ed.codi_tabl_det')
-
-                  ////////////////////////////////////////////////////////////
                   ->join('bdsig.ttablas_det AS b', 'b.codi_tabl_det', 'a.codi_espe_esp')
                   ->join('bdsig.ttablas_det AS c', 'c.codi_tabl_det', 'a.codi_secc_sec')
                   ->join('bdsig.ttablas_det AS d', 'd.codi_tabl_det', 'a.codi_pais_per')
@@ -44,12 +39,15 @@ class ReporteController extends Controller
                           'd.desc_tabl_det AS pais', 
                           'e.nume_proc_adm AS proceso', 
                           't.abre_tabl_det AS abre_tipo_doc',
-                          'ed.desc_tabl_det AS especialidad_estudio', 
-                          'p.nomb_comp_per AS profesor', 
                           DB::raw("DECODE(a.codi_secc_sec, '05001', 'S', '05002', 'P', 'E')||substr(e.nume_proc_adm, 3)||trim(to_char(a.nume_expe_pos, '0000')) AS nume_expe_exp")
                           )
                   ->first();
-
+         $profesor='';
+         $especialidad_estudio='';
+         if($postulacion->tipo_prep_pos=='C'){
+            $especialidad_estudio=DB::table('bdsig.ttablas_det')->where('codi_espe_adm',$postulacion->codi_espe_adm)->get()->desc_tabl_det;
+            $profesor=DB::table('bdsig.persona')->where('codi_pers_per',$postulacion->codi_doce_adm)->get()->nomb_comp_per;
+         }
          $repertorio = DB::table('ad_repertorio')
                  ->where('codi_post_pos', '=', $id)
                  ->get();
@@ -57,7 +55,6 @@ class ReporteController extends Controller
          $trabajos = DB::table('ad_trabajo')
                  ->where('codi_post_pos', '=', $id)
                  ->get();
-        return $postulacion;
         $ubigeoDom = $this->getUbigeo($postulacion->ubig_domi_per);
 
         $pdf = PDF::loadView('reportes.ficha.ficha',
@@ -65,6 +62,8 @@ class ReporteController extends Controller
           "repertorio"  => $repertorio,
           "trabajos"    => $trabajos,
           "ubigeoDom"   => $ubigeoDom,
+          "especialidad_estudio"=> $especialidad_estudio,
+          "profesor" => $profesor
         ]);
 
   			$filename='fichainscripcion.pdf';
