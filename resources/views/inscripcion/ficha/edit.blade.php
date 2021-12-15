@@ -206,7 +206,7 @@
                      <label for="desc_prep_pos" class="col-lg-3 col-md-12 text-lg-right">Docente de Lenguaje Musical:</label>
                      <div class="col-lg-9 col-md-12">
                         <select  class="selectpicker form-control" name="leng_musi_per" id="leng_musi_per" data-live-search="true" autocomplete="nope"
-                        {{ 'C'==($new ? old('tipo_prep_pos') : $ficha->tipo_prep_pos) ? "required" : '' }}>
+                        {{-- 'C'==($new?old('tipo_prep_pos'):$ficha->tipo_prep_pos)?"required":'' --}}>
                            <option value="">Seleccionar...</option>
                            @foreach ($docentes as $k => $doc)
                               <option value="{{ $doc->codi_pers_per}}" {{ $doc->codi_pers_per==($new ? old('leng_musi_per') : $ficha->leng_musi_per) ? 'selected' : '' }} >{{ $doc->nomb_comp_per }}</option>
