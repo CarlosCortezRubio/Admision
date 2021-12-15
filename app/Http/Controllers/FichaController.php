@@ -104,7 +104,9 @@ class FichaController extends Controller
                            ->orderBy('desc_espe_esp', 'asc')
                            ->get();
          
-         $docentes=DB::table('bdsig.persona')->where('flag_trab_per','S')->where('tipo_trab_per','03001')->get();
+         $docentes=DB::table('bdsig.persona')->where('flag_trab_per','S')->where('tipo_trab_per','03001')
+                           ->orderBy('nomb_comp_per', 'asc')
+                           ->get();
          $paises = $this->getTables('15', '%', 'S');
          $ubigeo = $this->getUbigeo('%');
          /////////////////////////
