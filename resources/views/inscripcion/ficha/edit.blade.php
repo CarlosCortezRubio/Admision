@@ -181,9 +181,10 @@
                   </div>
 
                   <div class="form-group row" id="docentes1div" {{ 'C'!=($new ? old('tipo_prep_pos') : $ficha->tipo_prep_pos) ? "style=display:none" : '' }} >
-                     <label for="desc_prep_pos" class="col-lg-3 col-md-12 text-lg-right">Especialidad / Profesor:</label>
+                     <label for="codi_espe_adm" class="col-lg-3 col-md-12 text-lg-right">Especialidad / Profesor:</label>
                      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <select  class="selectpicker form-control" name="codi_espe_adm" id="codi_espe_cex" data-live-search="true" autocomplete="nope">
+                        <select  class="selectpicker form-control" name="codi_espe_adm" id="codi_espe_cex" data-live-search="true" autocomplete="nope"
+                        {{ 'C'==($new ? old('tipo_prep_pos') : $ficha->tipo_prep_pos) ? "required" : '' }}>
                            <option value="">Seleccionar...</option>
                            @foreach ($especialidades as $k => $espe)
                               <option value="{{ $espe->codi_espe_esp }}" {{ $espe->codi_espe_esp==($new ? old('codi_espe_adm') : $ficha->codi_espe_adm) ? 'selected' : '' }} >{{ $espe->desc_espe_esp }}</option>
@@ -191,7 +192,8 @@
                         </select>
                      </div>
                      <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-xs-12">
-                        <select  class="selectpicker form-control" name="codi_doce_adm" id="codi_pers_per" data-live-search="true" autocomplete="nope">
+                        <select  class="selectpicker form-control" name="codi_doce_adm" id="codi_pers_per" data-live-search="true" autocomplete="nope"
+                        {{ 'C'==($new ? old('tipo_prep_pos') : $ficha->tipo_prep_pos) ? "required" : '' }}>
                            <option value="">Seleccionar...</option>
                            @foreach ($docentes as $k => $doc)
                               <option value="{{ $doc->codi_pers_per}}" {{ $doc->codi_pers_per==($new ? old('codi_doce_adm') : $ficha->codi_doce_adm) ? 'selected' : '' }} >{{ $doc->nomb_comp_per }}</option>
@@ -200,10 +202,11 @@
                      </div>
                   </div>
 
-                  <div class="form-group row" id="docentes2div" {{ 'A'!=($new ? old('tipo_prep_pos') : $ficha->tipo_prep_pos) ?  "style=display:none" : '' }}>
+                  <div class="form-group row" id="docentes2div" {{ 'C'==($new ? old('tipo_prep_pos') : $ficha->tipo_prep_pos) ?  "style=display:none" : '' }} {{ null==($new ? old('tipo_prep_pos') : $ficha->tipo_prep_pos) ?  "style=display:none" : '' }}>
                      <label for="desc_prep_pos" class="col-lg-3 col-md-12 text-lg-right">Especialidad / Profesor:</label>
                      <div class="col-lg-9 col-md-12">
-                        <input class="form-control text-uppercase" type="text" name="desc_prep_pos" id="desc_prep_pos" value="{{ $new ? old('desc_prep_pos') : $ficha->desc_prep_pos }}" autocomplete="nope">
+                        <input class="form-control text-uppercase" type="text" name="desc_prep_pos" id="desc_prep_pos" value="{{ $new ? old('desc_prep_pos') : $ficha->desc_prep_pos }}" autocomplete="nope"
+                        {{ 'A'==($new ? old('tipo_prep_pos') : $ficha->tipo_prep_pos) ? "required" : '' }}{{ 'O'==($new ? old('tipo_prep_pos') : $ficha->tipo_prep_pos) ? "required" : '' }}>
                      </div>
                   </div>
            @if($codi_secc!='05001') 
@@ -385,7 +388,7 @@
                   <div id="selec_disc" class="form-group row" {{'S'!=($new?old('flag_disc_adm'):$ficha->flag_disc_adm)?"style=display:none":'' }}>
                      <label for="apel_nomb_apd" class="col-lg-3 col-md-12 text-lg-right">Seleccione Discapacidad</label>
                      <div class="col-lg-9 col-md-12">
-                        <select id="seleccione_dis" name="disc_soli_adm" class="form-control">
+                        <select id="seleccione_dis" name="disc_soli_adm" {{'S'==($new?old('flag_disc_adm'):$ficha->flag_disc_adm)?"required":'' }} class="form-control">
                            <option value="">Seleccionar...</option>
                            <option class="disc" value="VISUAL" {{ 'VISUAL'==($new?old('disc_soli_adm'):$ficha->disc_soli_adm)?'selected':'' }} >VISUAL</option>
                            <option class="disc" value="AUTISTA" {{ 'AUTISTA'==($new?old('disc_soli_adm'):$ficha->disc_soli_adm)?'selected':'' }}>AUTISTA</option>
@@ -471,11 +474,7 @@
             $("#descripcion").hide();
          
          $("#si").click(function(){          
-            if($("#seleccione_dis").val()=="OTROS"){
-               $("#descripcion").show();
-            } else{
-               $("#descripcion").hide();
-            }
+            $("#seleccione_dis").prop("required", true);
             $("#selec_disc").show(); 
             });
 
@@ -488,6 +487,7 @@
             });
 
             $("#no").click(function(){ 
+               $("#seleccione_dis").prop("required", false);
             $("#selec_disc").hide(); 
          }); 
          //------------------------------------------------------------------------------
@@ -500,12 +500,21 @@
             if($("#tipo_prep_pos").val()=="C"){
                $("#docentes2div").hide();
                $("#docentes1div").show();
+               $("#desc_prep_pos").prop("required", false);
+               $("#codi_espe_cex").prop("required", true);
+               $("#codi_pers_per").prop("required", true);
             } else if($("#tipo_prep_pos").val()=="A" || $("#tipo_prep_pos").val()=="O"){
                $("#docentes1div").hide();
                $("#docentes2div").show();
+               $("#desc_prep_pos").prop("required", true);
+               $("#codi_espe_cex").prop("required", false);
+               $("#codi_pers_per").prop("required", false);
             }else{
                $("#docentes2div").hide();
                $("#docentes1div").hide();
+               $("#desc_prep_pos").prop("required", false);
+               $("#codi_espe_cex").prop("required", false);
+               $("#codi_pers_per").prop("required", false);
             }
             
          });
@@ -520,6 +529,7 @@
                $("#grad").show();
                $("#gra-sex").hide();
             } else if($("#tipo_gra_esc").val()=="P"){
+               
                $("#grad").show();
                $("#gra-sex").show();
             } else{
