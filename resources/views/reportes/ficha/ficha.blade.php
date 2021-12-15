@@ -131,8 +131,8 @@
 			
 		@endif
 		<tr>
-			<td class="td-right">Nivel de Estudio:</td>
-			<td colspan="3"> @if($postulacion->nive_estu_adm=='P') Primaria @elseif($postulacion->nive_estu_adm=='S') Secundaria @endif  </td>
+			<td class="td-right">Lugar dónde se preparó:</td>
+			<td colspan="3">{{ $postulacion->tipo_prep_pos == 'C' ? 'Cursos de extensión' : ($postulacion->tipo_prep_pos == 'A' ? 'Academia' : 'Otro') }}</td>
 		</tr>
 </table>
 <!-- 2021 -->
