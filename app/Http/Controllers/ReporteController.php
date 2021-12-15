@@ -57,7 +57,7 @@ class ReporteController extends Controller
          $trabajos = DB::table('ad_trabajo')
                  ->where('codi_post_pos', '=', $id)
                  ->get();
-
+        return $postulacion;
         $ubigeoDom = $this->getUbigeo($postulacion->ubig_domi_per);
 
         $pdf = PDF::loadView('reportes.ficha.ficha',
