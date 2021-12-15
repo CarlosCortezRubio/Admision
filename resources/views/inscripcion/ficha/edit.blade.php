@@ -202,6 +202,19 @@
                      </div>
                   </div>
 
+                  <div class="form-group row" id="docentes1div2" {{ 'C'==($new ? old('tipo_prep_pos') : $ficha->tipo_prep_pos) ?  "style=display:none" : '' }} {{ null==($new ? old('tipo_prep_pos') : $ficha->tipo_prep_pos) ?  "style=display:none" : '' }}>
+                     <label for="desc_prep_pos" class="col-lg-3 col-md-12 text-lg-right">Docente de Lenguaje Musical:</label>
+                     <div class="col-lg-9 col-md-12">
+                        <select  class="selectpicker form-control" name="leng_musi_per" id="leng_musi_per" data-live-search="true" autocomplete="nope"
+                        {{ 'C'==($new ? old('tipo_prep_pos') : $ficha->tipo_prep_pos) ? "required" : '' }}>
+                           <option value="">Seleccionar...</option>
+                           @foreach ($docentes as $k => $doc)
+                              <option value="{{ $doc->codi_pers_per}}" {{ $doc->codi_pers_per==($new ? old('leng_musi_per') : $ficha->leng_musi_per) ? 'selected' : '' }} >{{ $doc->nomb_comp_per }}</option>
+                           @endforeach
+                        </select>
+                     </div>
+                  </div>
+
                   <div class="form-group row" id="docentes2div" {{ 'C'==($new ? old('tipo_prep_pos') : $ficha->tipo_prep_pos) ?  "style=display:none" : '' }} {{ null==($new ? old('tipo_prep_pos') : $ficha->tipo_prep_pos) ?  "style=display:none" : '' }}>
                      <label for="desc_prep_pos" class="col-lg-3 col-md-12 text-lg-right">Especialidad / Profesor:</label>
                      <div class="col-lg-9 col-md-12">
@@ -500,11 +513,13 @@
             if($("#tipo_prep_pos").val()=="C"){
                $("#docentes2div").hide();
                $("#docentes1div").show();
+               $("#docentes1div2").show();
                $("#desc_prep_pos").prop("required", false);
                $("#codi_espe_cex").prop("required", true);
                $("#codi_pers_per").prop("required", true);
             } else if($("#tipo_prep_pos").val()=="A" || $("#tipo_prep_pos").val()=="O"){
                $("#docentes1div").hide();
+               $("#docentes1div2").hide();
                $("#docentes2div").show();
                $("#desc_prep_pos").prop("required", true);
                $("#codi_espe_cex").prop("required", false);
@@ -512,6 +527,7 @@
             }else{
                $("#docentes2div").hide();
                $("#docentes1div").hide();
+               $("#docentes1div2").hide();
                $("#desc_prep_pos").prop("required", false);
                $("#codi_espe_cex").prop("required", false);
                $("#codi_pers_per").prop("required", false);
