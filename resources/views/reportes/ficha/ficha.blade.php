@@ -130,6 +130,10 @@
 			</tr>
 			
 		@endif
+		<tr>
+			<td class="td-right">Nivel de Estudio:</td>
+			<td colspan="3"> @if($postulacion->nive_estu_adm=='P') Primaria @elseif($postulacion->nive_estu_adm=='S') Secundaria @endif  </td>
+		</tr>
 </table>
 <!-- 2021 -->
 
