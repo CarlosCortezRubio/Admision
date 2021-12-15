@@ -39,7 +39,7 @@
 		</tr>
 		<tr>
 				<td class="td-right">Apellido paterno:</td>
-				<td rowspan="13"></td>
+				<td rowspan="15"></td>
 				<td colspan="3">{{ $postulacion->apel_pate_per }}</td>
 		</tr>
 		<tr>
@@ -130,10 +130,6 @@
 			</tr>
 			
 		@endif
-		<tr>
-			<td class="td-right">Lugar dónde se preparó:</td>
-			<td colspan="3">{{ $postulacion->tipo_prep_pos == 'C' ? 'Cursos de extensión' : ($postulacion->tipo_prep_pos == 'A' ? 'Academia' : 'Otro') }}</td>
-		</tr>
 </table>
 <!-- 2021 -->
 
