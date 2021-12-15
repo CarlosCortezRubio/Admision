@@ -39,7 +39,7 @@
 		</tr>
 		<tr>
 				<td class="td-right">Apellido paterno:</td>
-				<td rowspan="15"></td>
+				<td rowspan="16"></td>
 				<td colspan="3">{{ $postulacion->apel_pate_per }}</td>
 		</tr>
 		<tr>
@@ -111,6 +111,12 @@
 								@endswitch
 				Grado </td>
 		</tr>
+		@if ($postulacion->flag_disc_adm=='S')
+			<tr>
+				<td class="td-right">Discapacidad:</td>
+				<td colspan="3">{{ $postulacion->disc_soli_adm }}</td>
+			</tr>
+		@endif
 		@if ($postulacion->edad_calc_pos < 18)
 			<tr>
 					<td colspan="5"><h4>Datos del Padre o Apoderado:</h4></td>

@@ -390,7 +390,7 @@
                            <option class="disc" value="VISUAL" {{ 'VISUAL'==($new?old('disc_soli_adm'):$ficha->disc_soli_adm)?'selected':'' }} >VISUAL</option>
                            <option class="disc" value="AUTISTA" {{ 'AUTISTA'==($new?old('disc_soli_adm'):$ficha->disc_soli_adm)?'selected':'' }}>AUTISTA</option>
                            <option class="disc" value="AUDITIVA" {{ 'AUDITIVA'==($new?old('disc_soli_adm'):$ficha->disc_soli_adm)?'selected':'' }}>AUDITIVA</option>
-                           <option class="disc" id="v_otros" value="OTROS" {{ 'OTROS'==($new?old('disc_soli_adm'):$ficha->disc_soli_adm)?'selected':'' }}>OTROS</option>
+                           <option class="disc" value="OTROS" {{ 'OTROS'==($new?old('disc_soli_adm'):$ficha->disc_soli_adm)?'selected':'' }}>OTROS</option>
                         </select>
                      </div>
                   </div>
