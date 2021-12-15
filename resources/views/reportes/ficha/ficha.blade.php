@@ -95,6 +95,7 @@
 				<td colspan="3">{{ $postulacion->desc_prep_pos }}</td>
 		@endif
 		</tr>
+		@if ($postulacion->codi_secc_sec=='05001')
 		<tr>
 				<td class="td-right">Nivel de Estudio:</td>
 				<td colspan="3"> @if($postulacion->nive_estu_adm=='P') Primaria @elseif($postulacion->nive_estu_adm=='S') Secundaria @endif  </td>
@@ -111,6 +112,7 @@
 								@endswitch
 				Grado </td>
 		</tr>
+		@endif
 		@if ($postulacion->flag_disc_adm=='S')
 			<tr>
 				<td class="td-right">Discapacidad:</td>
