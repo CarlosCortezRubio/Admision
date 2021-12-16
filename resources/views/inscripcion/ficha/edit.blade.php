@@ -202,7 +202,18 @@
                      </div>
                   </div>
 
-                  
+                  <div class="form-group row" id="docentes1div2" {{ 'C'==($new ? old('tipo_prep_pos') : $ficha->tipo_prep_pos) ?  "style=display:none" : '' }} {{ null==($new ? old('tipo_prep_pos') : $ficha->tipo_prep_pos) ?  "style=display:none" : '' }}>
+                     <label for="desc_prep_pos" class="col-lg-3 col-md-12 text-lg-right">Docente de Lenguaje Musical:</label>
+                     <div class="col-lg-9 col-md-12">
+                        <select  class="selectpicker form-control" name="leng_musi_per" id="leng_musi_per" data-live-search="true" autocomplete="nope"
+                        {{-- 'C'==($new?old('tipo_prep_pos'):$ficha->tipo_prep_pos)?"required":'' --}}>
+                           <option value="">Seleccionar...</option>
+                           @foreach ($docentes as $k => $doc)
+                              <option value="{{ $doc->codi_pers_per}}" {{ $doc->codi_pers_per==($new ? old('leng_musi_per') : $ficha->leng_musi_per) ? 'selected' : '' }} >{{ $doc->nomb_comp_per }}</option>
+                           @endforeach
+                        </select>
+                     </div>
+                  </div>
 
                   <div class="form-group row" id="docentes2div" {{ 'C'==($new ? old('tipo_prep_pos') : $ficha->tipo_prep_pos) ?  "style=display:none" : '' }} {{ null==($new ? old('tipo_prep_pos') : $ficha->tipo_prep_pos) ?  "style=display:none" : '' }}>
                      <label for="desc_prep_pos" class="col-lg-3 col-md-12 text-lg-right">Especialidad / Profesor:</label>
@@ -393,7 +404,7 @@
                         <select id="seleccione_dis" name="disc_soli_adm" {{'S'==($new?old('flag_disc_adm'):$ficha->flag_disc_adm)?"required":'' }} class="form-control">
                            <option value="">Seleccionar...</option>
                            <option class="disc" value="VISUAL" {{ 'VISUAL'==($new?old('disc_soli_adm'):$ficha->disc_soli_adm)?'selected':'' }} >VISUAL</option>
-                           <option class="disc" value="AUTISTA" {{ 'AUTISTA'==($new?old('disc_soli_adm'):$ficha->disc_soli_adm)?'selected':'' }}>AUTISTA</option>
+                           <option class="disc" value="T.E.A" {{ 'T.E.A'==($new?old('disc_soli_adm'):$ficha->disc_soli_adm)?'selected':'' }}>AUTISTA</option>
                            <option class="disc" value="AUDITIVA" {{ 'AUDITIVA'==($new?old('disc_soli_adm'):$ficha->disc_soli_adm)?'selected':'' }}>AUDITIVA</option>
                            <option class="disc" value="OTROS" {{ 'OTROS'==($new?old('disc_soli_adm'):$ficha->disc_soli_adm)?'selected':'' }}>OTROS</option>
                         </select>
