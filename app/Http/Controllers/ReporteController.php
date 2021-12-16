@@ -45,7 +45,7 @@ class ReporteController extends Controller
          $profesor='';
          $especialidad_estudio='';
          if($postulacion->tipo_prep_pos=='C'){
-            $especialidad_estudio=DB::table('bdsig.ttablas_det')->where('codi_espe_adm',$postulacion->codi_espe_adm)->get()->desc_tabl_det;
+            $especialidad_estudio=DB::table('bdsig.ttablas_det')->where('codi_tabl_det',$postulacion->codi_espe_adm)->get()->desc_tabl_det;
             $profesor=DB::table('bdsig.persona')->where('codi_pers_per',$postulacion->codi_doce_adm)->get()->nomb_comp_per;
          }
          $repertorio = DB::table('ad_repertorio')
