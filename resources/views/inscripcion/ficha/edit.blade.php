@@ -404,7 +404,7 @@
                         <select id="seleccione_dis" name="disc_soli_adm" {{'S'==($new?old('flag_disc_adm'):$ficha->flag_disc_adm)?"required":'' }} class="form-control">
                            <option value="">Seleccionar...</option>
                            <option class="disc" value="VISUAL" {{ 'VISUAL'==($new?old('disc_soli_adm'):$ficha->disc_soli_adm)?'selected':'' }} >VISUAL</option>
-                           <option class="disc" value="T.E.A" {{ 'T.E.A'==($new?old('disc_soli_adm'):$ficha->disc_soli_adm)?'selected':'' }}>AUTISTA</option>
+                           <option class="disc" value="T.E.A" {{ 'T.E.A'==($new?old('disc_soli_adm'):$ficha->disc_soli_adm)?'selected':'' }}>T.E.A</option>
                            <option class="disc" value="AUDITIVA" {{ 'AUDITIVA'==($new?old('disc_soli_adm'):$ficha->disc_soli_adm)?'selected':'' }}>AUDITIVA</option>
                            <option class="disc" value="OTROS" {{ 'OTROS'==($new?old('disc_soli_adm'):$ficha->disc_soli_adm)?'selected':'' }}>OTROS</option>
                         </select>
