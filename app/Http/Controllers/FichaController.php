@@ -117,7 +117,7 @@ class FichaController extends Controller
                      ->where('nume_docu_sol',Auth::user()->ndocumento)
                      ->select('pe.descripcion',
                                DB::raw('DATE(pe.fecha_resol) AS fecha_resol'),
-                               DB::raw('TIME(pe.fecha_resol) AS hora_resol'),
+                               DB::raw("to_char(current_timestamp, 'HH12:MI:SS') AS hora_resol"),
                                'pe.modalidad',
                                'pe.minutos',
                                'ps.estado')->get();
