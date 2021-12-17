@@ -112,7 +112,11 @@ class FichaController extends Controller
          /////////////////////////
          $horarios=DB::table('admision.adm_postulante as ps')
                      ->join('admision.adm_programacion_examen as pe','pe.id_programacion_examen','ps.id_programacion_examen')
-                     ->where('nume_docu_sol',Auth::user()->ndocumento)->get();
+                     ->join('admision.adm_aula as au','pe.id_aula','au.id_aula')
+                     ->join('admision.adm_examen as ex','pe.id_examen','ex.id_examen')
+                     ->where('nume_docu_sol',Auth::user()->ndocumento)
+                     ->select('pe.descripcion',"pe.fecha_resol::timestamp::date as fecha_resol",'')
+                     ->get();
          
          /////////////////////////
          //2021 No envia trabajos ni repertorio a vista inscripcion.ficha.index
