@@ -115,7 +115,7 @@ class FichaController extends Controller
                      ->join('admision.adm_aula as au','pe.id_aula','au.id_aula')
                      ->join('admision.adm_examen as ex','pe.id_examen','ex.id_examen')
                      ->where('nume_docu_sol',Auth::user()->ndocumento)
-                     ->select('pe.descripcion',"date(pe.fecha_resol) as fecha_resol",'')
+                     ->select('pe.descripcion',"DATE(pe.fecha_resol) as fecha_resol",'')
                      ->get();
          
          /////////////////////////
