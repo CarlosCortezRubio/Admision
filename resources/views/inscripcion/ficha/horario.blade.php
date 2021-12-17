@@ -49,13 +49,24 @@
                                     <div class="card">
                                         <div class="card-body">
                                             <i class="fa fa-clock-o" aria-hidden="true"> Hora de Inicio:</i>
-                                            <p class="card-text">12:30</p>
+                                            <p class="card-text">{{ $v->hora_resol }}</p>
                                         </div>
                                     </div>
                                     <div class="card">
                                         <div class="card-body">
                                             <i class="fa fa-clock-o" aria-hidden="true"> Estado:</i>
-                                            <p class="card-text">Pendiente</p>
+                                            <p class="card-text">
+                                               @switch($v->estado)
+                                                   @case('P')
+                                                       Pendiente
+                                                       @break
+                                                   @case('R')
+                                                       Resuelto
+                                                       @break
+                                                   @default
+                                                       Estado Indefinido
+                                               @endswitch
+                                            </p>
                                         </div>
                                     </div>
                                 </div>

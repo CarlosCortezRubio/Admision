@@ -117,8 +117,10 @@ class FichaController extends Controller
                      ->where('nume_docu_sol',Auth::user()->ndocumento)
                      ->select('pe.descripcion',
                                DB::raw('DATE(pe.fecha_resol) AS fecha_resol'),
+                               DB::raw('TIME(pe.fecha_resol) AS hora_resol'),
                                'pe.modalidad',
-                               'pe.minutos')->get();
+                               'pe.minutos',
+                               'ps.estado')->get();
          
          /////////////////////////
          //2021 No envia trabajos ni repertorio a vista inscripcion.ficha.index
