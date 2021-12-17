@@ -13,7 +13,7 @@
                 <div class="col card card-primary card-outline elevation-2">
                     <div id='title'>
                         <hr width="100%" size="5" noshade>
-                        <h5 class="centrar-content">Examen de Conocimiento</h5>
+                        <h5 class="centrar-content">{{ $v->descripcion }}</h5>
                         <hr width="100%" size="5" noshade>
                     </div>
                     <div class='container'>
@@ -35,13 +35,13 @@
                                     <div class="card">
                                         <div class="card-body">
                                             <i class="fa fa-laptop" aria-hidden="true"> Modalidad:</i>
-                                            <p class="card-text">Virtual</p>
+                                            <p class="card-text">@if ($v->modalidad=='P') Presencial @elseif($v->modalidad=='V') Virtual @endif </p>
                                         </div>
                                     </div>
                                     <div class="card">
                                         <div class="card-body">
                                             <i class="fa fa-circle-o-notch" aria-hidden="true"> Tiempo de resoluci&oacute;n:</i>
-                                            <p class="card-text">120 min.</p>
+                                            <p class="card-text">{{ $v->minutos }} min.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -50,12 +50,6 @@
                                         <div class="card-body">
                                             <i class="fa fa-clock-o" aria-hidden="true"> Hora de Inicio:</i>
                                             <p class="card-text">12:30</p>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <i class="fa fa-clock-o" aria-hidden="true"> Hora de Fin:</i>
-                                            <p class="card-text">15:30</p>
                                         </div>
                                     </div>
                                     <div class="card">
