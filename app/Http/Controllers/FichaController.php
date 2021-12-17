@@ -116,10 +116,9 @@ class FichaController extends Controller
                      ->join('admision.adm_examen as ex','pe.id_examen','ex.id_examen')
                      ->where('nume_docu_sol',Auth::user()->ndocumento)
                      ->select('pe.descripcion',
-                     DB::raw('DATE(pe.fecha_resol) AS Fecha')
-                     )
-                     
-                     ->get();
+                               DB::raw('DATE(pe.fecha_resol) AS fecha_resol'),
+                               'pe.modalidad',
+                               'pe.minutos')->get();
          
          /////////////////////////
          //2021 No envia trabajos ni repertorio a vista inscripcion.ficha.index
