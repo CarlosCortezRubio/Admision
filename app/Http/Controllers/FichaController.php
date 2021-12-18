@@ -114,13 +114,15 @@ class FichaController extends Controller
                      ->join('admision.adm_programacion_examen as pe','pe.id_programacion_examen','ps.id_programacion_examen')
                      ->join('admision.adm_aula as au','pe.id_aula','au.id_aula')
                      ->join('admision.adm_examen as ex','pe.id_examen','ex.id_examen')
+                     ->join('admision.adm_examen_admision as exd','ex.id_examen','exd.id_examen')
                      ->where('nume_docu_sol',Auth::user()->ndocumento)
                      ->select('pe.descripcion',
                                DB::raw('DATE(pe.fecha_resol) AS fecha_resol'),
                                DB::raw("to_char(pe.fecha_resol, 'HH12:MI:SS') AS hora_resol"),
                                'pe.modalidad',
                                'pe.minutos',
-                               'ps.estado')->get();
+                               'ps.estado',
+                               'exd.flag_jura')->get();
          
          /////////////////////////
          //2021 No envia trabajos ni repertorio a vista inscripcion.ficha.index

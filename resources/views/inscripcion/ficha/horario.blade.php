@@ -72,13 +72,16 @@
                                 </div>
                             </div>
                         </div>
-                        <form>
+                       @if ($v->flag_jura=='N')
+                       <form>
                             <div style="padding-bottom: 20px" class='centrar-content'>
                                 {{-- - "btn btn-success" href="{{ route('BeginExamen') }}">Ingresar</a> --}}
                                 <a type="submit" class="btn btn-success"
                                     href="https://academica360-beta.unm.edu.pe/MOCUNM/PHP/VISTA/Examen.php">Ingresar</a>
                             </div>
                         </form>
+                       @endif
+                        
                     </div>
                 </div>
             @endforeach
