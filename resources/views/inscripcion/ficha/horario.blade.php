@@ -84,6 +84,7 @@
                         
                     </div>
                 </div>
+                <br>
             @endforeach
         @endif
         <div class='col-1'></div>
