@@ -33,11 +33,11 @@ Route::post('inscripcion/solicitud','SolicitudController@store');
 Route::get('inscripcion/pago', 'PagoController@index')->name('pago.index');
 Route::get('/getEspecialidades','PagoController@getEspecialidades')->name('getEspecialidades');
 Route::post('inscripcion/pago/enviarHaciaPlataforma','PagoController@enviarHaciaPlataforma');
+Route::post('/fichaPDF','ReporteController@generatePDF')->name('fichaPDF');
 
 Route::middleware(['auth'])->group(function() {
   Route::get('inscripcion/ficha','FichaController@index')->name('inscription');
   Route::post('inscripcion/ficha','FichaController@store');
-  Route::post('/fichaPDF','ReporteController@generatePDF')->name('fichaPDF');
 });
 
 Route::get('/{slug}', function () {
