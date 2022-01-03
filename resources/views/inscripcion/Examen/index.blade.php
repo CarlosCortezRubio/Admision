@@ -21,12 +21,12 @@
 @section('scripts')
     <script>
         $(document).ready( function() {
-            //var minutos={{ session('minutos') }};
-            //var segundos={{ session('segundos') }};
+            var minutos={{ session('minutos') }};
+            var segundos={{ session('segundos') }};
             window.setTimeout(function() {
                 $.ajax({
                     type: "GET",
-                    url: {{ {{ route('timer') }} }},
+                    url: {{ route('timer') }},
                     data: {'minutos':zfill(minutos,2),'segundos':zfill(segundos,2)}, 
                     success: function(data){
                         if (segundos==0){
