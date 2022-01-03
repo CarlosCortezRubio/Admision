@@ -23,27 +23,30 @@
         $(document).ready( function() {
             var minutos={{ session('minutos') }};
             var segundos={{ session('segundos') }};
-            window.setTimeout(function() {
-                $.ajax({
-                    type: "GET",
-                    url: "{{ route('timer') }}",
-                    data: {'minutos':zfill(minutos,2),'segundos':zfill(segundos,2)}, 
-                    success: function(data){
-                        if (segundos==0){
-                            if (minutos<=0){
-
+            do {
+                window.setTimeout(function() {
+                    $.ajax({
+                        type: "GET",
+                        url: "{{ route('timer') }}",
+                        data: {'minutos':zfill(minutos,2),'segundos':zfill(segundos,2)}, 
+                        success: function(data){
+                            if (segundos==0){
+                                if (minutos<=0){
+    
+                                }else{
+                                    minutos=minutos-1;
+                                    segundos=59;
+                                }
                             }else{
-                                minutos=minutos-1;
-                                segundos=59;
+                                segundos=segundos-1;
                             }
-                        }else{
-                            segundos=segundos-1;
+                            $('#minutos').html(zfill(minutos,2));
+                            $("#segundos").html(zfill(segundos,2));
                         }
-                        $('#minutos').html(zfill(minutos,2));
-                        $("#segundos").html(zfill(segundos,2));
-                    }
-                });
-            }, 1000);
+                    });
+                }, 1000);
+            } while (minutos > 0 && segundos >0);
+            
         });
     </script>
     <script>
