@@ -45,7 +45,8 @@
                         }
                     });
                 }, 1000);
-            } while (minutos > 0 && segundos >0);
+            } while (minutos > 0 && segundos >0)
+            alert('termino');
             
         });
     </script>
