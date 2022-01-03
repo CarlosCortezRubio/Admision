@@ -12,9 +12,9 @@ class ExamenController extends Controller
 {
     public function index(Request $request){
         $examen=DB::table('admision.adm_examen_postulante as ep')
-               // ->join('admision.adm_postulante as ps','ps.id_postulante','ep.id_postulante')
-               // ->join('admision.adm_programacion_examen as pe','pe.id_programacion_examen','ps.id_programacion_examen')
-               // ->join('admision.adm_examen as e','pe.id_examen','e.id_examen')
+                ->join('admision.adm_postulante as ps','ps.id_postulante','ep.id_postulante')
+                ->join('admision.adm_programacion_examen as pe','pe.id_programacion_examen','ps.id_programacion_examen')
+                ->join('admision.adm_examen as e','pe.id_examen','e.id_examen')
                // ->where('ps.nume_docu_sol',Auth::user()->ndocument)
                // ->where('pe.id_examen',$request->id_examen)
                // ->select('e.enlace',
