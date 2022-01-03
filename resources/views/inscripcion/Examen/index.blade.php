@@ -43,7 +43,7 @@
                         $("#segundos").html(zfill(segundos,2));
                     }
                 });
-            }, 10000);
+            }, 1000);
         });
     </script>
     <script>
