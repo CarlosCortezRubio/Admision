@@ -117,13 +117,13 @@ class FichaController extends Controller
                      ->join('admision.adm_examen_admision as exd','ex.id_examen','exd.id_examen')
                      ->where('nume_docu_sol',Auth::user()->ndocumento)
                      ->select('pe.descripcion',
-                               DB::raw('DATE(pe.fecha_resol) AS fecha_resol'),
+                               DB::raw("to_char(pe.fecha_resol, 'yyyy-mm-dd') AS fecha_resol"),
                                DB::raw("to_char(pe.fecha_resol, 'HH12:MI:SS') AS hora_resol"),
+                               DB::raw("to_char(pe.fecha_resol, 'yyyy-mm-dd HH12:MI:SS') AS fecha_comp"),
                                'pe.modalidad',
                                'pe.minutos',
                                'ps.estado',
                                'pe.id_examen',
-                               'pe.fecha_resol as fecha_comp',
                                'ps.nota',
                                'exd.flag_jura')->get();
          
