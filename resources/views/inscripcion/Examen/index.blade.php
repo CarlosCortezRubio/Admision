@@ -34,7 +34,7 @@
                 $.ajax({
                     type: "GET",
                     url: "{{ route('timer') }}",
-                    data: {'minutos':zfill(minutos,2),'segundos':zfill(segundos,2)}, 
+                    data: {'minutos':minutos,'segundos':segundos}, 
                     success: function(data){
                         if (segundos==0){
                             if (minutos<=0){
