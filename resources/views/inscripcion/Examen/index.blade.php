@@ -32,7 +32,7 @@
                         success: function(data){
                             if (segundos==0){
                                 if (minutos<=0){
-    
+
                                 }else{
                                     minutos=minutos-1;
                                     segundos=59;
@@ -47,7 +47,7 @@
                     });
                 }, 1000);
             }
-            
+            timer();
         });
     </script>
     <script>
