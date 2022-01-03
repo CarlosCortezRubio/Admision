@@ -17,10 +17,10 @@ class ExamenController extends Controller
                 ->join('admision.adm_examen as e','pe.id_examen','e.id_examen')
                // ->where('ps.nume_docu_sol',Auth::user()->ndocument)
                // ->where('pe.id_examen',$request->id_examen)
-               // ->select('e.enlace',
-               //          'ep.id_examen_postulante',
-               //          "ep.minutos",
-               //          "ep.segundos")
+                ->select('e.enlace',
+                         'ep.id_examen_postulante',
+                         "ep.minutos",
+                         "ep.segundos")
                 ->get();
         return $examen;
         session(['examen'=>$examen->enlace,'minutos'=>$examen->minutos,'segundos'=>$examen->segundos,'id_examen_postulante'=>$examen->id_examen_postulante]);
