@@ -123,7 +123,7 @@ class FichaController extends Controller
                                'pe.minutos',
                                'ps.estado',
                                'pe.id_examen',
-                               'pe.fecha_resol',
+                               'pe.fecha_resol as fecha_comp',
                                'exd.flag_jura')->get();
          
          /////////////////////////
