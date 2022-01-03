@@ -5,7 +5,7 @@
     <div class="row">
         <h1 class="col" id="minutos">{{ session('minutos')}}</h1>
         <h1 class="col">:</h1>
-        <h1 class="col" id="segundos">{{ session('segundos')}}0</h1>
+        <h1 class="col" id="segundos">{{ session('segundos')}}</h1>
     </div>
 </div>
    @switch(session('examen'))
