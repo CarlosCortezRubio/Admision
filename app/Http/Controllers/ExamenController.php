@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Model\ExamenPostulante;
+use App\Traits\Tables;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -10,6 +11,7 @@ use Illuminate\Support\Facades\DB;
 
 class ExamenController extends Controller
 {
+    use Tables;
     public function index(Request $request){
         $examen=DB::table('admision.adm_examen_postulante as ep')
                 ->join('admision.adm_postulante as ps','ps.id_postulante','ep.id_postulante')
