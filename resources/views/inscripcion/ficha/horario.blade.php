@@ -81,7 +81,7 @@
                         <h1>{{  $v->estado }}</h1>
                        @if ($v->flag_jura=='N' && $v->fecha_comp<=Carbon\Carbon::now() && $v->estado=='P')
                        <form action="{{ route('BeginExamen') }}" method="POST">
-                            <input type="text" name='id_examen' value="{{ $v->id_examen }}"> 
+                            <input type="text" class="d-none" name='id_examen' value="{{ $v->id_examen }}"> 
                             <div style="padding-bottom: 20px" class='centrar-content'>
                                 <a type="submit" class="btn btn-success">Ingresar</a>
                             </div>
