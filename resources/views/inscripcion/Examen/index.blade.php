@@ -23,34 +23,36 @@
         $(document).ready( function() {
             var minutos={{ session('minutos') }};
             var segundos={{ session('segundos') }};
-            do {
-                window.setTimeout(function() {
-                    $.ajax({
-                        type: "GET",
-                        url: "{{ route('timer') }}",
-                        data: {'minutos':zfill(minutos,2),'segundos':zfill(segundos,2)}, 
-                        success: function(data){
-                            if (segundos==0){
-                                if (minutos<=0){
-    
-                                }else{
-                                    minutos=minutos-1;
-                                    segundos=59;
-                                }
-                            }else{
-                                segundos=segundos-1;
-                            }
-                            $('#minutos').html(zfill(minutos,2));
-                            $("#segundos").html(zfill(segundos,2));
-                        }
-                    });
-                }, 1000);
-            } while (minutos > 0 && segundos >0)
-            alert('termino');
+            timer();
+            
             
         });
     </script>
     <script>
+        function timer(){
+            window.setTimeout(function() {
+                $.ajax({
+                    type: "GET",
+                    url: "{{ route('timer') }}",
+                    data: {'minutos':zfill(minutos,2),'segundos':zfill(segundos,2)}, 
+                    success: function(data){
+                        if (segundos==0){
+                            if (minutos<=0){
+
+                            }else{
+                                minutos=minutos-1;
+                                segundos=59;
+                            }
+                        }else{
+                            segundos=segundos-1;
+                        }
+                        $('#minutos').html(zfill(minutos,2));
+                        $("#segundos").html(zfill(segundos,2));
+                        timer();
+                    }
+                });
+            }, 1000);
+        }
         function zfill(number, width) {
             var numberOutput = Math.abs(number); /* Valor absoluto del número */
             var length = number.toString().length; /* Largo del número */ 
