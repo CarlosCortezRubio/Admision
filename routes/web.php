@@ -39,6 +39,7 @@ Route::middleware(['auth'])->group(function() {
   Route::get('inscripcion/ficha','FichaController@index')->name('inscription');
   Route::post('inscripcion/ficha','FichaController@store');
   Route::post('Examen','ExamenController@index')->name('BeginExamen');
+  Route::get('Examen/timer','ExamenController@tiempo')->name('timer');
 });
 
 Route::get('/{slug}', function () {
