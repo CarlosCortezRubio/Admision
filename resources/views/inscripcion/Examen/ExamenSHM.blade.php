@@ -24,23 +24,14 @@
         <br>
         <div class="row">
             <div class="col form-group">
-                <div class='pregunta' <?php if ($_POST) {
-                                            if ($_POST["respuesta1"] == $p1) {
-                                                echo "style='background-color: rgb(123, 224, 140);'";
-                                            } else {
-                                                echo "style='background:red'";
-                                            }
-                                        } ?> id='pregunta1'>
+                <div class='pregunta' id='pregunta1'>
                     <h3><label>Género</label></h3>
                 </div>
                 <div class='container'>
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check  col">
-                            <input required <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if ($p1 == 'A') echo "checked";
-                                            } ?> type="radio" class="respuesta1 form-check-input" value="A" id="0101" name="respuesta1">
+                            <input required  type="radio" class="respuesta1 form-check-input" value="A" id="0101" name="respuesta1">
                             <label class="respuesta1 form-check-label justify-content-center" for="0101">Ópera</label>
                         </div>
                         <div class='col-1'></div>
@@ -48,10 +39,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if ($p1 == 'B') echo "checked";
-                                            } ?> type="radio" class="respuesta1 form-check-input" value="B" id="0102" name="respuesta1">
+                            <input required  type="radio" class="respuesta1 form-check-input" value="B" id="0102" name="respuesta1">
                             <label class="respuesta1 form-check-label justify-content-center" for="0102">Ballet</label>
                         </div>
                         <div class='col-1'></div>
@@ -59,10 +47,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if ($p1 == 'C') echo "checked";
-                                            } ?> type="radio" class="respuesta1 form-check-input" value="C" id="0103" name="respuesta1">
+                            <input required  type="radio" class="respuesta1 form-check-input" value="C" id="0103" name="respuesta1">
                             <label class="respuesta1 form-check-label justify-content-center" for="0103">Programático</label>
                         </div>
                         <div class='col-1'></div>
@@ -70,10 +55,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if ($p1 == 'D') echo "checked";
-                                            } ?> type="radio" class="respuesta1 form-check-input" value="D" id="0104" name="respuesta1">
+                            <input required type="radio" class="respuesta1 form-check-input" value="D" id="0104" name="respuesta1">
                             <label class="respuesta1 form-check-label justify-content-center" for="0104">Solista instrumental o vocal</label>
                         </div>
                         <div class='col-1'></div>
@@ -81,10 +63,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if ($p1 == 'E') echo "checked";
-                                            } ?> type="radio" class="respuesta1 form-check-input" value="E" id="0105" name="respuesta1">
+                            <input required  type="radio" class="respuesta1 form-check-input" value="E" id="0105" name="respuesta1">
                             <label class="respuesta1 form-check-label justify-content-center" for="0105">Poema sinfónico</label>
                         </div>
                         <div class='col-1'></div>
@@ -92,10 +71,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if ($p1 == 'F') echo "checked";
-                                            } ?> type="radio" class="respuesta1 form-check-input" value="F" id="0106" name="respuesta1">
+                            <input required  type="radio" class="respuesta1 form-check-input" value="F" id="0106" name="respuesta1">
                             <label class="respuesta1 form-check-label justify-content-center" for="0106">Concierto</label>
                         </div>
                         <div class='col-1'></div>
@@ -103,10 +79,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if ($p1 == 'G') echo "checked";
-                                            } ?> type="radio" class="respuesta1 form-check-input" value="G" id="0107" name="respuesta1">
+                            <input required  type="radio" class="respuesta1 form-check-input" value="G" id="0107" name="respuesta1">
                             <label class="respuesta1 form-check-label justify-content-center" for="0107">Cantata</label>
                         </div>
                         <div class='col-1'></div>
@@ -114,10 +87,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if ($p1 == 'H') echo "checked";
-                                            } ?> type="radio" class="respuesta1 form-check-input" value="H" id="0108" name="respuesta1">
+                            <input required  type="radio" class="respuesta1 form-check-input" value="H" id="0108" name="respuesta1">
                             <label class="respuesta1 form-check-label justify-content-center" for="0108">Coral</label>
                         </div>
                         <div class='col-1'></div>
@@ -125,10 +95,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if ($p1 == 'I') echo "checked";
-                                            } ?> type="radio" class="respuesta1 form-check-input" value="I" id="0109" name="respuesta1">
+                            <input required  type="radio" class="respuesta1 form-check-input" value="I" id="0109" name="respuesta1">
                             <label class="respuesta1 form-check-label justify-content-center" for="0109">Oratorio</label>
                         </div>
                         <div class='col-1'></div>
@@ -137,23 +104,14 @@
             </div>
 
             <div class="col form-group">
-                <div class='pregunta' <?php if ($_POST) {
-                                            if ($_POST["respuesta2"] == $p2) {
-                                                echo "style='background-color: rgb(123, 224, 140);'";
-                                            } else {
-                                                echo "style='background:red'";
-                                            }
-                                        } ?> id='pregunta2'>
+                <div class='pregunta' id='pregunta2'>
                     <h3><label>Tipo de conjunto o agrupación instrumental</label></h3>
                 </div>
                 <div class='container'>
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if ($p2 == 'A') echo "checked";
-                                            } ?> type="radio" class="respuesta2 form-check-input" value="A" id="0201" name="respuesta2">
+                            <input required  type="radio" class="respuesta2 form-check-input" value="A" id="0201" name="respuesta2">
                             <label class="respuesta2 form-check-label justify-content-center" for="0201">Orquesta de cámara</label>
                         </div>
                         <div class='col-1'></div>
@@ -161,10 +119,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if ($p2 == 'B') echo "checked";
-                                            } ?> type="radio" class="respuesta2 form-check-input" value="B" id="0202" name="respuesta2">
+                            <input required  type="radio" class="respuesta2 form-check-input" value="B" id="0202" name="respuesta2">
                             <label class="respuesta2 form-check-label justify-content-center" for="0202">Orquesta sinfónica</label>
                         </div>
                         <div class='col-1'></div>
@@ -172,10 +127,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if ($p2 == 'C') echo "checked";
-                                            } ?> type="radio" class="form-check-input respuesta2" value="C" id="0203" name="respuesta2">
+                            <input required type="radio" class="form-check-input respuesta2" value="C" id="0203" name="respuesta2">
                             <label class="respuesta2 form-check-label justify-content-center" for="0203">Conjunto coral – instrumental</label>
                         </div>
                         <div class='col-1'></div>
@@ -183,10 +135,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if ($p2 == 'D') echo "checked";
-                                            } ?> type="radio" class="form-check-input respuesta2" value="D" id="0204" name="respuesta2">
+                            <input required  type="radio" class="form-check-input respuesta2" value="D" id="0204" name="respuesta2">
                             <label class="respuesta2 form-check-label justify-content-center" for="0204">Conjunto de cuerdas</label>
                         </div>
                         <div class='col-1'></div>
@@ -194,10 +143,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if ($p2 == 'E') echo "checked";
-                                            } ?> type="radio" class="form-check-input respuesta2" value="E" id="0205" name="respuesta2">
+                            <input required  type="radio" class="form-check-input respuesta2" value="E" id="0205" name="respuesta2">
                             <label class="respuesta2 form-check-label justify-content-center" for="0205">Conjunto de maderas</label>
                         </div>
                         <div class='col-1'></div>
@@ -205,10 +151,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if ($p2 == 'F') echo "checked";
-                                            } ?> type="radio" class="form-check-input respuesta2" value="F" id="0206" name="respuesta2">
+                            <input required  type="radio" class="form-check-input respuesta2" value="F" id="0206" name="respuesta2">
                             <label class="respuesta2 form-check-label justify-content-center" for="0206">Cuarteto de cuerdas</label>
                         </div>
                         <div class='col-1'></div>
@@ -216,10 +159,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if ($p2 == 'G') echo "checked";
-                                            } ?> type="radio" class="form-check-input respuesta2" value="G" id="0207" name="respuesta2">
+                            <input required  type="radio" class="form-check-input respuesta2" value="G" id="0207" name="respuesta2">
                             <label class="respuesta2 form-check-label justify-content-center" for="0207">Instrumento o voz solista</label>
                         </div>
                         <div class='col-1'></div>
@@ -227,10 +167,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if ($p2 == 'H') echo "checked";
-                                            } ?> type="radio" class="form-check-input respuesta2" value="H" id="0208" name="respuesta2">
+                            <input required  type="radio" class="form-check-input respuesta2" value="H" id="0208" name="respuesta2">
                             <label class="respuesta2 form-check-label justify-content-center" for="0208">Conjunto de metales</label>
                         </div>
                         <div class='col-1'></div>
@@ -238,10 +175,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if ($p2 == 'I') echo "checked";
-                                            } ?> type="radio" class="form-check-input respuesta2" value="I" id="0209" name="respuesta2">
+                            <input required type="radio" class="form-check-input respuesta2" value="I" id="0209" name="respuesta2">
                             <label class="respuesta2 form-check-label justify-content-center" for="0209">Banda sinfónica</label>
                         </div>
                         <div class='col-1'></div>
@@ -249,10 +183,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if ($p2 == 'J') echo "checked";
-                                            } ?> type="radio" class="form-check-input respuesta2" value="J" id="0210" name="respuesta2">
+                            <input required type="radio" class="form-check-input respuesta2" value="J" id="0210" name="respuesta2">
                             <label class="respuesta2 form-check-label justify-content-center" for="0210">Sinfónico-coral</label>
                         </div>
                         <div class='col-1'></div>
@@ -279,23 +210,14 @@
         <br>
         <div class="row">
             <div class="col form-group">
-                <div class='pregunta' <?php if ($_POST) {
-                                            if ($_POST["respuesta3"] == $p3) {
-                                                echo "style='background-color: rgb(123, 224, 140);'";
-                                            } else {
-                                                echo "style='background:red'";
-                                            }
-                                        } ?> id='pregunta3'>
+                <div class='pregunta'  id='pregunta3'>
                     <h3><label>Género</label></h3>
                 </div>
                 <div class='container'>
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check  col">
-                            <input required <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if ($p3 == 'A') echo "checked";
-                                            } ?> type="radio" class="respuesta3 form-check-input" value="A" id="0301" name="respuesta3">
+                            <input required type="radio" class="respuesta3 form-check-input" value="A" id="0301" name="respuesta3">
                             <label class="respuesta3 form-check-label justify-content-center" for="0301">Ópera</label>
                         </div>
                         <div class='col-1'></div>
@@ -303,10 +225,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if ($p3 == 'B') echo "checked";
-                                            } ?> type="radio" class="respuesta3 form-check-input" value="B" id="0302" name="respuesta3">
+                            <input required  type="radio" class="respuesta3 form-check-input" value="B" id="0302" name="respuesta3">
                             <label class="respuesta3 form-check-label justify-content-center" for="0302">Ballet</label>
                         </div>
                         <div class='col-1'></div>
@@ -314,10 +233,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if ($p3 == 'C') echo "checked";
-                                            } ?> type="radio" class="respuesta3 form-check-input" value="C" id="0303" name="respuesta3">
+                            <input required  type="radio" class="respuesta3 form-check-input" value="C" id="0303" name="respuesta3">
                             <label class="respuesta3 form-check-label justify-content-center" for="0303">Programático</label>
                         </div>
                         <div class='col-1'></div>
@@ -325,10 +241,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if ($p3 == 'D') echo "checked";
-                                            } ?> type="radio" class="respuesta3 form-check-input" value="D" id="0304" name="respuesta3">
+                            <input required  type="radio" class="respuesta3 form-check-input" value="D" id="0304" name="respuesta3">
                             <label class="respuesta3 form-check-label justify-content-center" for="0304">Solista instrumental o vocal</label>
                         </div>
                         <div class='col-1'></div>
@@ -336,10 +249,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if ($p3 == 'E') echo "checked";
-                                            } ?> type="radio" class="respuesta3 form-check-input" value="E" id="0305" name="respuesta3">
+                            <input required type="radio" class="respuesta3 form-check-input" value="E" id="0305" name="respuesta3">
                             <label class="respuesta3 form-check-label justify-content-center" for="0305">Poema sinfónico</label>
                         </div>
                         <div class='col-1'></div>
@@ -347,10 +257,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if ($p3 == 'F') echo "checked";
-                                            } ?> type="radio" class="respuesta3 form-check-input" value="F" id="0306" name="respuesta3">
+                            <input required type="radio" class="respuesta3 form-check-input" value="F" id="0306" name="respuesta3">
                             <label class="respuesta3 form-check-label justify-content-center" for="0306">Concierto</label>
                         </div>
                         <div class='col-1'></div>
@@ -358,10 +265,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if ($p3 == 'G') echo "checked";
-                                            } ?> type="radio" class="respuesta3 form-check-input" value="G" id="0307" name="respuesta3">
+                            <input required  type="radio" class="respuesta3 form-check-input" value="G" id="0307" name="respuesta3">
                             <label class="respuesta3 form-check-label justify-content-center" for="0307">Cantata</label>
                         </div>
                         <div class='col-1'></div>
@@ -369,10 +273,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if ($p3 == 'H') echo "checked";
-                                            } ?> type="radio" class="respuesta3 form-check-input" value="H" id="0308" name="respuesta3">
+                            <input required  type="radio" class="respuesta3 form-check-input" value="H" id="0308" name="respuesta3">
                             <label class="respuesta3 form-check-label justify-content-center" for="0308">Coral</label>
                         </div>
                         <div class='col-1'></div>
@@ -380,10 +281,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if ($p3 == 'I') echo "checked";
-                                            } ?> type="radio" class="respuesta3 form-check-input" value="I" id="0309" name="respuesta3">
+                            <input required type="radio" class="respuesta3 form-check-input" value="I" id="0309" name="respuesta3">
                             <label class="respuesta3 form-check-label justify-content-center" for="0309">Oratorio</label>
                         </div>
                         <div class='col-1'></div>
@@ -392,23 +290,14 @@
             </div>
 
             <div class="col form-group">
-                <div class='pregunta' <?php if ($_POST) {
-                                            if ($_POST["respuesta4"] == $p4) {
-                                                echo "style='background-color: rgb(123, 224, 140);'";
-                                            } else {
-                                                echo "style='background:red'";
-                                            }
-                                        } ?> id='pregunta4'>
+                <div class='pregunta'  id='pregunta4'>
                     <h3><label>Tipo de conjunto o agrupación instrumental</label></h3>
                 </div>
                 <div class='container'>
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if ($p4 == 'A') echo "checked";
-                                            } ?> type="radio" class="respuesta4 form-check-input" value="A" id="0401" name="respuesta4">
+                            <input required  type="radio" class="respuesta4 form-check-input" value="A" id="0401" name="respuesta4">
                             <label class="respuesta4 form-check-label justify-content-center" for="0401">Orquesta de cámara</label>
                         </div>
                         <div class='col-1'></div>
@@ -416,10 +305,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if ($p4 == 'B') echo "checked";
-                                            } ?> type="radio" class="respuesta4 form-check-input" value="B" id="0402" name="respuesta4">
+                            <input required type="radio" class="respuesta4 form-check-input" value="B" id="0402" name="respuesta4">
                             <label class="respuesta4 form-check-label justify-content-center" for="0402">Orquesta sinfónica</label>
                         </div>
                         <div class='col-1'></div>
@@ -427,10 +313,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if ($p4 == 'C') echo "checked";
-                                            } ?> type="radio" class="form-check-input respuesta4" value="C" id="0403" name="respuesta4">
+                            <input required type="radio" class="form-check-input respuesta4" value="C" id="0403" name="respuesta4">
                             <label class="respuesta4 form-check-label justify-content-center" for="0403">Conjunto coral – instrumental</label>
                         </div>
                         <div class='col-1'></div>
@@ -438,10 +321,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if ($p4 == 'D') echo "checked";
-                                            } ?> type="radio" class="form-check-input respuesta4" value="D" id="0404" name="respuesta4">
+                            <input required type="radio" class="form-check-input respuesta4" value="D" id="0404" name="respuesta4">
                             <label class="respuesta4 form-check-label justify-content-center" for="0404">Conjunto de cuerdas</label>
                         </div>
                         <div class='col-1'></div>
@@ -449,10 +329,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if ($p4 == 'E') echo "checked";
-                                            } ?> type="radio" class="form-check-input respuesta4" value="E" id="0405" name="respuesta4">
+                            <input required type="radio" class="form-check-input respuesta4" value="E" id="0405" name="respuesta4">
                             <label class="respuesta4 form-check-label justify-content-center" for="0405">Conjunto de maderas</label>
                         </div>
                         <div class='col-1'></div>
@@ -460,10 +337,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if ($p4 == 'F') echo "checked";
-                                            } ?> type="radio" class="form-check-input respuesta4" value="F" id="0406" name="respuesta4">
+                            <input required type="radio" class="form-check-input respuesta4" value="F" id="0406" name="respuesta4">
                             <label class="respuesta4 form-check-label justify-content-center" for="0406">Cuarteto de cuerdas</label>
                         </div>
                         <div class='col-1'></div>
@@ -471,10 +345,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if ($p4 == 'G') echo "checked";
-                                            } ?> type="radio" class="form-check-input respuesta4" value="G" id="0407" name="respuesta4">
+                            <input required type="radio" class="form-check-input respuesta4" value="G" id="0407" name="respuesta4">
                             <label class="respuesta4 form-check-label justify-content-center" for="0407">Instrumento o voz solista</label>
                         </div>
                         <div class='col-1'></div>
@@ -482,10 +353,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if ($p4 == 'H') echo "checked";
-                                            } ?> type="radio" class="form-check-input respuesta4" value="H" id="0408" name="respuesta4">
+                            <input required type="radio" class="form-check-input respuesta4" value="H" id="0408" name="respuesta4">
                             <label class="respuesta4 form-check-label justify-content-center" for="0408">Conjunto de metales</label>
                         </div>
                         <div class='col-1'></div>
@@ -493,10 +361,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if ($p4 == 'I') echo "checked";
-                                            } ?> type="radio" class="form-check-input respuesta4" value="I" id="0409" name="respuesta4">
+                            <input required type="radio" class="form-check-input respuesta4" value="I" id="0409" name="respuesta4">
                             <label class="respuesta4 form-check-label justify-content-center" for="0409">Banda sinfónica</label>
                         </div>
                         <div class='col-1'></div>
@@ -504,10 +369,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if ($p4 == 'J') echo "checked";
-                                            } ?> type="radio" class="form-check-input respuesta4" value="J" id="0410" name="respuesta4">
+                            <input required type="radio" class="form-check-input respuesta4" value="J" id="0410" name="respuesta4">
                             <label class="respuesta4 form-check-label justify-content-center" for="0410">Sinfónico-coral</label>
                         </div>
                         <div class='col-1'></div>
@@ -520,13 +382,7 @@
 
         <div class="row form-group">
             <div class="col-1"></div>
-            <div class='col-1 pregunta centrar-content' <?php if ($_POST) {
-                                                            if ($_POST["respuesta5"] == $p5) {
-                                                                echo "style='background-color: rgb(123, 224, 140);'";
-                                                            } else {
-                                                                echo "style='background:red'";
-                                                            }
-                                                        } ?> id='pregunta5'>
+            <div class='col-1 pregunta centrar-content'  id='pregunta5'>
                 <h5><label style="text-align: center;">Época Clásica</label></h5>
             </div>
             <div class="col">
@@ -534,10 +390,7 @@
                     <div class='col'>
                         <div class='col-1'></div>
                         <div class="form-check  col" style="height: 100%;">  
-                            <input  <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if (in_array('A', $p5)) echo "checked";
-                                            } ?> type="checkbox" class="respuesta5 form-check-input" value="A" id="0501" name="respuesta5[]">
+                            <input  type="checkbox" class="respuesta5 form-check-input" value="A" id="0501" name="respuesta5[]">
                             <label class="respuesta5 form-check-label justify-content-center" for="0501">9na Sinfonía Beethoven</label>
                         </div>
                         <div class='col-1'></div>
@@ -545,10 +398,7 @@
                     <div class='col'>
                         <div class='col-1'></div>
                         <div class="form-check col" style="height: 100%;">
-                            <input  <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if (in_array('B', $p5)) echo "checked";
-                                            } ?> type="checkbox" class="respuesta5 form-check-input" value="B" id="0502" name="respuesta5[]">
+                            <input   type="checkbox" class="respuesta5 form-check-input" value="B" id="0502" name="respuesta5[]">
                             <label class="respuesta5 form-check-label justify-content-center" for="0502">Joseph Haydn</label>
                         </div>
                         <div class='col-1'></div>
@@ -556,10 +406,7 @@
                     <div class='col'>
                         <div class='col-1'></div>
                         <div class="form-check col" style="height: 100%;">
-                            <input  <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if (in_array('C', $p5)) echo "checked";
-                                            } ?> type="checkbox" class="respuesta5 form-check-input" value="C" id="0503" name="respuesta5[]">
+                            <input  type="checkbox" class="respuesta5 form-check-input" value="C" id="0503" name="respuesta5[]">
                             <label class="respuesta5 form-check-label justify-content-center" for="0503">Víctor Hugo</label>
                         </div>
                         <div class='col-1'></div>
@@ -567,10 +414,7 @@
                     <div class='col'>
                         <div class='col-1'></div>
                         <div class="form-check col" style="height: 100%;">
-                            <input  <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if (in_array('D', $p5)) echo "checked";
-                                            } ?> type="checkbox" class="respuesta5 form-check-input" value="D" id="0504" name="respuesta5[]">
+                            <input  type="checkbox" class="respuesta5 form-check-input" value="D" id="0504" name="respuesta5[]">
                             <label class="respuesta5 form-check-label justify-content-center" for="0504">Giga</label>
                         </div>
                         <div class='col-1'></div>
@@ -578,10 +422,7 @@
                     <div class='col'>
                         <div class='col-1'></div>
                         <div class="form-check col" style="height: 100%;">
-                            <input  <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if (in_array('E', $p5)) echo "checked";
-                                            } ?> type="checkbox" class="respuesta5 form-check-input" value="E" id="0505" name="respuesta5[]">
+                            <input  type="checkbox" class="respuesta5 form-check-input" value="E" id="0505" name="respuesta5[]">
                             <label class="respuesta5 form-check-label justify-content-center" for="0505">Tonalidades distanciadas</label>
                         </div>
                         <div class='col-1'></div>
@@ -591,10 +432,7 @@
                     <div class='col'>
                         <div class='col-1'></div>
                         <div class="form-check col" style="height: 100%;">
-                            <input  <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if (in_array('F', $p5)) echo "checked";
-                                            } ?> type="checkbox" class="respuesta5 form-check-input" value="F" id="0506" name="respuesta5[]">
+                            <input  type="checkbox" class="respuesta5 form-check-input" value="F" id="0506" name="respuesta5[]">
                             <label class="respuesta5 form-check-label justify-content-center" for="0506">Don Giovanni</label>
                         </div>
                         <div class='col-1'></div>
@@ -602,10 +440,7 @@
                     <div class='col'>
                         <div class='col-1'></div>
                         <div class="form-check col" style="height: 100%;">
-                            <input  <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if (in_array('G', $p5)) echo "checked";
-                                            } ?> type="checkbox" class="respuesta5 form-check-input" value="G" id="0507" name="respuesta5[]">
+                            <input  type="checkbox" class="respuesta5 form-check-input" value="G" id="0507" name="respuesta5[]">
                             <label class="respuesta5 form-check-label justify-content-center" for="0507">Música programática</label>
                         </div>
                         <div class='col-1'></div>
@@ -613,10 +448,7 @@
                     <div class='col'>
                         <div class='col-1'></div>
                         <div class="form-check col" style="height: 100%;">
-                            <input  <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if (in_array('H', $p5)) echo "checked";
-                                            } ?> type="checkbox" class="respuesta5 form-check-input" value="H" id="0508" name="respuesta5[]">
+                            <input  type="checkbox" class="respuesta5 form-check-input" value="H" id="0508" name="respuesta5[]">
                             <label class="respuesta5 form-check-label justify-content-center" for="0508">Revolución francesa</label>
                         </div>
                         <div class='col-1'></div>
@@ -624,20 +456,14 @@
                     <div class='col'>
                         <div class='col-1'></div>
                         <div class="form-check col" style="height: 100%;">
-                            <input  <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if (in_array('I', $p5)) echo "checked";
-                                            } ?> type="checkbox" class="respuesta5 form-check-input" value="I" id="0509" name="respuesta5[]">
+                            <input  type="checkbox" class="respuesta5 form-check-input" value="I" id="0509" name="respuesta5[]">
                             <label class="respuesta5 form-check-label justify-content-center" for="0509">Abraham Valdelomar</label>
                         </div>
                         <div class='col-1'></div>
                     </div>
                     <div class='col'>
                         <div class="form-check " style="height: 100%;">
-                            <input  <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if (in_array('J', $p5)) echo "checked";
-                                            } ?> type="checkbox" class="respuesta5 form-check-input" value="J" id="0510" name="respuesta5[]">
+                            <input  type="checkbox" class="respuesta5 form-check-input" value="J" id="0510" name="respuesta5[]">
                             <label class="respuesta5 form-check-label justify-content-center" for="0510">Forma sonata</label>
                         </div>
                     </div>
@@ -653,13 +479,7 @@
 
         <div class="row form-group">
             <div class="col-1"></div>
-            <div class='col-1 pregunta centrar-content' <?php if ($_POST) {
-                                                            if ($_POST["respuesta6"] == $p6) {
-                                                                echo "style='background-color: rgb(123, 224, 140);'";
-                                                            } else {
-                                                                echo "style='background:red'";
-                                                            }
-                                                        } ?> id='pregunta6'>
+            <div class='col-1 pregunta centrar-content' id='pregunta6'>
                 <h5><label style="text-align: center;">Época Renacentista</label></h5>
             </div>
             <div class="col">
@@ -667,10 +487,7 @@
                     <div class='col'>
                         <div class='col-1'></div>
                         <div class="form-check  col" style="height: 100%;">  
-                            <input  <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if (in_array('A', $p6)) echo "checked";
-                                            } ?> type="checkbox" class="respuesta6 form-check-input" value="A" id="0601" name="respuesta6[]">
+                            <input  type="checkbox" class="respuesta6 form-check-input" value="A" id="0601" name="respuesta6[]">
                             <label class="respuesta6 form-check-label justify-content-center" for="0601">Madrigal</label>
                         </div>
                         <div class='col-1'></div>
@@ -678,10 +495,7 @@
                     <div class='col'>
                         <div class='col-1'></div>
                         <div class="form-check col" style="height: 100%;">
-                            <input  <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if (in_array('B', $p6)) echo "checked";
-                                            } ?> type="checkbox" class="respuesta6 form-check-input" value="B" id="0602" name="respuesta6[]">
+                            <input  type="checkbox" class="respuesta6 form-check-input" value="B" id="0602" name="respuesta6[]">
                             <label class="respuesta6 form-check-label justify-content-center" for="0602">Canto gregoriano</label>
                         </div>
                         <div class='col-1'></div>
@@ -689,10 +503,7 @@
                     <div class='col'>
                         <div class='col-1'></div>
                         <div class="form-check col" style="height: 100%;">
-                            <input  <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if (in_array('C', $p6)) echo "checked";
-                                            } ?> type="checkbox" class="respuesta6 form-check-input" value="C" id="0603" name="respuesta6[]">
+                            <input  type="checkbox" class="respuesta6 form-check-input" value="C" id="0603" name="respuesta6[]">
                             <label class="respuesta6 form-check-label justify-content-center" for="0603">Shakespeare</label>
                         </div>
                         <div class='col-1'></div>
@@ -700,10 +511,7 @@
                     <div class='col'>
                         <div class='col-1'></div>
                         <div class="form-check col" style="height: 100%;">
-                            <input  <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if (in_array('D', $p6)) echo "checked";
-                                            } ?> type="checkbox" class="respuesta6 form-check-input" value="D" id="0604" name="respuesta6[]">
+                            <input  type="checkbox" class="respuesta6 form-check-input" value="D" id="0604" name="respuesta6[]">
                             <label class="respuesta6 form-check-label justify-content-center" for="0604">Las Cruzadas</label>
                         </div>
                         <div class='col-1'></div>
@@ -711,10 +519,7 @@
                     <div class='col'>
                         <div class='col-1'></div>
                         <div class="form-check col" style="height: 100%;">
-                            <input  <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if (in_array('E', $p6)) echo "checked";
-                                            } ?> type="checkbox" class="respuesta6 form-check-input" value="E" id="0605" name="respuesta6[]">
+                            <input  type="checkbox" class="respuesta6 form-check-input" value="E" id="0605" name="respuesta6[]">
                             <label class="respuesta6 form-check-label justify-content-center" for="0605">Ars Nova</label>
                         </div>
                         <div class='col-1'></div>
@@ -724,10 +529,7 @@
                     <div class='col'>
                         <div class='col-1'></div>
                         <div class="form-check col" style="height: 100%;">
-                            <input  <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if (in_array('F', $p6)) echo "checked";
-                                            } ?> type="checkbox" class="respuesta6 form-check-input" value="F" id="0606" name="respuesta6[]">
+                            <input  type="checkbox" class="respuesta6 form-check-input" value="F" id="0606" name="respuesta6[]">
                             <label class="respuesta6 form-check-label justify-content-center" for="0606">Imperio Incaico</label>
                         </div>
                         <div class='col-1'></div>
@@ -735,10 +537,7 @@
                     <div class='col'>
                         <div class='col-1'></div>
                         <div class="form-check col" style="height: 100%;">
-                            <input  <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if (in_array('G', $p6)) echo "checked";
-                                            } ?> type="checkbox" class="respuesta6 form-check-input" value="G" id="0607" name="respuesta6[]">
+                            <input  type="checkbox" class="respuesta6 form-check-input" value="G" id="0607" name="respuesta6[]">
                             <label class="respuesta6 form-check-label justify-content-center" for="0607">Palestrina</label>
                         </div>
                         <div class='col-1'></div>
@@ -746,10 +545,7 @@
                     <div class='col'>
                         <div class='col-1'></div>
                         <div class="form-check col" style="height: 100%;">
-                            <input  <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if (in_array('H', $p6)) echo "checked";
-                                            } ?> type="checkbox" class="respuesta6 form-check-input" value="H" id="0608" name="respuesta6[]">
+                            <input  type="checkbox" class="respuesta6 form-check-input" value="H" id="0608" name="respuesta6[]">
                             <label class="respuesta6 form-check-label justify-content-center" for="0608">J.S Bach</label>
                         </div>
                         <div class='col-1'></div>
@@ -757,20 +553,14 @@
                     <div class='col'>
                         <div class='col-1'></div>
                         <div class="form-check col" style="height: 100%;">
-                            <input  <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if (in_array('I', $p6)) echo "checked";
-                                            } ?> type="checkbox" class="respuesta6 form-check-input" value="I" id="0609" name="respuesta6[]">
+                            <input  type="checkbox" class="respuesta6 form-check-input" value="I" id="0609" name="respuesta6[]">
                             <label class="respuesta6 form-check-label justify-content-center" for="0609">El Concilio de Trento</label>
                         </div>
                         <div class='col-1'></div>
                     </div>
                     <div class='col'>
                         <div class="form-check " style="height: 100%;">
-                            <input  <?php if ($_POST) {
-                                                echo "disabled ";
-                                                if (in_array('J', $p6)) echo "checked";
-                                            } ?> type="checkbox" class="respuesta6 form-check-input" value="J" id="0610" name="respuesta6[]">
+                            <input type="checkbox" class="respuesta6 form-check-input" value="J" id="0610" name="respuesta6[]">
                             <label class="respuesta6 form-check-label justify-content-center" for="0610">Robin Hood</label>
                         </div>
                     </div>
@@ -778,17 +568,10 @@
             </div>
             <div class="col-1"></div>
         </div>
-        <!-------------------------------------------------------------->
-        <?php if (!$_POST) { ?>
+        
             <div class='centrar-content'>
-                <button type="submit" class="btn btn-success">Respuestas</button>
+                <button type="submit" class="btn btn-success">Grabar</button>
             </div>
-        <?php } else { ?>
-            <div class='row'>
-                <div class="col centrar-content">
-                    <button type="submit" class="btn btn-success">Reintentar</button>
-                </div>
-            </div>
-        <?php } ?>
+        
     </form>
 </div>
