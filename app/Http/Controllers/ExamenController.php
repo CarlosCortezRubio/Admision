@@ -22,6 +22,7 @@ class ExamenController extends Controller
                          "ep.minutos",
                          "ep.segundos")
                 ->first();
+        return $examen;
         session(['examen'=>$examen->enlace,'minutos'=>$examen->minutos,'segundos'=>$examen->segundos,'id_examen_postulante'=>$examen->id_examen_postulante]);
         return view('inscripcion.Examen.index');
     }
