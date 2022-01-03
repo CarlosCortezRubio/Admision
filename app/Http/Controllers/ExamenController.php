@@ -22,7 +22,6 @@ class ExamenController extends Controller
                          "ep.minutos",
                          "ep.segundos")
                 ->get();
-        return Auth::user()->ndocumento;
         session(['examen'=>$examen->enlace,'minutos'=>$examen->minutos,'segundos'=>$examen->segundos,'id_examen_postulante'=>$examen->id_examen_postulante]);
         return view('inscripcion.Examen.index');
     }
