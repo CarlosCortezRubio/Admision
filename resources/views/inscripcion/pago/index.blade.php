@@ -88,7 +88,7 @@
                         <select name="codi_moda_mod" class="custom-select" id="s_modalidad" required>
                            <option value="">Seleccione...</option>
                            <option value="O">EXAMEN ORDINARIO</option>
-                           <!-- <option value="E">EXONERADO</option> -->
+                           <option value="E">EXONERADO</option>
                         </select>
                      </div>
                      <!-- 2021 -->
@@ -118,7 +118,7 @@
                   <div class="card-body">
                      <h5 class="card-title">Pago &uacute;nico por derecho de inscripci&oacute;n</h5>					 
                      <strong>Examen Ordinario S/ {{ $proceso->mnto_proc_adm }}</strong><br>
-					 <strong>Exonerado S/ {{ $proceso->mnto_exon_adm }}</strong>
+      			      <strong>Exonerado S/ {{ $proceso->mnto_exon_adm }}</strong>
                      <hr>
 
 {{--                      <h6 class="card-subtitle mb-2 text-muted">Seleccione la forma de pago:</h6>

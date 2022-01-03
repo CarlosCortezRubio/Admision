@@ -75,12 +75,11 @@
                                 </div>
                             </div>
                         </div>
-                       @if ($v->flag_jura=='N')
-                       <form>
+                       @if ($v->flag_jura=='N' && $v->fecha_resol>=Carbon::now() && $v->estado=='P')
+                       <form action="{{ route('BeginExamen') }}" method="POST">
+                            <input type="text" name='id_examen' value="{{ $v->id_examen }}"> 
                             <div style="padding-bottom: 20px" class='centrar-content'>
-                                {{-- - "btn btn-success" href="{{ route('BeginExamen') }}">Ingresar</a> --}}
-                                <a type="submit" class="btn btn-success"
-                                    href="https://academica360-beta.unm.edu.pe/MOCUNM/PHP/VISTA/Examen.php">Ingresar</a>
+                                <a type="submit" class="btn btn-success">Ingresar</a>
                             </div>
                         </form>
                        @endif

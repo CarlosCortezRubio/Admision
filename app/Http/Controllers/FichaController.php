@@ -122,6 +122,8 @@ class FichaController extends Controller
                                'pe.modalidad',
                                'pe.minutos',
                                'ps.estado',
+                               'pe.id_examen',
+                               'pe.fecha_resol',
                                'exd.flag_jura')->get();
          
          /////////////////////////
