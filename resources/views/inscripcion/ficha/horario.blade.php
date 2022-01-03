@@ -75,7 +75,7 @@
                                 </div>
                             </div>
                         </div>
-                        <h1>{{ $v->flag_jura=='N' }}</h1>
+                        <h1>{{ $v->flag_jura }}</h1>
                         <h1>{{ $v->fecha_comp }}</h1>
                         <h1>{{ Carbon\Carbon::now() }}</h1>
                         <h1>{{  $v->estado }}</h1>
