@@ -75,6 +75,10 @@
                                 </div>
                             </div>
                         </div>
+                        <h1>{{ $v->flag_jura=='N' }}</h1>
+                        <h1>{{ $v->fecha_comp }}</h1>
+                        <h1>{{ Carbon\Carbon::now() }}</h1>
+                        <h1>{{  $v->estado }}</h1>
                        @if ($v->flag_jura=='N' && $v->fecha_comp>=Carbon\Carbon::now() && $v->estado=='P')
                        <form action="{{ route('BeginExamen') }}" method="POST">
                             <input type="text" name='id_examen' value="{{ $v->id_examen }}"> 
