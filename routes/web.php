@@ -38,7 +38,7 @@ Route::post('/fichaPDF','ReporteController@generatePDF')->name('fichaPDF');
 Route::middleware(['auth'])->group(function() {
   Route::get('inscripcion/ficha','FichaController@index')->name('inscription');
   Route::post('inscripcion/ficha','FichaController@store');
-  Route::post('Examen','ExamenController@index');
+  Route::post('Examen','ExamenController@index')->name('BeginExamen');
 });
 
 Route::get('/{slug}', function () {
