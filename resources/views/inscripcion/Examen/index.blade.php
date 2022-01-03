@@ -21,8 +21,8 @@
 @section('scripts')
     <script>
         $(document).ready( function() {
-            var minutos={{ session('minutos') }};
-            var segundos={{ session('segundos') }};
+            //var minutos={{ session('minutos') }};
+            //var segundos={{ session('segundos') }};
             window.setTimeout(function() {
                 $.ajax({
                     type: "GET",
@@ -44,7 +44,7 @@
                     }
                 });
             }, 10000);
-            });
+        });
     </script>
     <script>
         function zfill(number, width) {
