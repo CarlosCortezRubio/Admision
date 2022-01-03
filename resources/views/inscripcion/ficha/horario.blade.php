@@ -24,7 +24,7 @@
                             <div class='col'>
                                 <div class="centrar-content container">
                                     <!-- <h6 cla>Nota</h6>-->
-                                    <input type="text" value="0" class="dial">
+                                    <input type="text" value="{{ $v->nota }}" class="dial">
                                 </div>
                             </div>
                             <div class='col'>
