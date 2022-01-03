@@ -15,14 +15,14 @@ class ExamenController extends Controller
                 ->join('admision.adm_postulante as ps','ps.id_postulante','ep.id_postulante')
                 ->join('admision.adm_programacion_examen as pe','pe.id_programacion_examen','ps.id_programacion_examen')
                 ->join('admision.adm_examen as e','pe.id_examen','e.id_examen')
-                ->where('ps.nume_docu_sol',Auth::user()->ndocument)
+                ->where('ps.nume_docu_sol',Auth::user()->ndocumento)
                 ->where('pe.id_examen',$request->id_examen)
                 ->select('e.enlace',
                          'ep.id_examen_postulante',
                          "ep.minutos",
                          "ep.segundos")
                 ->get();
-        return Auth::user()->ndocument;
+        return Auth::user()->ndocumento;
         session(['examen'=>$examen->enlace,'minutos'=>$examen->minutos,'segundos'=>$examen->segundos,'id_examen_postulante'=>$examen->id_examen_postulante]);
         return view('inscripcion.Examen.index');
     }
