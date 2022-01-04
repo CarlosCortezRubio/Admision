@@ -51,9 +51,9 @@ class ExamenController extends Controller
             case 'ExamenSHM':
                     $respuestas = ["B","B","I","J",["B", "F" ,"H","J"],["A", "C", "G", "I"]];
                     foreach ($request as $key => $value) {
-                        if (substr($key,0,-1)=='respuesta') {
-                            return $key;
-                        }
+                       // if (substr($key,0,-1)=='respuesta') {
+                            return substr($key,0,-1);
+                       // }
                     }
                     $postulante= Postulante::find($request->id_postulante);
                     try {
