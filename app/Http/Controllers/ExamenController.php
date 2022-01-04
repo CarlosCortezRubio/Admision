@@ -56,6 +56,8 @@ class ExamenController extends Controller
                                   "respuesta5"=>["B", "F" ,"H","J"],
                                   "respuesta6"=>["A", "C", "G", "I"]];
                     $respuestas = $request->except('_token','id_postulante');
+                    echo var_dump($correctas);
+                    echo var_dump($respuestas);
                     /*$resultado = array_intersect_assoc($correctas, $respuestas);
                     foreach ($resultado as $key => $value) {
                         if (substr($key,0,-1)=='respuesta') {
