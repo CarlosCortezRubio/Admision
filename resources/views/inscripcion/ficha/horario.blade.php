@@ -72,12 +72,15 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="card">
+                                   @if ($v->modalidad=='P')
+                                   <div class="card">
                                         <div class="card-body">
                                             <i class="fa fa-clock-o" aria-hidden="true"> Aula:</i>
                                             <p class="card-text">{{ $v->aula }}</p>
                                         </div>
                                     </div>
+                                   @endif
+                                    
                                 </div>
                             </div>
                         </div>
