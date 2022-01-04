@@ -59,7 +59,7 @@ class ExamenController extends Controller
                     $resultado = array_intersect_assoc($correctas, $respuestas);
                     foreach ($resultado as $key => $value) {
                         if (substr($key,0,-1)=='respuesta') {
-                            return $value;
+                           // return $value;
                         }
                     }
                     $postulante= Postulante::find($request->id_postulante);
