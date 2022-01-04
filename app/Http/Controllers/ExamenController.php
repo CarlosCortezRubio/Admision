@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Model\ExamenPostulante;
+use App\Models\Postulante;
 use App\Traits\Tables;
 use Exception;
 use Illuminate\Http\Request;
@@ -22,11 +23,12 @@ class ExamenController extends Controller
                 ->select('e.enlace',
                          'ep.id_examen_postulante',
                          "ep.minutos",
-                         "ep.segundos")
+                         "ep.segundos",
+                         'ps.id_postulante')
                 ->first();
         $proceso = $this->getProceso('V');
         session(['examen'=>$examen->enlace,'minutos'=>$examen->minutos,'segundos'=>$examen->segundos,'id_examen_postulante'=>$examen->id_examen_postulante]);
-        return view('inscripcion.Examen.index',['proceso'=>$proceso]);
+        return view('inscripcion.Examen.index',['proceso'=>$proceso,'id_postulante'=>$examen->id_postulante]);
     }
 
     public function tiempo(Request $request){
@@ -41,6 +43,35 @@ class ExamenController extends Controller
         } catch (Exception $e) {
             DB::rollBack();
             dd($e);
+        }
+    }
+
+    public function evaluar(Request $request){
+        switch (session('examen')) {
+            case 'ExamenSHM':
+                    $p1 = "B";
+                    $p2 = "B";
+                    $p3 = "I";
+                    $p4 = "J";
+                    $p5 = ["B", "F" ,"H","J"];
+                    $p6 = ["A", "C", "G", "I"];
+                    $postulante= Postulante::find($request->id_postulante);
+                    try {
+                        //DB::beginTransaction();
+                        //$postulante->nota=2;
+                        //$postulante->estado='R';                
+                        //$postulante->update();
+                        return $request;
+                        //DB::commit();
+                    } catch (Exception $e) {
+                        DB::rollBack();
+                        dd($e);
+                    }
+                break;
+            
+            default:
+                # code...
+                break;
         }
     }
 }

@@ -7,7 +7,7 @@
         <h4>Examen Tipo de Apreciación Histórico Musical</h4>
     </div>
     <hr width="100%" size="5" noshade>
-    <form action="/ExamenTipo/PHP/VISTA/Controller/Superior/ExamenHM.php" method="post">
+    <form action="{{ route('evaluar', ['id_postulante'=>$id_postulante]) }}" method="post">
         <h5>1. Elija las alternativas correctas respecto a la audición, puede marcar más de una por categoría:</h5>
      
 
