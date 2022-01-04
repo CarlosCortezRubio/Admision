@@ -58,8 +58,8 @@ class ExamenController extends Controller
                     $respuestas = $request->except('_token','id_postulante');
                     echo var_dump($correctas);
                     echo var_dump($respuestas);
-                    /*$resultado = array_intersect_assoc($correctas, $respuestas);
-                    foreach ($resultado as $key => $value) {
+                    $resultado = array_intersect_assoc($correctas, $respuestas);
+                    /*foreach ($resultado as $key => $value) {
                         if (substr($key,0,-1)=='respuesta') {
                            // return $value;
                         }
