@@ -40,7 +40,7 @@ Route::middleware(['auth'])->group(function() {
   Route::post('inscripcion/ficha','FichaController@store');
   Route::post('Examen','ExamenController@index')->name('BeginExamen');
   Route::get('Examen/timer','ExamenController@tiempo')->name('timer');
-  Route::get('Examen/evaluar','ExamenController@evaluar')->name('evaluar');
+  Route::post('Examen/evaluar','ExamenController@evaluar')->name('evaluar');
 });
 
 Route::get('/{slug}', function () {
