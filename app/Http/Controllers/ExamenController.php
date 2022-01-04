@@ -56,22 +56,19 @@ class ExamenController extends Controller
                                   "respuesta5"=>["B", "F" ,"H","J"],
                                   "respuesta6"=>["A", "C", "G", "I"]];
                     $respuestas = $request->except('_token','id_postulante');
-                    echo var_dump($correctas);
-                    echo var_dump($respuestas);
-                    $resultado = array_intersect_assoc($correctas, $respuestas);
-                    /*foreach ($resultado as $key => $value) {
-                        if (substr($key,0,-1)=='respuesta') {
-                           // return $value;
+                    $nota=0;
+                    foreach ($correctas as $key => $value) {
+                        if (substr($key,0,-1)=='respuesta' && array_key_exists($key, $respuestas) && $value==$respuestas[$key]) {
+                            $nota=$nota+20/count($correctas);
                         }
-                    }*/
+                    }
                     $postulante= Postulante::find($request->id_postulante);
                     try {
-                        //DB::beginTransaction();
-                        //$postulante->nota=2;
-                        //$postulante->estado='R';                
-                        //$postulante->update();
-                        return $request;
-                        //DB::commit();
+                        DB::beginTransaction();
+                        $postulante->nota=$nota;
+                        $postulante->estado='R';                
+                        $postulante->update();
+                        DB::commit();
                     } catch (Exception $e) {
                         DB::rollBack();
                         dd($e);
