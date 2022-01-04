@@ -31,7 +31,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check  col">
-                            <input required  type="radio" class="respuesta1 form-check-input" value="A" id="0101" name="respuesta1">
+                            <input   type="radio" class="respuesta1 form-check-input" value="A" id="0101" name="respuesta1">
                             <label class="respuesta1 form-check-label justify-content-center" for="0101">Ópera</label>
                         </div>
                         <div class='col-1'></div>
@@ -39,7 +39,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required  type="radio" class="respuesta1 form-check-input" value="B" id="0102" name="respuesta1">
+                            <input   type="radio" class="respuesta1 form-check-input" value="B" id="0102" name="respuesta1">
                             <label class="respuesta1 form-check-label justify-content-center" for="0102">Ballet</label>
                         </div>
                         <div class='col-1'></div>
@@ -47,7 +47,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required  type="radio" class="respuesta1 form-check-input" value="C" id="0103" name="respuesta1">
+                            <input   type="radio" class="respuesta1 form-check-input" value="C" id="0103" name="respuesta1">
                             <label class="respuesta1 form-check-label justify-content-center" for="0103">Programático</label>
                         </div>
                         <div class='col-1'></div>
@@ -55,7 +55,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required type="radio" class="respuesta1 form-check-input" value="D" id="0104" name="respuesta1">
+                            <input  type="radio" class="respuesta1 form-check-input" value="D" id="0104" name="respuesta1">
                             <label class="respuesta1 form-check-label justify-content-center" for="0104">Solista instrumental o vocal</label>
                         </div>
                         <div class='col-1'></div>
@@ -63,7 +63,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required  type="radio" class="respuesta1 form-check-input" value="E" id="0105" name="respuesta1">
+                            <input   type="radio" class="respuesta1 form-check-input" value="E" id="0105" name="respuesta1">
                             <label class="respuesta1 form-check-label justify-content-center" for="0105">Poema sinfónico</label>
                         </div>
                         <div class='col-1'></div>
@@ -71,7 +71,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required  type="radio" class="respuesta1 form-check-input" value="F" id="0106" name="respuesta1">
+                            <input   type="radio" class="respuesta1 form-check-input" value="F" id="0106" name="respuesta1">
                             <label class="respuesta1 form-check-label justify-content-center" for="0106">Concierto</label>
                         </div>
                         <div class='col-1'></div>
@@ -79,7 +79,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required  type="radio" class="respuesta1 form-check-input" value="G" id="0107" name="respuesta1">
+                            <input   type="radio" class="respuesta1 form-check-input" value="G" id="0107" name="respuesta1">
                             <label class="respuesta1 form-check-label justify-content-center" for="0107">Cantata</label>
                         </div>
                         <div class='col-1'></div>
@@ -87,7 +87,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required  type="radio" class="respuesta1 form-check-input" value="H" id="0108" name="respuesta1">
+                            <input   type="radio" class="respuesta1 form-check-input" value="H" id="0108" name="respuesta1">
                             <label class="respuesta1 form-check-label justify-content-center" for="0108">Coral</label>
                         </div>
                         <div class='col-1'></div>
@@ -95,7 +95,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required  type="radio" class="respuesta1 form-check-input" value="I" id="0109" name="respuesta1">
+                            <input   type="radio" class="respuesta1 form-check-input" value="I" id="0109" name="respuesta1">
                             <label class="respuesta1 form-check-label justify-content-center" for="0109">Oratorio</label>
                         </div>
                         <div class='col-1'></div>
@@ -111,7 +111,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required  type="radio" class="respuesta2 form-check-input" value="A" id="0201" name="respuesta2">
+                            <input   type="radio" class="respuesta2 form-check-input" value="A" id="0201" name="respuesta2">
                             <label class="respuesta2 form-check-label justify-content-center" for="0201">Orquesta de cámara</label>
                         </div>
                         <div class='col-1'></div>
@@ -119,7 +119,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required  type="radio" class="respuesta2 form-check-input" value="B" id="0202" name="respuesta2">
+                            <input   type="radio" class="respuesta2 form-check-input" value="B" id="0202" name="respuesta2">
                             <label class="respuesta2 form-check-label justify-content-center" for="0202">Orquesta sinfónica</label>
                         </div>
                         <div class='col-1'></div>
@@ -127,7 +127,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required type="radio" class="form-check-input respuesta2" value="C" id="0203" name="respuesta2">
+                            <input  type="radio" class="form-check-input respuesta2" value="C" id="0203" name="respuesta2">
                             <label class="respuesta2 form-check-label justify-content-center" for="0203">Conjunto coral – instrumental</label>
                         </div>
                         <div class='col-1'></div>
@@ -135,7 +135,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required  type="radio" class="form-check-input respuesta2" value="D" id="0204" name="respuesta2">
+                            <input   type="radio" class="form-check-input respuesta2" value="D" id="0204" name="respuesta2">
                             <label class="respuesta2 form-check-label justify-content-center" for="0204">Conjunto de cuerdas</label>
                         </div>
                         <div class='col-1'></div>
@@ -143,7 +143,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required  type="radio" class="form-check-input respuesta2" value="E" id="0205" name="respuesta2">
+                            <input   type="radio" class="form-check-input respuesta2" value="E" id="0205" name="respuesta2">
                             <label class="respuesta2 form-check-label justify-content-center" for="0205">Conjunto de maderas</label>
                         </div>
                         <div class='col-1'></div>
@@ -151,7 +151,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required  type="radio" class="form-check-input respuesta2" value="F" id="0206" name="respuesta2">
+                            <input   type="radio" class="form-check-input respuesta2" value="F" id="0206" name="respuesta2">
                             <label class="respuesta2 form-check-label justify-content-center" for="0206">Cuarteto de cuerdas</label>
                         </div>
                         <div class='col-1'></div>
@@ -159,7 +159,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required  type="radio" class="form-check-input respuesta2" value="G" id="0207" name="respuesta2">
+                            <input   type="radio" class="form-check-input respuesta2" value="G" id="0207" name="respuesta2">
                             <label class="respuesta2 form-check-label justify-content-center" for="0207">Instrumento o voz solista</label>
                         </div>
                         <div class='col-1'></div>
@@ -167,7 +167,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required  type="radio" class="form-check-input respuesta2" value="H" id="0208" name="respuesta2">
+                            <input   type="radio" class="form-check-input respuesta2" value="H" id="0208" name="respuesta2">
                             <label class="respuesta2 form-check-label justify-content-center" for="0208">Conjunto de metales</label>
                         </div>
                         <div class='col-1'></div>
@@ -175,7 +175,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required type="radio" class="form-check-input respuesta2" value="I" id="0209" name="respuesta2">
+                            <input  type="radio" class="form-check-input respuesta2" value="I" id="0209" name="respuesta2">
                             <label class="respuesta2 form-check-label justify-content-center" for="0209">Banda sinfónica</label>
                         </div>
                         <div class='col-1'></div>
@@ -183,7 +183,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required type="radio" class="form-check-input respuesta2" value="J" id="0210" name="respuesta2">
+                            <input  type="radio" class="form-check-input respuesta2" value="J" id="0210" name="respuesta2">
                             <label class="respuesta2 form-check-label justify-content-center" for="0210">Sinfónico-coral</label>
                         </div>
                         <div class='col-1'></div>
@@ -217,7 +217,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check  col">
-                            <input required type="radio" class="respuesta3 form-check-input" value="A" id="0301" name="respuesta3">
+                            <input  type="radio" class="respuesta3 form-check-input" value="A" id="0301" name="respuesta3">
                             <label class="respuesta3 form-check-label justify-content-center" for="0301">Ópera</label>
                         </div>
                         <div class='col-1'></div>
@@ -225,7 +225,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required  type="radio" class="respuesta3 form-check-input" value="B" id="0302" name="respuesta3">
+                            <input   type="radio" class="respuesta3 form-check-input" value="B" id="0302" name="respuesta3">
                             <label class="respuesta3 form-check-label justify-content-center" for="0302">Ballet</label>
                         </div>
                         <div class='col-1'></div>
@@ -233,7 +233,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required  type="radio" class="respuesta3 form-check-input" value="C" id="0303" name="respuesta3">
+                            <input   type="radio" class="respuesta3 form-check-input" value="C" id="0303" name="respuesta3">
                             <label class="respuesta3 form-check-label justify-content-center" for="0303">Programático</label>
                         </div>
                         <div class='col-1'></div>
@@ -241,7 +241,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required  type="radio" class="respuesta3 form-check-input" value="D" id="0304" name="respuesta3">
+                            <input   type="radio" class="respuesta3 form-check-input" value="D" id="0304" name="respuesta3">
                             <label class="respuesta3 form-check-label justify-content-center" for="0304">Solista instrumental o vocal</label>
                         </div>
                         <div class='col-1'></div>
@@ -249,7 +249,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required type="radio" class="respuesta3 form-check-input" value="E" id="0305" name="respuesta3">
+                            <input  type="radio" class="respuesta3 form-check-input" value="E" id="0305" name="respuesta3">
                             <label class="respuesta3 form-check-label justify-content-center" for="0305">Poema sinfónico</label>
                         </div>
                         <div class='col-1'></div>
@@ -257,7 +257,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required type="radio" class="respuesta3 form-check-input" value="F" id="0306" name="respuesta3">
+                            <input  type="radio" class="respuesta3 form-check-input" value="F" id="0306" name="respuesta3">
                             <label class="respuesta3 form-check-label justify-content-center" for="0306">Concierto</label>
                         </div>
                         <div class='col-1'></div>
@@ -265,7 +265,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required  type="radio" class="respuesta3 form-check-input" value="G" id="0307" name="respuesta3">
+                            <input   type="radio" class="respuesta3 form-check-input" value="G" id="0307" name="respuesta3">
                             <label class="respuesta3 form-check-label justify-content-center" for="0307">Cantata</label>
                         </div>
                         <div class='col-1'></div>
@@ -273,7 +273,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required  type="radio" class="respuesta3 form-check-input" value="H" id="0308" name="respuesta3">
+                            <input   type="radio" class="respuesta3 form-check-input" value="H" id="0308" name="respuesta3">
                             <label class="respuesta3 form-check-label justify-content-center" for="0308">Coral</label>
                         </div>
                         <div class='col-1'></div>
@@ -281,7 +281,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required type="radio" class="respuesta3 form-check-input" value="I" id="0309" name="respuesta3">
+                            <input  type="radio" class="respuesta3 form-check-input" value="I" id="0309" name="respuesta3">
                             <label class="respuesta3 form-check-label justify-content-center" for="0309">Oratorio</label>
                         </div>
                         <div class='col-1'></div>
@@ -297,7 +297,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required  type="radio" class="respuesta4 form-check-input" value="A" id="0401" name="respuesta4">
+                            <input   type="radio" class="respuesta4 form-check-input" value="A" id="0401" name="respuesta4">
                             <label class="respuesta4 form-check-label justify-content-center" for="0401">Orquesta de cámara</label>
                         </div>
                         <div class='col-1'></div>
@@ -305,7 +305,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required type="radio" class="respuesta4 form-check-input" value="B" id="0402" name="respuesta4">
+                            <input  type="radio" class="respuesta4 form-check-input" value="B" id="0402" name="respuesta4">
                             <label class="respuesta4 form-check-label justify-content-center" for="0402">Orquesta sinfónica</label>
                         </div>
                         <div class='col-1'></div>
@@ -313,7 +313,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required type="radio" class="form-check-input respuesta4" value="C" id="0403" name="respuesta4">
+                            <input  type="radio" class="form-check-input respuesta4" value="C" id="0403" name="respuesta4">
                             <label class="respuesta4 form-check-label justify-content-center" for="0403">Conjunto coral – instrumental</label>
                         </div>
                         <div class='col-1'></div>
@@ -321,7 +321,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required type="radio" class="form-check-input respuesta4" value="D" id="0404" name="respuesta4">
+                            <input  type="radio" class="form-check-input respuesta4" value="D" id="0404" name="respuesta4">
                             <label class="respuesta4 form-check-label justify-content-center" for="0404">Conjunto de cuerdas</label>
                         </div>
                         <div class='col-1'></div>
@@ -329,7 +329,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required type="radio" class="form-check-input respuesta4" value="E" id="0405" name="respuesta4">
+                            <input  type="radio" class="form-check-input respuesta4" value="E" id="0405" name="respuesta4">
                             <label class="respuesta4 form-check-label justify-content-center" for="0405">Conjunto de maderas</label>
                         </div>
                         <div class='col-1'></div>
@@ -337,7 +337,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required type="radio" class="form-check-input respuesta4" value="F" id="0406" name="respuesta4">
+                            <input  type="radio" class="form-check-input respuesta4" value="F" id="0406" name="respuesta4">
                             <label class="respuesta4 form-check-label justify-content-center" for="0406">Cuarteto de cuerdas</label>
                         </div>
                         <div class='col-1'></div>
@@ -345,7 +345,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required type="radio" class="form-check-input respuesta4" value="G" id="0407" name="respuesta4">
+                            <input  type="radio" class="form-check-input respuesta4" value="G" id="0407" name="respuesta4">
                             <label class="respuesta4 form-check-label justify-content-center" for="0407">Instrumento o voz solista</label>
                         </div>
                         <div class='col-1'></div>
@@ -353,7 +353,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required type="radio" class="form-check-input respuesta4" value="H" id="0408" name="respuesta4">
+                            <input  type="radio" class="form-check-input respuesta4" value="H" id="0408" name="respuesta4">
                             <label class="respuesta4 form-check-label justify-content-center" for="0408">Conjunto de metales</label>
                         </div>
                         <div class='col-1'></div>
@@ -361,7 +361,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required type="radio" class="form-check-input respuesta4" value="I" id="0409" name="respuesta4">
+                            <input  type="radio" class="form-check-input respuesta4" value="I" id="0409" name="respuesta4">
                             <label class="respuesta4 form-check-label justify-content-center" for="0409">Banda sinfónica</label>
                         </div>
                         <div class='col-1'></div>
@@ -369,7 +369,7 @@
                     <div class='row'>
                         <div class='col-1'></div>
                         <div class="form-check col">
-                            <input required type="radio" class="form-check-input respuesta4" value="J" id="0410" name="respuesta4">
+                            <input  type="radio" class="form-check-input respuesta4" value="J" id="0410" name="respuesta4">
                             <label class="respuesta4 form-check-label justify-content-center" for="0410">Sinfónico-coral</label>
                         </div>
                         <div class='col-1'></div>
