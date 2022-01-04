@@ -51,7 +51,7 @@
                         success: function(data){
                             if (segundos==0){
                                 if (minutos<=0){
-
+                                    document.getElementById("formevaluar").submit();
                                 }else{
                                     minutos=minutos-1;
                                     segundos=59;

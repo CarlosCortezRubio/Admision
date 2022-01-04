@@ -569,10 +569,10 @@
             </div>
             <div class="col-1"></div>
         </div>
-        
+    </form>
             <div class='centrar-content'>
                 <button class="btn btn-success" data-toggle="modal" data-target="#modalconfirmar">Grabar</button>
             </div>
         
-    </form>
+    
 </div>
