@@ -66,10 +66,7 @@ class ExamenController extends Controller
             }
         }
         $postulante= Postulante::find($request->id_postulante);
-        session_destroy('examen');
-        session_destroy('minutos');
-        session_destroy('segundos');
-        session_destroy('id_examen_postulante');
+        session()->forget(['examen','minutos','segundos','id_examen_postulante']);
         try {
             DB::beginTransaction();
             $postulante->nota=$nota;
