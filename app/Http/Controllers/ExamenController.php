@@ -53,12 +53,9 @@ class ExamenController extends Controller
                     $data = $request->except('_token','id_postulante');
 
                     foreach ($data as $key => $value) {
-                        echo $key."\n";
-                    }
-                    foreach ($request as $key => $value) {
-                       // if (substr($key,0,-1)=='respuesta') {
-                     //       echo $key."\n";
-                       // }
+                        if (substr($key,0,-1)=='respuesta') {
+                            echo $value."\n";
+                        }
                     }
                     $postulante= Postulante::find($request->id_postulante);
                     try {
