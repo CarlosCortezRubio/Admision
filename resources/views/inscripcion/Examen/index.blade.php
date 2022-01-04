@@ -68,8 +68,6 @@
             }
             timer();
         });
-    </script>
-    <script>
         function zfill(number, width) {
             var numberOutput = Math.abs(number); /* Valor absoluto del número */
             var length = number.toString().length; /* Largo del número */ 
@@ -89,9 +87,9 @@
                 }
             }
         }
-        /*$('body').on("contextmenu",function(e){
+        $('body').on("contextmenu",function(e){
             return false;
-        });*/
+        });
         $('body').bind('cut copy paste', function(e){
             e.preventDefault();
         });
