@@ -49,12 +49,12 @@ class ExamenController extends Controller
     public function evaluar(Request $request){
         switch (session('examen')) {
             case 'ExamenSHM':
-                    $p1 = "B";
-                    $p2 = "B";
-                    $p3 = "I";
-                    $p4 = "J";
-                    $p5 = ["B", "F" ,"H","J"];
-                    $p6 = ["A", "C", "G", "I"];
+                    $respuestas = ["B","B","I","J",["B", "F" ,"H","J"],["A", "C", "G", "I"]];
+                    foreach ($request as $key => $value) {
+                        if (substr($key,0,-1)=='respuesta') {
+                            return $key;
+                        }
+                    }
                     $postulante= Postulante::find($request->id_postulante);
                     try {
                         //DB::beginTransaction();
