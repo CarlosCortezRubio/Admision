@@ -49,10 +49,15 @@ class ExamenController extends Controller
     public function evaluar(Request $request){
         switch (session('examen')) {
             case 'ExamenSHM':
-                    $respuestas = ["B","B","I","J",["B", "F" ,"H","J"],["A", "C", "G", "I"]];
-                    $data = $request->except('_token','id_postulante');
-
-                    foreach ($data as $key => $value) {
+                    $correctas = ["respuesta1"=>"B",
+                                  "respuesta2"=>"B",
+                                  "respuesta3"=>"I",
+                                  "respuesta4"=>"J",
+                                  "respuesta5"=>["B", "F" ,"H","J"],
+                                  "respuesta6"=>["A", "C", "G", "I"]];
+                    $respuestas = $request->except('_token','id_postulante');
+                    $resultado = array_intersect_assoc($correctas, $respuestas);
+                    foreach ($resultado as $key => $value) {
                         if (substr($key,0,-1)=='respuesta') {
                             return $value;
                         }
