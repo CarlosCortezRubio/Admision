@@ -8,6 +8,25 @@
         <h1 class="col" id="segundos">{{ session('segundos')}}</h1>
     </div>
 </div>
+<div class="modal fade" id="modalconfirmar" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-success">
+                <h5 class="modal-title">Eliminar</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+            </div>
+            <div class="modal-body">
+                <p>¿Desea grabar las respuesta de este examen?</p>
+            </div>
+            <div class="modal-footer centrar-content">
+                <button type="submit" class="btn btn-success" form="formevaluar">Aceptar</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>
    @switch(session('examen'))
        @case('ExamenSHM')
            @include('inscripcion.Examen.ExamenSHM')
