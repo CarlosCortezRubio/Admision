@@ -1,5 +1,5 @@
 <div class='container'>
-    <div class='row'>
+    <div class='row centrar-content'>
         @if (!$horarios)
             <div class="container justify-content-center align-items-center">
                 <div class="card card-primary card-outline elevation-2">

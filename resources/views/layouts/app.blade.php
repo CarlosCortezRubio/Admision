@@ -30,6 +30,12 @@
             left:0;
             z-index:-1;
          }
+         .centrar-content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
       </style>
 
       <!-- Icon -->
