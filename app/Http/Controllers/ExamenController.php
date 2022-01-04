@@ -47,6 +47,7 @@ class ExamenController extends Controller
     }
 
     public function evaluar(Request $request){
+        $correctas=[];
         switch (session('examen')) {
             case 'ExamenSHM':
                     $correctas = ["respuesta1"=>"B",
@@ -55,29 +56,29 @@ class ExamenController extends Controller
                                   "respuesta4"=>"J",
                                   "respuesta5"=>["B", "F" ,"H","J"],
                                   "respuesta6"=>["A", "C", "G", "I"]];
-                    $respuestas = $request->except('_token','id_postulante');
-                    $nota=0;
-                    foreach ($correctas as $key => $value) {
-                        if (substr($key,0,-1)=='respuesta' && array_key_exists($key, $respuestas) && $value==$respuestas[$key]) {
-                            $nota=$nota+20/count($correctas);
-                        }
-                    }
-                    $postulante= Postulante::find($request->id_postulante);
-                    try {
-                        DB::beginTransaction();
-                        $postulante->nota=$nota;
-                        $postulante->estado='R';                
-                        $postulante->update();
-                        DB::commit();
-                    } catch (Exception $e) {
-                        DB::rollBack();
-                        dd($e);
-                    }
                 break;
-            
-            default:
-                # code...
-                break;
+        }
+        $respuestas = $request->except('_token','id_postulante');
+        $nota=0;
+        foreach ($correctas as $key => $value) {
+            if (substr($key,0,-1)=='respuesta' && array_key_exists($key, $respuestas) && $value==$respuestas[$key]) {
+                $nota=$nota+20/count($correctas);
+            }
+        }
+        $postulante= Postulante::find($request->id_postulante);
+        try {
+            DB::beginTransaction();
+            $postulante->nota=$nota;
+            $postulante->estado='R';                
+            $postulante->update();
+            DB::commit();
+            session_destroy(session('examen'));
+            session_destroy(session('minutos'));
+            session_destroy(session('segundos'));
+            session_destroy(session('id_examen_postulante'));
+        } catch (Exception $e) {
+            DB::rollBack();
+            dd($e);
         }
     }
 }
