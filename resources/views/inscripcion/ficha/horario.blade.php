@@ -9,7 +9,7 @@
                 </div>
             </div>
         @else
-            <div class="container">
+          
 
 
                 @foreach ($horarios as $k => $v)
@@ -101,7 +101,7 @@
                     </div>
                     <br>
                 @endforeach
-            </div>
+          
         @endif
         <div class='col-1'></div>
     </div>
