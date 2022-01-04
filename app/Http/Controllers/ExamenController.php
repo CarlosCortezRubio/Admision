@@ -78,5 +78,6 @@ class ExamenController extends Controller
             DB::rollBack();
             dd($e);
         }
+        return redirect()->route('inscription');
     }
 }
