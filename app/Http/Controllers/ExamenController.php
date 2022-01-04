@@ -66,16 +66,17 @@ class ExamenController extends Controller
             }
         }
         $postulante= Postulante::find($request->id_postulante);
+        session_destroy(session('examen'));
+            session_destroy(session('minutos'));
+            session_destroy(session('segundos'));
+            session_destroy(session('id_examen_postulante'));
         try {
             DB::beginTransaction();
             $postulante->nota=$nota;
             $postulante->estado='R';                
             $postulante->update();
             DB::commit();
-            session_destroy(session('examen'));
-            session_destroy(session('minutos'));
-            session_destroy(session('segundos'));
-            session_destroy(session('id_examen_postulante'));
+            
         } catch (Exception $e) {
             DB::rollBack();
             dd($e);
