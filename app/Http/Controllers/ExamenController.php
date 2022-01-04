@@ -54,7 +54,7 @@ class ExamenController extends Controller
 
                     foreach ($data as $key => $value) {
                         if (substr($key,0,-1)=='respuesta') {
-                            echo $value."\n";
+                            return $value;
                         }
                     }
                     $postulante= Postulante::find($request->id_postulante);
