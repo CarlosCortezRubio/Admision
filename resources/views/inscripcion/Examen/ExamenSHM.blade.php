@@ -8,6 +8,7 @@
     </div>
     <hr width="100%" size="5" noshade>
     <form action="{{ route('evaluar', ['id_postulante'=>$id_postulante]) }}" id="formevaluar" method="post">
+        @csrf
         <h5>1. Elija las alternativas correctas respecto a la audición, puede marcar más de una por categoría:</h5>
      
 
