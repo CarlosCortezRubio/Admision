@@ -52,7 +52,7 @@ class ExamenController extends Controller
                     $respuestas = ["B","B","I","J",["B", "F" ,"H","J"],["A", "C", "G", "I"]];
                     foreach ($request as $key => $value) {
                        // if (substr($key,0,-1)=='respuesta') {
-                            return substr($key,0,-1);
+                            echo substr($key,0,-1);
                        // }
                     }
                     $postulante= Postulante::find($request->id_postulante);
