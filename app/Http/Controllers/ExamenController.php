@@ -50,7 +50,7 @@ class ExamenController extends Controller
         switch (session('examen')) {
             case 'ExamenSHM':
                     $respuestas = ["B","B","I","J",["B", "F" ,"H","J"],["A", "C", "G", "I"]];
-                    $data = $request->except('_token');
+                    $data = $request->except('_token','id_postulante');
 
                     foreach ($data as $key => $value) {
                         echo $key."\n";
