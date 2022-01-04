@@ -53,7 +53,7 @@ class ExamenController extends Controller
                     $data = $request->except('_token');
 
                     foreach ($data as $key => $value) {
-                        echo $value."\n";
+                        echo var_dump($value)."\n";
                     }
                     foreach ($request as $key => $value) {
                        // if (substr($key,0,-1)=='respuesta') {
