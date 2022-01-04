@@ -69,7 +69,7 @@ class ExamenController extends Controller
         session()->forget(['examen','minutos','segundos','id_examen_postulante']);
         try {
             DB::beginTransaction();
-            $postulante->nota=$nota;
+            $postulante->nota=round($nota);
             $postulante->estado='R';                
             $postulante->update();
             DB::commit();
