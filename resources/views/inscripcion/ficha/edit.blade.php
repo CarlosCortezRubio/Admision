@@ -399,7 +399,7 @@
                </div>
                
                   <div id="selec_disc" class="form-group row" {{'S'!=($new?old('flag_disc_adm'):$ficha->flag_disc_adm)?"style=display:none":'' }}>
-                     <label for="apel_nomb_apd" class="col-lg-3 col-md-12 text-lg-right">Seleccione Discapacidad</label>
+                     <label for="apel_nomb_apd" class="col-lg-3 col-md-12 text-lg-right">Seleccione:</label>
                      <div class="col-lg-9 col-md-12">
                         <select id="seleccione_dis" name="disc_soli_adm" {{'S'==($new?old('flag_disc_adm'):$ficha->flag_disc_adm)?"required":'' }} class="form-control">
                            <option value="">Seleccionar...</option>

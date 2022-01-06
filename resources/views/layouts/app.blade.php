@@ -115,7 +115,7 @@
                      <h5>
                         El proceso de admisi&oacute;n ha finalizado.
                         <br>Puede ingresar
-                        <a href="http://www.unm.edu.pe/proceso-de-admision/" target="_blank">aqu&iacute;</a>
+                        <a href="http://www.unm.edu.pe/admision-presentacion/" target="_blank">aqu&iacute;</a>
                         para conocer m&aacute;s sobre este proceso.
                      </h5>
                   </div>
