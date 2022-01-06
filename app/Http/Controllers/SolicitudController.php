@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\URL;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\DB;
 
 class SolicitudController extends Controller
 {
@@ -25,14 +26,18 @@ class SolicitudController extends Controller
 
    public function index()
    {
-	   
-      $proceso = $this->getProceso('V');
-	  //echo "[$proceso]";
-	  //dd($proceso);
-      $secciones = $this->getSections('S');
-      $tDocumentos=$this->getTables('01','%','S')->where('abre_tabl_det', '<>', 'RUC');
-
-      return view('inscripcion.solicitud.index', ['proceso'=>$proceso, 'secciones'=>$secciones, 'tDocumentos'=>$tDocumentos]);
+	   $periodos= DB::table('admision.adm_periodo')->where('anio',Carbon::now()->year)
+                                                  ->where('estado','A')->get();
+      foreach ($periodos as $key => $per) {
+         if(Carbon::now()->between($per->peri_insc_inic,$per->peri_insc_fin)){
+            $proceso = $this->getProceso('V');
+            $secciones = $this->getSections('S');
+            $tDocumentos=$this->getTables('01','%','S')->where('abre_tabl_det', '<>', 'RUC');
+            return view('inscripcion.solicitud.index', ['proceso'=>$proceso, 'secciones'=>$secciones, 'tDocumentos'=>$tDocumentos]);
+         }
+         
+      }
+      return view('inscripcion.mensaje',['proceso'=>false]);
    }
 
    public function store(SolicitudFormRequest $request)
