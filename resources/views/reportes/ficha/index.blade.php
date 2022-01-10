@@ -20,7 +20,7 @@
                 </li>
             </ul>
             <span class="navbar-text text-light">
-                Proceso de Admisión 2020
+                Proceso de Admisión 2022
             </span>
         </div>
     </nav>
@@ -28,7 +28,7 @@
         <div class="container">
 
 						<div class="alert alert-success" role="alert">
-								<h4 class="alert-heading">Proceso de Admisión 2020</h4>
+								<h4 class="alert-heading">Proceso de Admisión 2022</h4>
 								<hr class="message-inner-separator">
 								<p>Usted ya ha enviado su inscripción, puede visualizarla en la siguiente opción:</p>
 								<form action="{{ url('reportes/fichaPDF') }}" method="post" id="formPDF" target="_blank">

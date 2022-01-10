@@ -101,7 +101,7 @@
                <div class="mx-auto" style="height:40px;">
                   <hr>
                   <h4 class="text-center" style="position:relative; top:-40px;">
-                     <span class="badge badge-secondary p-3" >Proceso de Admisión {{ $proceso->nume_proc_adm }}</span>
+                     <span class="badge badge-secondary p-3" >Proceso de Admisión 2022 {{-- $proceso->nume_proc_adm --}}</span>
                   </h4>
                </div>
             </div>
