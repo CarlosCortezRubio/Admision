@@ -121,7 +121,7 @@
       			      <strong>Exonerado S/ {{ $proceso->mnto_exon_adm }}</strong>
                      <hr>
 
-{{--                      <h6 class="card-subtitle mb-2 text-muted">Seleccione la forma de pago:</h6>
+                     {{-- <h6 class="card-subtitle mb-2 text-muted">Seleccione la forma de pago:</h6>
                      <div class="custom-control custom-radio mb-2">
                         <input type="radio" class="custom-control-input" id="rbtn1" name="tipo_plat_sol" value="T">
                         <label class="custom-control-label" for="rbtn1">Tarjeta de cr&eacute;dito o d&eacute;bito</label>
