@@ -123,8 +123,8 @@ class PagoController extends Controller
       $ficha->apel_mate_per = trim(strtoupper($request->get('apel_mate_per')));
       $ficha->nomb_pers_per = trim(strtoupper($request->get('nomb_pers_per')));
       $ficha->esta_post_pos = 'R';
+      $ficha->save();
       //
-      return $ficha;
       $client = new Client([
          'base_uri' => config('app.url_pasarela').'/',
          'verify' => false,
