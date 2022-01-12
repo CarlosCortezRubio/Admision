@@ -83,7 +83,7 @@
                         <div class="col-12">
                            <div class="form-group">
                               <label for="documento" class="mb-1">Nombres:</label>
-                              <input type="text" id="nomb_pers_per" class="form-control" required>
+                              <input type="text" name="nomb_pers_per" class="form-control" required>
                            </div>
                         </div>
                      </div>
