@@ -11,6 +11,7 @@ use App\User;
 use App\Models\Solicitud;
 use App\Models\Seccion_Especialidad;
 use App\Http\Requests\PagoFormRequest;
+use App\Models\Ficha;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Redirect;
 use GuzzleHttp\Client;
@@ -88,7 +89,24 @@ class PagoController extends Controller
 	  if($request->get('codi_moda_mod') == 'E'){             
           $solicitud->mnto_pago_sol = $request->get('mnto_pago_exo');     
 	  } else {
-		  $solicitud->mnto_pago_sol = $request->get('mnto_pago_ord');
+         $solicitud->mnto_pago_sol = $request->get('mnto_pago_ord');
+         //2022
+         $ficha=new Ficha;
+         $maxExpe = Ficha::where('codi_proc_adm', $proceso->codi_proc_adm)->max('nume_expe_pos');
+         $maxExpe = empty($maxExpe) ? 0 : $maxExpe;
+         $ficha->codi_proc_adm = $proceso->codi_proc_adm;
+         $ficha->codi_secc_sec = $request->get('codi_secc_sec');;
+         $ficha->codi_espe_esp = $request->get('codi_espe_esp');
+         $ficha->tipo_docu_per = $request->get('tipo_docu_sol');
+         $ficha->nume_docu_per = $request->get('nume_docu_sol');
+         $ficha->nume_expe_pos = $maxExpe + 1;
+         $ficha->fech_naci_per = $request->get('fech_naci_pos');
+         $ficha->edad_calc_pos = $request->get('edad_calc_pos');
+         $ficha->apel_pate_per = trim(strtoupper($request->get('apel_pate_per')));
+         $ficha->apel_mate_per = trim(strtoupper($request->get('apel_mate_per')));
+         $ficha->nomb_pers_per = trim(strtoupper($request->get('nomb_pers_per')));
+         $ficha->esta_post_pos = 'R';
+         //
 	  }
 	  	  
       $solicitud->codi_secc_sec = $request->get('codi_secc_sec');
