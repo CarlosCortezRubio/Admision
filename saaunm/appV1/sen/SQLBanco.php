@@ -1,0 +1,35 @@
+<?php 
+/** 
+ * @file SQLBanco.php 
+ *  
+ * Consultas SQL de la Tabla Banco 
+ * 
+ * @author UNM 
+ * @version V 0.1 
+ * @date 27/11/2021
+ *  
+*/ 
+class SQLBanco 
+{ 
+  const AGREGAR_BANCO = "INSERT INTO Banco (IDBANCO, Edo_idEdoRegistro, NOMBANCO, ETIBANCO) VALUES (?, ?, ?, ?) ";
+
+  const ACTUALIZAR_BANCO = "UPDATE Banco SET IDBANCO = ?, Edo_idEdoRegistro = ?, NOMBANCO = ?, ETIBANCO = ? WHERE idBanco = ?";
+
+  const ELIMINAR_BANCO = "DELETE FROM Banco WHERE idBanco = ?";
+
+  const CONSULTAR_BANCO = "SELECT * FROM Banco ORDER BY IDBANCO";
+
+  const CONSULTAR_BANCO_POR_IDBANCOBANCO = "SELECT * FROM Banco WHERE IDBANCOBanco = ?";
+
+  const CONSULTAR_BANCO_POR_EDO_IDEDOREGISTRO = "SELECT * FROM Banco WHERE Edo_idEdoRegistroBanco = ?";
+
+  const CONSULTAR_BANCO_POR_NOMBANCO = "SELECT * FROM Banco WHERE UPPER(NOMBANCOBanco) = UPPER(?)";
+
+  const CONSULTAR_BANCO_POR_NOMBANCO_APROX = "SELECT * FROM Banco WHERE UPPER(NOMBANCOBanco) LIKE UPPER(?) ORDER BY NOMBANCOBanco";
+
+  const CONSULTAR_BANCO_POR_ETIBANCO = "SELECT * FROM Banco WHERE UPPER(ETIBANCOBanco) = UPPER(?)";
+
+  const CONSULTAR_BANCO_POR_ETIBANCO_APROX = "SELECT * FROM Banco WHERE UPPER(ETIBANCOBanco) LIKE UPPER(?) ORDER BY ETIBANCOBanco";
+
+}
+?>

@@ -1,0 +1,37 @@
+Codigo;Nombre;nomCorto;ResAuto;FecAuto;TipoEvaluacion;AplicaGrupos;AplicaPreInscrip;Estado
+S2011ARIT;Arpa;AR;;;Tradicional;1;1;Activo
+S2011CAIT;Canto;CA;;;Tradicional;1;1;Activo
+S2011CLIT;Clarinete;CL;;;Tradicional;1;1;Activo
+S2011COIT;Composición;CO;;;Tradicional;1;1;Activo
+S2011CBIT;Contrabajo;CB;;;Tradicional;1;1;Activo
+S2011CRIT;Corno;CR;;;Tradicional;1;1;Activo
+S2011DCIT;Dirección Coral;DC;;;Tradicional;1;1;Activo
+S2011DIIT;Dirección Instrumental;DI;;;Tradicional;1;1;Activo
+S2011EDDO;Educación Musical;ED;;;Tradicional;1;1;Activo
+S2011ECDO;Educación Musical - Dirección de Coros;EC;;;Tradicional;1;1;Activo
+S2011ETDO;Educación Musical - Dirección Instrumental;ET;;;Tradicional;1;1;Activo
+S2011EUIT;Eufonio;EU;;;Tradicional;1;1;Activo
+S2011FGIT;Fagot;FG;;;Tradicional;1;1;Activo
+S2011FLIT;Flauta;FL;;;Tradicional;1;1;Activo
+S2011FDIT;Flauta dulce;FD;;;Tradicional;1;1;Activo
+S2011GTIT;Guitarra;GT;;;Tradicional;1;1;Activo
+S2011MGIT;Musicología;MG;;;Tradicional;1;1;Activo
+S2011OBIT;Oboe;OB;;;Tradicional;1;1;Activo
+S2011ARDO;Pedagogía de la interpretación en Arpa (ELIMINAR);AR;;;Tradicional;1;2;Activo
+S2011GTDO;Pedagogía de la interpretación en Guitarra (ELIMINAR);GT;;;Tradicional;1;1;Activo
+S2011OBDO;Pedagogía de la interpretación en Oboe (ELIMINAR);OB;;;Tradicional;1;1;Activo
+S2011PEDO;Pedagogía de la interpretación en Percusión( ELIMINAR);PE;;;Tradicional;1;1;Activo
+S2011PIDO;Pedagogía de la interpretación en Piano;PI;;;Tradicional;1;1;Activo
+S2011VADO;Pedagogía de la interpretación en Viola (ELIMINAR);VA;;;Tradicional;1;1;Activo
+S2011VCDO;Pedagogía de la interpretación en Violenchelo( ELIMINAR);VC;;;Tradicional;1;1;Activo
+S2011PEIT;Percusión;PE;;;Tradicional;1;1;Activo
+S2011PIIT;Piano;PI;;;Tradicional;1;1;Activo
+01;Repositorio Digital Individual (ELIMINAR);Repositorio Digital Individual;;;Tradicional;2;2;Activo
+S2011SXIT;Saxofón;SX;;;Tradicional;1;1;Activo
+S2011TBIT;Trombón;TB;;;Tradicional;1;1;Activo
+S2011TPIT;Trompeta;TP;;;Tradicional;1;1;Activo
+S2011TUIT;Tuba;TU;;;Tradicional;1;1;Activo
+S2011VAIT;Viola;VA;;;Tradicional;1;1;Activo
+S2011VNIT;Violín;VN;;;Tradicional;1;1;Activo
+S2011VCIT;Violonchelo;VC;;;Tradicional;1;1;Activo
+;;;;;;;;

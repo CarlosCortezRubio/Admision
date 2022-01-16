@@ -1,0 +1,37 @@
+<?php 
+/** 
+ * @file SQLLog.php 
+ *  
+ * Consultas SQL de la Tabla Log 
+ * 
+ * @author UNM 
+ * @version V 0.1 
+ * @date 08/11/2021
+ *  
+*/ 
+class SQLLog 
+{ 
+  const AGREGAR_LOG = "INSERT INTO log (IDLOG, IDUSUARIO, FECHALOG, IPLOG, ACCIONLOG) VALUES (?, ?, ?, ?, ?) ";
+
+  const ACTUALIZAR_LOG = "UPDATE log SET IDLOG = ?, IDUSUARIO = ?, FECHALOG = ?, IPLOG = ?, ACCIONLOG = ? WHERE idlog = ?";
+
+  const ELIMINAR_LOG = "DELETE FROM log WHERE idlog = ?";
+
+  const CONSULTAR_LOG = "SELECT * FROM log ORDER BY IDLOG";
+
+  const CONSULTAR_LOG_POR_IDLOGLOG = "SELECT * FROM log WHERE IDLOGlog = ?";
+
+  const CONSULTAR_LOG_POR_IDUSUARIO = "SELECT * FROM log WHERE IDUSUARIOlog = ?";
+
+  const CONSULTAR_LOG_POR_FECHALOG = "SELECT * FROM log WHERE FECHALOGlog = ?";
+
+  const CONSULTAR_LOG_POR_IPLOG = "SELECT * FROM log WHERE UPPER(IPLOGlog) = UPPER(?)";
+
+  const CONSULTAR_LOG_POR_IPLOG_APROX = "SELECT * FROM log WHERE UPPER(IPLOGlog) LIKE UPPER(?) ORDER BY IPLOGlog";
+
+  const CONSULTAR_LOG_POR_ACCIONLOG = "SELECT * FROM log WHERE UPPER(ACCIONLOGlog) = UPPER(?)";
+
+  const CONSULTAR_LOG_POR_ACCIONLOG_APROX = "SELECT * FROM log WHERE UPPER(ACCIONLOGlog) LIKE UPPER(?) ORDER BY ACCIONLOGlog";
+
+}
+?>
