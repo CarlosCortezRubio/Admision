@@ -127,8 +127,7 @@ class PagoController extends Controller
                      $ficha->esta_post_pos = 'R';
                      $ficha->save();
                     }
-      
-      //
+   
       $client = new Client([
          'base_uri' => config('app.url_pasarela') . '/',
          'verify' => false,
