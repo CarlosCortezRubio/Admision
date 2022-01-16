@@ -57,7 +57,7 @@ trait Tables
 
     public function getSections($status)
     {
-        $data = Seccion::whereIn('codi_secc_sec',['05001','05002','05003'])
+        $data = Seccion::whereIn('codi_secc_sec',['05001'/*,'05002','05003'*/])
                   ->where('esta_secc_sec','LIKE',$status)
                   ->orderBy('desc_secc_sec','asc')
                   ->get();

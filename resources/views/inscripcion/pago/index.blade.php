@@ -65,7 +65,28 @@
                            </div>
                         </div>
                      </div>
-
+                     <div class="row">
+                        <div class="col-6">
+                           <div class="form-group">
+                              <label for="documento" class="mb-1">Apellido Paterno:</label>
+                              <input type="text" name="apel_pate_per" class="form-control" required>
+                           </div>
+                        </div>
+                        <div class="col-6">
+                           <div class="form-group">
+                              <label for="documento" class="mb-1">Apellido Materno:</label>
+                              <input type="text" name="apel_mate_per" class="form-control" required>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-12">
+                           <div class="form-group">
+                              <label for="documento" class="mb-1">Nombres:</label>
+                              <input type="text" name="nomb_pers_per" class="form-control" required>
+                           </div>
+                        </div>
+                     </div>
                      <div class="form-group">
                         <label for="s_seccion" class="mb-1">Secci&oacute;n a la que postula:</label>
                         <select name="codi_secc_sec" class="custom-select" id="s_seccion" required>
@@ -121,7 +142,7 @@
       			      <strong>Exonerado S/ {{ $proceso->mnto_exon_adm }}</strong>
                      <hr>
 
-{{--                      <h6 class="card-subtitle mb-2 text-muted">Seleccione la forma de pago:</h6>
+                     {{-- <h6 class="card-subtitle mb-2 text-muted">Seleccione la forma de pago:</h6>
                      <div class="custom-control custom-radio mb-2">
                         <input type="radio" class="custom-control-input" id="rbtn1" name="tipo_plat_sol" value="T">
                         <label class="custom-control-label" for="rbtn1">Tarjeta de cr&eacute;dito o d&eacute;bito</label>
