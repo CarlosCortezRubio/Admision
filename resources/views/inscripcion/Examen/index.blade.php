@@ -67,6 +67,7 @@
                 }, 1000);
             }
             timer();
+            cargaraudio()
         });
         function zfill(number, width) {
             var numberOutput = Math.abs(number); /* Valor absoluto del número */
@@ -93,5 +94,21 @@
         $('body').bind('cut copy paste', function(e){
             e.preventDefault();
         });
+        function cargaraudio(){
+            $("audio").each(function (index, element) {
+                var archivo=;
+                $.ajax({
+                    type: "GET",
+                    url: "{{ route('CargarAudio') }}",
+                    data: {'archivo':archivo}, 
+                    success: function(data){
+                        if (data) {
+                            $(element.getElementById).prop("disabled", true);
+                            $(element.getElementById).prop("src", '');
+                        }
+                    }
+                });
+            });
+        }
     </script>
 @endsection

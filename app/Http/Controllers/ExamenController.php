@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Model\ExamenPostulante;
+use App\Models\Audiotmp;
 use App\Models\Postulante;
 use App\Traits\Tables;
 use Exception;
@@ -79,5 +80,44 @@ class ExamenController extends Controller
             dd($e);
         }
         return redirect()->route('inscription');
+    }
+    public function CargarAudio(Request $request){
+        $audio=DB::table("admision.adm_audiostmp")
+        ->where("id_examen_postulante",session('id_examen_postulante'))
+        ->where("archivo",$request->archivo)
+        ->where("estado",'U')
+        ->where("contador",'>',0)
+        ->first();
+        if ($audio) {
+            return false;
+        }else{
+            return true;
+        }
+    }
+    public function InsertarAudio(Request $request){
+        $audio=Audiotmp::where("id_examen_postulante",session('id_examen_postulante'))
+        ->where("archivo",$request->archivo)
+        ->where("estado",'U')
+        ->where("contador",'>',0)
+        ->first();
+        try {
+            DB::beginTransaction();
+            if ($audio) {
+                //$audio->contador=$audio->contador+1;
+                //$audio->update();
+            }else{
+                $audio=new Audiotmp;
+                $audio->id_examen_postulante=session('id_examen_postulante');
+                $audio->archivo=$request->archivo;
+                $audio->estado='U';
+                $audio->contador=1;
+                $audio->save();
+            }
+            DB::commit();
+        } catch (Exception $e) {
+            DB::rollBack();
+            dd($e);
+        }
+        return $this->CargarAudio($request);
     }
 }
