@@ -111,7 +111,7 @@
                     data: {"archivo":element.currentSrc}, 
                     success: function(data){
                         //alert(data);
-                        if (data=='S') {
+                        if (data=='N') {
                             $(element).prop("disabled", true);
                             $(element).prop("src", '');
                         }
