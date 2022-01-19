@@ -120,8 +120,19 @@
             });
         }
         function reproducir(id){
-            $(id+" audio")[0].play();
-            
+           
+             if ($(id+" audio")[0].ended) {
+                cargaraudio()
+            } else {
+                if($(id+" audio")[0].paused){
+                    $(id+" audio")[0].play();
+                    $(id+" a").html('<i class="fa fa-pause-circle" style="color:greenyellow;font-size: 33px;" aria-hidden="true"></i>');
+
+                }else{
+                    $(id+" audio")[0].pause();
+                    $(id+" a").html('<i class="fa fa-play-circle" style="color:greenyellow;font-size: 33px;" aria-hidden="true"></i>');
+                }
+            }
         }
         
     </script>
