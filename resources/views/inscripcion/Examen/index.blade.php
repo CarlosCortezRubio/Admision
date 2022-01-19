@@ -68,6 +68,7 @@
             }   
             timer();
             cargaraudio();
+            reproductor();
             $("audio").each(function (index, element) {
                 $(element.getElementById).change(function(){
                     alert(element.ended);
