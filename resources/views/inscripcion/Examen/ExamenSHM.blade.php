@@ -200,7 +200,7 @@
 
         <div class='centrar-content col'>
             
-            <div class="centrar-content reproductor">
+            <div id="reproductor1" class="centrar-content ">
                 <audio >
                     <source src="/ExamenTipo/AUDIO/ExamenSHM/P2.mp3" type="audio/mp3">
                     <object type="application/x-shockwave-flash" data="player.swf?miArchivo=mi-archivo-de-audio.mp3">
@@ -208,7 +208,7 @@
                         <a href="mi-archivo-de-audio.mp3">Descárgate aquí mi archivo de audio</a>
                     </object>
                 </audio>
-                <a href="#" ><i class="fa fa-play-circle" style="color:greenyellow;font-size: 33px;" aria-hidden="true"></i></a>
+                <a href="javascript:reproducir('#reproductor1');" ><i class="fa fa-play-circle" style="color:greenyellow;font-size: 33px;" aria-hidden="true"></i></a>
             </div>
         </div>
         <br>

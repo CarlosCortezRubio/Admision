@@ -68,7 +68,7 @@
             }   
             timer();
             cargaraudio();
-            reproductor();
+           
             $("audio").each(function (index, element) {
                 $(element.getElementById).change(function(){
                     alert(element.ended);
@@ -119,12 +119,8 @@
                 });
             });
         }
-        function reproductor(){
-            $(".reproductor").each(function (index, element) {
-                $(element.getElementById+" a").click(function(){
-                    $(element.getElementById+" audio").play();
-                });
-            });
+        function reproducir(id){
+            $(id+" audio").play();
         }
         
     </script>
