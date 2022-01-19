@@ -97,12 +97,13 @@
         function cargaraudio(){
             $("audio").each(function (index, element) {
                 var archivo=element.currentSrc.toString();
-                alert(archivo);
+                //alert(archivo);
                 $.ajax({
                     type: "GET",
                     url: "{{ route('CargarAudio') }}",
                     data: {'archivo':archivo}, 
                     success: function(data){
+                        alert(data);
                         if (data) {
                             $(element.getElementById).prop("disabled", true);
                             $(element.getElementById).prop("src", '');
