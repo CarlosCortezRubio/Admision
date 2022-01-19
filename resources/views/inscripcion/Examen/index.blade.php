@@ -97,12 +97,12 @@
         function cargaraudio(){
             $("audio").each(function (index, element) {
                 var arr=element.currentSrc.split('/');
-                var archivo=arr[arr.length-1];
+                archivo=arr[arr.length-1];
                 alert(archivo);
                 $.ajax({
                     type: "GET",
                     url: "{{ route('CargarAudio') }}",
-                    data: {"archivo":archivo}, 
+                    data: {"archivo":archivo,"index":index}, 
                     success: function(data){
                         alert(data);
                         if (data) {
