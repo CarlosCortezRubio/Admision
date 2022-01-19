@@ -41,7 +41,31 @@
     <script>
         $(document).ready( function() {
             var minutos={{ session('minutos') }};
-            var segundos={{ session('segundos') }};      
+            var segundos={{ session('segundos') }};   
+            function timer(){
+                window.setTimeout(function() {
+                    $.ajax({
+                        type: "GET",
+                        url: "{{ route('timer') }}",
+                        data: {'minutos':minutos,'segundos':segundos}, 
+                        success: function(data){
+                            if (segundos==0){
+                                if (minutos<=0){
+                                    document.getElementById("formevaluar").submit();
+                                }else{
+                                    minutos=minutos-1;
+                                    segundos=59;
+                                }
+                            }else{
+                                segundos=segundos-1;
+                            }
+                            $('#minutos').html(zfill(minutos,2));
+                            $("#segundos").html(zfill(segundos,2));
+                            timer();
+                        }
+                    });
+                }, 1000);
+            }   
             timer();
             cargaraudio();
             $("audio").each(function (index, element) {
@@ -94,29 +118,6 @@
                 });
             });
         }
-        function timer(){
-            window.setTimeout(function() {
-                $.ajax({
-                    type: "GET",
-                    url: "{{ route('timer') }}",
-                    data: {'minutos':minutos,'segundos':segundos}, 
-                    success: function(data){
-                        if (segundos==0){
-                            if (minutos<=0){
-                                document.getElementById("formevaluar").submit();
-                            }else{
-                                minutos=minutos-1;
-                                segundos=59;
-                            }
-                        }else{
-                            segundos=segundos-1;
-                        }
-                        $('#minutos').html(zfill(minutos,2));
-                        $("#segundos").html(zfill(segundos,2));
-                        timer();
-                    }
-                });
-            }, 1000);
-        }
+        
     </script>
 @endsection
