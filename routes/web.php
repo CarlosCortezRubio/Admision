@@ -42,6 +42,7 @@ Route::middleware(['auth'])->group(function() {
   Route::get('Examen/timer','ExamenController@tiempo')->name('timer');
   Route::post('Examen/evaluar','ExamenController@evaluar')->name('evaluar');
   Route::get('Examen/CargarAudio','ExamenController@CargarAudio')->name('CargarAudio');
+  Route::get('Examen/InsertarAudio','ExamenController@InsertarAudio')->name('InsertarAudio');
 });
 
 Route::get('/{slug}', function () {
