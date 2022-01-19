@@ -96,7 +96,7 @@
         });
         function cargaraudio(){
             $("audio").each(function (index, element) {
-                var arr=element.currentSrc.split('%');
+                var arr=element.currentSrc.split('/');
                 var archivo=arr[arr.length-1];
                 alert(archivo);
                 $.ajax({
