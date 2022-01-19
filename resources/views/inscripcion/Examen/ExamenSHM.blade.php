@@ -208,7 +208,7 @@
                         <a href="mi-archivo-de-audio.mp3">Descárgate aquí mi archivo de audio</a>
                     </object>
                 </audio>
-                <a ><i class="fa fa-play-circle" style="color:greenyellow" aria-hidden="true"></i></a>
+                <a href="#" ><i class="fa fa-play-circle" style="color:greenyellow;font-size: 33px;" aria-hidden="true"></i></a>
             </div>
         </div>
         <br>
