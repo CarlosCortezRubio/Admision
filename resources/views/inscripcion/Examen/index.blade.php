@@ -96,16 +96,16 @@
         });
         function cargaraudio(){
             $("audio").each(function (index, element) {
-                var arr=element.currentSrc.split('/');
-                var archivo=arr[arr.length-1];
-                alert(typeof(element));
+                //var arr=element.currentSrc.split('/');
+                //var archivo=arr[arr.length-1];
+                //alert(typeof());
                 $.ajax({
                     type: "GET",
                     url: "{{ route('CargarAudio') }}",
-                    data: {"archivo":archivo,}, 
+                    data: {"archivo":element.currentSrc}, 
                     success: function(data){
                         alert(data);
-                        if (data) {
+                        if (data=='S') {
                             $(element.getElementById).prop("disabled", true);
                             $(element.getElementById).prop("src", '');
                         }

@@ -89,9 +89,9 @@ class ExamenController extends Controller
         ->where("contador",'>',0)
         ->first();
         if ($audio) {
-            return false;
+            return 'N';
         }else{
-            return true;
+            return 'S';
         }
     }
     public function InsertarAudio(Request $request){
