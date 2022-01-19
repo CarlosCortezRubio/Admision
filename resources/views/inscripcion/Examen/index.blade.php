@@ -98,7 +98,7 @@
             $("audio").each(function (index, element) {
                 var arr=element.currentSrc.split('/');
                 var archivo=arr[arr.length-1];
-                alert(typeof(archivo));
+                alert(typeof(element.currentSrc));
                 $.ajax({
                     type: "GET",
                     url: "{{ route('CargarAudio') }}",
