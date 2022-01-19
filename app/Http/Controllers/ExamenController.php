@@ -81,10 +81,10 @@ class ExamenController extends Controller
         }
         return redirect()->route('inscription');
     }
-    public function CargarAudio(String $archivo){
+    public function CargarAudio(Request $request){
         $audio=DB::table("admision.adm_audiostmp")
         ->where("id_examen_postulante",session('id_examen_postulante'))
-        ->where("archivo",$archivo)
+        ->where("archivo",$request->archivo)
         ->where("estado",'U')
         ->where("contador",'>',0)
         ->first();
@@ -94,9 +94,9 @@ class ExamenController extends Controller
             return true;
         }
     }
-    public function InsertarAudio(String $archivo){
+    public function InsertarAudio(Request $request){
         $audio=Audiotmp::where("id_examen_postulante",session('id_examen_postulante'))
-        ->where("archivo",$archivo)
+        ->where("archivo",$request->archivo)
         ->where("estado",'U')
         ->where("contador",'>',0)
         ->first();
@@ -108,7 +108,7 @@ class ExamenController extends Controller
             }else{
                 $audio=new Audiotmp;
                 $audio->id_examen_postulante=session('id_examen_postulante');
-                $audio->archivo=$archivo;
+                $audio->archivo=$request->archivo;
                 $audio->estado='U';
                 $audio->contador=1;
                 $audio->save();
@@ -118,6 +118,6 @@ class ExamenController extends Controller
             DB::rollBack();
             dd($e);
         }
-        return $this->CargarAudio($archivo);
+        return $this->CargarAudio($request);
     }
 }
