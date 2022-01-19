@@ -124,8 +124,8 @@
              if ($(id+" audio")[0].ended) {
                 cargaraudio()
             } else {
-                if($(id+" audio")[0].currentSrc){
-                    alert($(id+" audio")[0].currentSrc);
+                if(!$(id+" audio")[0].prop("disabled")){
+                    alert($(id+" audio")[0].prop("disabled"));
                     if($(id+" audio")[0].paused){
                         $.ajax({
                             type: "GET",
