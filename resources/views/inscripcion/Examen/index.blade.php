@@ -112,8 +112,8 @@
                     success: function(data){
                         //alert(data);
                         if (data=='S') {
-                            $(element.getElementById).prop("disabled", true);
-                            $(element.getElementById).prop("src", '');
+                            $(element).prop("disabled", true);
+                            $(element).prop("src", '');
                         }
                     }
                 });
