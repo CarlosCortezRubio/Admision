@@ -96,7 +96,7 @@
         });
         function cargaraudio(){
             $("audio").each(function (index, element) {
-                var archivo=;
+                var archivo=element.name;
                 $.ajax({
                     type: "GET",
                     url: "{{ route('CargarAudio') }}",
