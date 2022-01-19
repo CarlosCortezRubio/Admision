@@ -97,7 +97,7 @@
         function cargaraudio(){
             $("audio").each(function (index, element) {
                 var arr=element.currentSrc.split('/');
-                string archivo=arr[arr.length-1];
+                let archivo=arr[arr.length-1];
                 alert(archivo);
                 $.ajax({
                     type: "GET",
