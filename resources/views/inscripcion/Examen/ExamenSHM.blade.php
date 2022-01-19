@@ -199,14 +199,17 @@
     
 
         <div class='centrar-content col'>
-            <audio >
-                <source src="/ExamenTipo/AUDIO/ExamenSHM/P2.mp3" type="audio/mp3">
-
-                <object type="application/x-shockwave-flash" data="player.swf?miArchivo=mi-archivo-de-audio.mp3">
-                    <param name="movie" value="player.swf?miArchivo=mi-archivo-de-audio.mp3">
-                    <a href="mi-archivo-de-audio.mp3">Descárgate aquí mi archivo de audio</a>
-                </object>
-            </audio>
+            
+            <div class="centrar-content reproductor">
+                <audio >
+                    <source src="/ExamenTipo/AUDIO/ExamenSHM/P2.mp3" type="audio/mp3">
+                    <object type="application/x-shockwave-flash" data="player.swf?miArchivo=mi-archivo-de-audio.mp3">
+                        <param name="movie" value="player.swf?miArchivo=mi-archivo-de-audio.mp3">
+                        <a href="mi-archivo-de-audio.mp3">Descárgate aquí mi archivo de audio</a>
+                    </object>
+                </audio>
+                <a ><i class="fa fa-play-circle" style="color:greenyellow" aria-hidden="true"></i></a>
+            </div>
         </div>
         <br>
         <div class="row">

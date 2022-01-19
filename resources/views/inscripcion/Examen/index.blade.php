@@ -118,6 +118,13 @@
                 });
             });
         }
+        function reproductor(){
+            $(".reproductor").each(function (index, element) {
+                $(element.getElementById+" a").click(function(){
+                    $(element.getElementById+" audio").play();
+                });
+            });
+        }
         
     </script>
 @endsection
