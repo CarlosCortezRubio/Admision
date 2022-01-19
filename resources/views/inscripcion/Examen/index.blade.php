@@ -102,7 +102,7 @@
                 $.ajax({
                     type: "GET",
                     url: "{{ route('CargarAudio') }}",
-                    data: {'archivo':archivo.toString}, 
+                    data: {'archivo':archivo.prototype.toString}, 
                     success: function(data){
                         alert(data);
                         if (data) {
