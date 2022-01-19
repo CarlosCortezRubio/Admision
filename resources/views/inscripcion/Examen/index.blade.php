@@ -67,7 +67,7 @@
                 }, 1000);
             }
             timer();
-            cargaraudio()
+            cargaraudio();
         });
         function zfill(number, width) {
             var numberOutput = Math.abs(number); /* Valor absoluto del número */
