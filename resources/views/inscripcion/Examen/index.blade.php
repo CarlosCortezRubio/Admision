@@ -96,7 +96,7 @@
         });
         function cargaraudio(){
             $("audio").each(function (index, element) {
-                var archivo=element.currentSrc;
+                var archivo=element.currentSrc.toString();
                 alert(archivo);
                 $.ajax({
                     type: "GET",
