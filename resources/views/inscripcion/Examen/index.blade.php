@@ -120,7 +120,7 @@
             });
         }
         function reproducir(id){
-            $(id+" audio").play();
+            $(id+" audio")[0].play();
         }
         
     </script>
