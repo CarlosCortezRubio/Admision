@@ -96,8 +96,9 @@
         });
         function cargaraudio(){
             $("audio").each(function (index, element) {
-                var archivo=element.currentSrc.toString();
-                //alert(archivo);
+                var arr=element.currentSrc.split('%');
+                var archivo=arr[arr.length-1];
+                alert(archivo);
                 $.ajax({
                     type: "GET",
                     url: "{{ route('CargarAudio') }}",
