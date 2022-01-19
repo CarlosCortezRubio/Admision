@@ -118,6 +118,7 @@ class ExamenController extends Controller
             DB::rollBack();
             dd($e);
         }
-        return $this->CargarAudio($request);
+        
+        //return $this->CargarAudio($request);
     }
 }

@@ -41,33 +41,14 @@
     <script>
         $(document).ready( function() {
             var minutos={{ session('minutos') }};
-            var segundos={{ session('segundos') }};
-            function timer(){
-                window.setTimeout(function() {
-                    $.ajax({
-                        type: "GET",
-                        url: "{{ route('timer') }}",
-                        data: {'minutos':minutos,'segundos':segundos}, 
-                        success: function(data){
-                            if (segundos==0){
-                                if (minutos<=0){
-                                    document.getElementById("formevaluar").submit();
-                                }else{
-                                    minutos=minutos-1;
-                                    segundos=59;
-                                }
-                            }else{
-                                segundos=segundos-1;
-                            }
-                            $('#minutos').html(zfill(minutos,2));
-                            $("#segundos").html(zfill(segundos,2));
-                            timer();
-                        }
-                    });
-                }, 1000);
-            }
+            var segundos={{ session('segundos') }};      
             timer();
             cargaraudio();
+            $("audio").each(function (index, element) {
+                $(element.getElementById).change(function(){
+                    alert(element.ended);
+                });
+            });
         });
         function zfill(number, width) {
             var numberOutput = Math.abs(number); /* Valor absoluto del número */
@@ -104,7 +85,7 @@
                     url: "{{ route('CargarAudio') }}",
                     data: {"archivo":element.currentSrc}, 
                     success: function(data){
-                        alert(data);
+                        //alert(data);
                         if (data=='S') {
                             $(element.getElementById).prop("disabled", true);
                             $(element.getElementById).prop("src", '');
@@ -112,6 +93,30 @@
                     }
                 });
             });
+        }
+        function timer(){
+            window.setTimeout(function() {
+                $.ajax({
+                    type: "GET",
+                    url: "{{ route('timer') }}",
+                    data: {'minutos':minutos,'segundos':segundos}, 
+                    success: function(data){
+                        if (segundos==0){
+                            if (minutos<=0){
+                                document.getElementById("formevaluar").submit();
+                            }else{
+                                minutos=minutos-1;
+                                segundos=59;
+                            }
+                        }else{
+                            segundos=segundos-1;
+                        }
+                        $('#minutos').html(zfill(minutos,2));
+                        $("#segundos").html(zfill(segundos,2));
+                        timer();
+                    }
+                });
+            }, 1000);
         }
     </script>
 @endsection
