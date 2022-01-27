@@ -84,7 +84,7 @@
                         </div>
 
 
-                        @if ($v->flag_jura == 'N' && $v->fecha_comp <= Carbon\Carbon::now() && $v->estado == 'P')
+                        @if ($v->flag_jura == 'N' && $v->fecha_comp <= Carbon\Carbon::now() && $v->estado == 'P' && ($v->req_estado=='E' || $v->req_estado==null))
                             <form action="{{ route('BeginExamen') }}" method="POST">
                                 @csrf
                                 <input type="text" class="d-none" name='id_examen'
