@@ -10,7 +10,8 @@
             </div>
         @else
             @foreach ($horarios as $k => $v)
-                <div class="col-6 card card-primary card-outline elevation-2">
+                <div class="col-1"></div>
+                <div class="col-5 card card-primary card-outline elevation-2">
                     <div id='title'>
                         <hr width="100%" size="5" noshade>
                         <h5 class="centrar-content">{{ $v->descripcion }}</h5>
