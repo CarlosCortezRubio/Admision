@@ -71,7 +71,7 @@ class ExamenController extends Controller
         try {
             DB::beginTransaction();
             $postulante->nota=round($nota);
-            $postulante->estado='R';                
+            $postulante->estado='E';                
             $postulante->update();
             DB::commit();
             
