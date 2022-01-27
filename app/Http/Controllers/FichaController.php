@@ -136,7 +136,8 @@ class FichaController extends Controller
                                'au.descripcion as aula',
                                'ps.id_postulante',
                                'pe.id_programacion_examen',
-                               'exd.flag_jura')->get();
+                               'exd.flag_jura')
+                               ->orderBy('ps.estado')->get();
          
          /////////////////////////
          //2021 No envia trabajos ni repertorio a vista inscripcion.ficha.index
