@@ -135,6 +135,7 @@ class FichaController extends Controller
                                'ps.nota',
                                'au.descripcion as aula',
                                'ps.id_postulante',
+                               'pe.id_programacion_examen',
                                'exd.flag_jura')->get();
          
          /////////////////////////

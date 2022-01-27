@@ -22,6 +22,7 @@ class ExamenController extends Controller
                 ->where('ps.nume_docu_sol',Auth::user()->ndocumento)
                 ->where('pe.id_examen',$request->id_examen)
                 ->where('ps.id_postulante',$request->id_postulante)
+                ->where('pe.id_programacion_examen',$request->id_programacion_examen)
                 ->select('e.enlace',
                          'ep.id_examen_postulante',
                          "ep.minutos",
