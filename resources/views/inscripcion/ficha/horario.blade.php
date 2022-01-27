@@ -62,7 +62,7 @@
                                                 @case('P')
                                                     Pendiente
                                                 @break
-                                                @case('R')
+                                                @case('E')
                                                     Resuelto
                                                 @break
                                                 @default
