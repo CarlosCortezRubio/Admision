@@ -115,9 +115,13 @@ class FichaController extends Controller
                      ->join('admision.adm_aula as au','pe.id_aula','au.id_aula')
                      ->join('admision.adm_examen as ex','pe.id_examen','ex.id_examen')
                      ->join('admision.adm_examen_admision as exd','ex.id_examen','exd.id_examen')
-                     ->leftJoin('admision.adm_programacion_examen as reprog','reprog.id_programacion_examen','pe.id_prog_requ')
-                     ->leftJoin('admision.adm_programacion_examen as repost','repost.id_programacion_examen','reprog.id_programacion_examen')
-                     ->where('nume_docu_sol',Auth::user()->ndocumento)
+                     ->leftJoin('admision.adm_programacion_examen as repost','repost.id_programacion_examen','pe.id_prog_requ')
+                     ->where('ps.nume_docu_sol',Auth::user()->ndocumento)
+                     
+                     ->where(function ($query) {
+                        $query->whereNull('pe.id_prog_requ')
+                              ->orWhere('repost.nume_docu_sol', Auth::user()->ndocumento);
+                     })
                      ->select('pe.descripcion',
                                DB::raw("to_char(pe.fecha_resol, 'yyyy-mm-dd') AS fecha_resol"),
                                DB::raw("to_char(pe.fecha_resol, 'HH12:MI:SS') AS hora_resol"),
