@@ -1,13 +1,19 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="jumbotron col-md-4 ">
-    <div class="row">
-        <h1 class="col" id="minutos">{{ session('minutos')}}</h1>
-        <h1 class="col">:</h1>
-        <h1 class="col" id="segundos">{{ session('segundos')}}</h1>
+<div class="row">
+    <div class="col"></div>
+    <div class="jumbotron centrar-content col-2 ">
+        <div class="row">
+            <h3 class="col" id="minutos">{{ session('minutos')}}</h3>
+            <h3 class="col">:</h3>
+            <h3 class="col" id="segundos">{{ session('segundos')}}</h3>
+        </div>
     </div>
+    <div class="col"></div>
 </div>
+
+
 <div class="modal fade" id="modalconfirmar" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -27,15 +33,58 @@
         </div>
     </div>
 </div>
-   @switch(session('examen'))
-       @case('ExamenSHM')
-           @include('inscripcion.Examen.ExamenSHM')
+<div class="container-fluid centrar-content col-8 card card-primary card-outline elevation-2">
+    <br>
+    @switch(session('examen'))
+        @case('ExamenSHMA')
+           @include('inscripcion.Examen.ExamenSHMA')
            @break
-       @default
+        @case('ExamenSHMB')
+           @include('inscripcion.Examen.ExamenSHMB')
+           @break
+        @case('ExamenA1214A')
+           @include('inscripcion.Examen.ExamenA1214A')
+           @break
+        @case('ExamenSAAA')
+           @include('inscripcion.Examen.ExamenSAAA')
+           @break
+        @case('ExamenSAAB')
+           @include('inscripcion.Examen.ExamenSAAB')
+           @break
+        @case('ExamenSPAA')
+           @include('inscripcion.Examen.ExamenSPAA')
+           @break
+        @case('ExamenSCGA')
+           @include('inscripcion.Examen.ExamenSCGA')
+           @break
+        @case('ExamenSCGB')
+           @include('inscripcion.Examen.ExamenSCGB')
+           @break
+        @case('ExamenSHPA')
+           @include('inscripcion.Examen.ExamenSHPA')
+           @break
+        @case('ExamenSRMA')
+           @include('inscripcion.Examen.ExamenSRMA')
+           @break
+        @case('ExamenSRMB')
+           @include('inscripcion.Examen.ExamenSRMB')
+           @break
+        @case('ExamenSRVA')
+           @include('inscripcion.Examen.ExamenSRVA')
+           @break
+        @case('ExamenSRVB')
+           @include('inscripcion.Examen.ExamenSRVB')
+           @break
+        @default
             @include('inscripcion.Examen.mensaje')
             @break
-   @endswitch
-
+    @endswitch
+    <div class='centrar-content'>
+        <button class="btn btn-success" data-toggle="modal" data-target="#modalconfirmar">Grabar</button>
+    </div>
+    <br>
+    <br>
+</div>
 @endsection
 @section('scripts')
     <script>
@@ -144,4 +193,31 @@
         }
         
     </script>
+@endsection
+
+@section('styles')
+    <style>
+        .form-check{
+            display: block;
+            padding: 6px;
+            padding-left: 30px;
+            border-radius: 6px;
+            border: solid #dde7e8;
+        }
+        .form-check:hover{
+            background-color: rgb(241, 239, 250);
+            border: solid rgb(114, 166, 245);
+        }
+        .titlecenter{
+            text-align: center;
+            font-weight: 700;
+        }
+        #title{
+            text-align: center;
+        }
+        .text{
+            padding: 50px;
+        }
+        
+    </style>
 @endsection

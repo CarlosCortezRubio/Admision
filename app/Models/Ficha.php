@@ -50,11 +50,12 @@ class Ficha extends Model
       'nive_estu_adm',
       'grad_estu_adm',
       'flag_disc_adm',
-      'disc_soli_adm'
+      'disc_soli_adm',
+      'fech_naci_per'
    ];
 
    protected $dates=[
-      'fech_naci_per',
+      //'fech_naci_per',
       'fech_regi_aud',
       'fech_actu_aud'
    ];
