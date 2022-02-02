@@ -1,16 +1,19 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="row">
-    <div class="col"></div>
-    <div class="jumbotron centrar-content col-2 ">
-        <div class="row">
-            <h3 class="col" id="minutos">{{ session('minutos')}}</h3>
-            <h3 class="col">:</h3>
-            <h3 class="col" id="segundos">{{ session('segundos')}}</h3>
+<div class="row" id="timer">
+    <div class="jumbotron">
+        <div class="container">
+            <div class="centrar-content row">
+                <h4>Tiempo restante</h4>
+            </div>
+            <div class="centrar-content row">
+                <h3 class="col centrar-content" id="minutos">{{ session('minutos')}}</h3>
+                <h3 class="col centrar-content">:</h3>
+                <h3 class="col centrar-content" id="segundos">{{ session('segundos')}}</h3>
+            </div>
         </div>
     </div>
-    <div class="col"></div>
 </div>
 
 
@@ -54,6 +57,9 @@
         @case('ExamenSPAA')
            @include('inscripcion.Examen.ExamenSPAA')
            @break
+        @case('ExamenSPAB')
+           @include('inscripcion.Examen.ExamenSPAB')
+           @break
         @case('ExamenSCGA')
            @include('inscripcion.Examen.ExamenSCGA')
            @break
@@ -80,7 +86,7 @@
             @break
     @endswitch
     <div class='centrar-content'>
-        <button class="btn btn-success" data-toggle="modal" data-target="#modalconfirmar">Grabar</button>
+        <button class="btn btn-success" data-toggle="modal" data-target="#modalconfirmar">Guardar</button>
     </div>
     <br>
     <br>
@@ -218,6 +224,31 @@
         .text{
             padding: 50px;
         }
+        
+        
+        #timer{
+            width: 50%;
+            height: 10%;
+            border-width: 5px;
+            border-style: solid;
+            border-color: black;
+            border-radius: 20px;
+            background-color: #1072BA;
+
+        }
+        #timer .jumbotron{
+            left: 10%;
+            right: 10%;
+            width: 80%;
+            height: 80%;
+            border-width: 5px;
+            border-style: solid;
+            border-color: black;
+            border-radius: 20px;
+            background-color: white;
+
+        }
+
         
     </style>
 @endsection

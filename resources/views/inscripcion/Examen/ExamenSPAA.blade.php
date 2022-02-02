@@ -107,7 +107,7 @@
                 <div class="form-check col">
                     <input  type="radio" class="form-check-input respuesta2" value="C" id="0203" value="3"
                         name="respuesta2">
-                    <label class="respuesta2 form-check-label justify-content-center" for="0203">I - VII6 - VI - 16/4 - II6 - V7</label>
+                    <label class="respuesta2 form-check-label justify-content-center" for="0203">I - VII6 - VI - I6/4 - II6 - V7</label>
                 </div>
                 <div class='col-1'></div>
             </div>
@@ -224,7 +224,7 @@
                 <div class="form-check col">
                     <input  type="radio" class="form-check-input respuesta4" value="C" id="0403" value="3"
                         name="respuesta4">
-                    <label class="respuesta4 form-check-label justify-content-center" for="0403">I - VII6 - VI - 16/4 - II6 - V7</label>
+                    <label class="respuesta4 form-check-label justify-content-center" for="0403">I - VII6 - VI - I6/4 - II6 - V7</label>
                 </div>
                 <div class='col-1'></div>
             </div>
