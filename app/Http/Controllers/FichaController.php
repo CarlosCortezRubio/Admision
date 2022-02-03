@@ -111,6 +111,8 @@ class FichaController extends Controller
          $ubigeo = $this->getUbigeo('%');
          /////////////////////////
          $horarios=DB::table('admision.adm_postulante as ps')
+                     ->join('bdsigunm.ad_postulacion as sigpos','sigpos.nume_docu_per','ps.nume_docu_sol')
+                     ->join('bdsigunm.ad_proceso as pr','sigpos.codi_proc_adm','pr.codi_proc_adm')
                      ->join('admision.adm_programacion_examen as pe','pe.id_programacion_examen','ps.id_programacion_examen')
                      ->join('admision.adm_aula as au','pe.id_aula','au.id_aula')
                      ->join('admision.adm_examen as ex','pe.id_examen','ex.id_examen')
@@ -121,8 +123,11 @@ class FichaController extends Controller
                               ->orWhere('repost.nume_docu_sol', Auth::user()->ndocumento);
                      })
                      ->where('ps.nume_docu_sol',Auth::user()->ndocumento)
-                     
-                     
+                     ->whereNotIn('ps.estado',['I','E'])
+                     ->where('pe.estado','A')
+                     ->where('pr.esta_proc_adm','V')
+                     ->where('au.estado','A')
+                     ->where('ex.estado','A')
                      ->select('pe.descripcion',
                                DB::raw("to_char(pe.fecha_resol, 'yyyy-mm-dd') AS fecha_resol"),
                                DB::raw("to_char(pe.fecha_resol, 'HH12:MI:SS') AS hora_resol"),
