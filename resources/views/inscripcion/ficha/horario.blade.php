@@ -4,7 +4,7 @@
             <div class="container justify-content-center align-items-center">
                 <div class="card card-primary card-outline elevation-2">
                     <div class="card-body" style="text-align: center;">
-                        <p>No existe horario programado para este periodo</p>
+                        <p>Usted ya no tiene exámenes restantes por resolver. Cierre sesión</p>
                     </div>
                 </div>
             </div>
