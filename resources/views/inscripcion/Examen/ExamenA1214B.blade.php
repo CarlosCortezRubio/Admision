@@ -846,7 +846,7 @@
                     </button>
                 </div>
                 <div class="modal-body" style="text-align: center">
-                    <h4>Los audios mostrados en este examen se reproduciran solamente una ves.</h4>
+                    <h4>Los audios mostrados en este examen se reproducirán solamente una vez.</h4>
                 </div>
                 <div class="modal-footer centrar-content">
                     <button type="submit" class="btn btn-success" form="formularioupd">Aceptar</button>
