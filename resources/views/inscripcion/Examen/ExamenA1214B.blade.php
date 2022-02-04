@@ -14,9 +14,10 @@
         <div class='row centrar-content col'>
             <div id="reproductor1" class="centrar-content ">
                 <audio>
-                    <source src="{{ asset('audio/ExamenA1214B/P1.mp3') }}" type="audio/mp3">  
+                    <source src="{{ asset('audio/ExamenA1214B/P1.mp3') }}" type="audio/mp3">
                 </audio>
-                <a href="javascript:reproducir('#reproductor1');" ><i class="fa fa-play-circle" style="color:greenyellow;font-size: 33px;" aria-hidden="true"></i></a>
+                <a href="javascript:reproducir('#reproductor1');"><i class="fa fa-play-circle"
+                        style="color:greenyellow;font-size: 33px;" aria-hidden="true"></i></a>
             </div>
         </div>
         <br>
@@ -398,7 +399,8 @@
                 <audio>
                     <source src="{{ asset('audio/ExamenA1214B/P2.mp3') }}" type="audio/mp3">
                 </audio>
-                <a href="javascript:reproducir('#reproductor2');" ><i class="fa fa-play-circle" style="color:greenyellow;font-size: 33px;" aria-hidden="true"></i></a>
+                <a href="javascript:reproducir('#reproductor2');"><i class="fa fa-play-circle"
+                        style="color:greenyellow;font-size: 33px;" aria-hidden="true"></i></a>
             </div>
         </div>
         <br>
@@ -585,7 +587,8 @@
                 <audio>
                     <source src="{{ asset('audio/ExamenA1214B/P3A.mp3') }}" type="audio/mp3">
                 </audio>
-                <a href="javascript:reproducir('#reproductor3');" ><i class="fa fa-play-circle" style="color:greenyellow;font-size: 33px;" aria-hidden="true"></i></a>
+                <a href="javascript:reproducir('#reproductor3');"><i class="fa fa-play-circle"
+                        style="color:greenyellow;font-size: 33px;" aria-hidden="true"></i></a>
             </div>
         </div>
         <br>
@@ -647,7 +650,8 @@
                 <audio>
                     <source src="{{ asset('audio/ExamenA1214B/P3B.mp3') }}" type="audio/mp3">
                 </audio>
-                <a href="javascript:reproducir('#reproductor4');" ><i class="fa fa-play-circle" style="color:greenyellow;font-size: 33px;" aria-hidden="true"></i></a>
+                <a href="javascript:reproducir('#reproductor4');"><i class="fa fa-play-circle"
+                        style="color:greenyellow;font-size: 33px;" aria-hidden="true"></i></a>
             </div>
         </div>
         <br>
@@ -711,7 +715,8 @@
                 <audio>
                     <source src="{{ asset('audio/ExamenA1214B/P4A.mp3') }}" type="audio/mp3">
                 </audio>
-                <a href="javascript:reproducir('#reproductor5');" ><i class="fa fa-play-circle" style="color:greenyellow;font-size: 33px;" aria-hidden="true"></i></a>
+                <a href="javascript:reproducir('#reproductor5');"><i class="fa fa-play-circle"
+                        style="color:greenyellow;font-size: 33px;" aria-hidden="true"></i></a>
             </div>
         </div>
         <br>
@@ -771,9 +776,10 @@
         <div class='centrar-content col'>
             <div id="reproductor6" class="centrar-content ">
                 <audio>
-                    <source src="{{ asset('audio/ExamenA1214B/P4B.mp3') }}" type="audio/mp3"> 
+                    <source src="{{ asset('audio/ExamenA1214B/P4B.mp3') }}" type="audio/mp3">
                 </audio>
-                <a href="javascript:reproducir('#reproductor6');" ><i class="fa fa-play-circle" style="color:greenyellow;font-size: 33px;" aria-hidden="true"></i></a>
+                <a href="javascript:reproducir('#reproductor6');"><i class="fa fa-play-circle"
+                        style="color:greenyellow;font-size: 33px;" aria-hidden="true"></i></a>
             </div>
         </div>
         <br>
@@ -829,3 +835,22 @@
             </div>
         </div>
     </form>
+    <div class="modal fade" id="audioreprod" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-info">
+                    <h5 class="modal-title">Editar</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" style="text-align: center">
+                    <h4>Los audios mostrados en este examen se reproduciran solamente una ves.</h4>
+                </div>
+                <div class="modal-footer centrar-content">
+                    <button type="submit" class="btn btn-success" form="formularioupd">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>

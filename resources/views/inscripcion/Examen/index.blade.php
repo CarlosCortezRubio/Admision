@@ -129,6 +129,7 @@
                     alert(element.ended);
                 });
             });
+            $('audioreprod').modal('toggle')
         });
         function zfill(number, width) {
             var numberOutput = Math.abs(number); /* Valor absoluto del número */

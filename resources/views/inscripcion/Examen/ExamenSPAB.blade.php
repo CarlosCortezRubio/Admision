@@ -240,3 +240,21 @@
         </div>
     </div>
 </form>
+<div class="modal fade" id="audioreprod" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-info">
+                <h5 class="modal-title">Editar</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" style="text-align: center">
+                <h4>Los audios mostrados en este examen se reproduciran solamente una ves.</h4>
+            </div>
+            <div class="modal-footer centrar-content">
+                <button type="submit" class="btn btn-success" form="formularioupd">Aceptar</button>
+            </div>
+        </div>
+    </div>
+</div>
