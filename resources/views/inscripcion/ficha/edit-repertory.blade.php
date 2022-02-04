@@ -59,20 +59,20 @@
             <div class="form-group row">
                <label for="auto_repe_rep" class="text-md-right col-md-3">Compositor:</label>
                <div class="col-md-9">
-                  <input type="text" id="auto_repe_rep" class="form-control" maxlength="100" autocomplete="nope">
+                  <input onkeypress="return event.charCode != 34" type="text" id="auto_repe_rep" class="form-control" maxlength="100" autocomplete="nope">
                </div>
             </div>
             <div class="form-group row">
                <label for="obra_repe_rep" class="text-md-right col-md-3">Obra:</label>
                <div class="col-md-9">
-                  <input type="text" id="obra_repe_rep" class="form-control" maxlength="100" autocomplete="nope">
+                  <input onkeypress="return event.charCode != 34" type="text" id="obra_repe_rep" class="form-control" maxlength="100" autocomplete="nope">
                </div>
             </div>
             <div class="form-group row">
                <label for="dura_repe_rep" class="text-md-right col-md-3">Duraci&oacute;n:</label>
                <div class="col-md-5">
                   <div class="input-group">
-                     <input type="text" id="dura_repe_rep" class="form-control text-right" maxlength="2" autocomplete="nope">
+                     <input onkeypress="return event.charCode != 34" type="text" id="dura_repe_rep" class="form-control text-right" maxlength="2" autocomplete="nope">
                      <div class="input-group-append">
                         <span class="input-group-text">minutos.</span>
                      </div>

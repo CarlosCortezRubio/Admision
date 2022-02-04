@@ -59,7 +59,7 @@
             <div class="form-group row">
                <label for="obra_trab_tra" class="text-md-right col-md-4">Obra o trabajo:</label>
                <div class="col-md-8">
-                  <input type="text" id="obra_trab_tra" class="form-control" maxlength="100" autocomplete="nope">
+                  <input onkeypress="return event.charCode != 34" type="text" id="obra_trab_tra" class="form-control" maxlength="100" autocomplete="nope">
                </div>
             </div>
             <div class="form-group row">
@@ -67,7 +67,7 @@
                   Instrumentaci&oacute;n:<br><small>(solo para composici&oacute;n)</small>
                </label>
                <div class="col-md-8">
-                  <input type="text" id="inst_trab_tra" class="form-control" maxlength="100" autocomplete="nope">
+                  <input onkeypress="return event.charCode != 34" type="text" id="inst_trab_tra" class="form-control" maxlength="100" autocomplete="nope">
                </div>
             </div>
             <div class="form-group row">
@@ -75,7 +75,7 @@
                   Comentarios:<br><small>(opcional)</small>
                </label>
                <div class="col-md-8">
-                  <input type="text" id="comn_trab_tra" class="form-control" maxlength="100" autocomplete="nope">
+                  <input onkeypress="return event.charCode != 34" type="text" id="comn_trab_tra" class="form-control" maxlength="100" autocomplete="nope">
                </div>
             </div>
          </div>

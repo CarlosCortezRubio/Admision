@@ -25,22 +25,22 @@
                   {{--<div class="form-group row">
                      <label for="nume_expe_pos" class="col-lg-3 col-md-12 text-lg-right">N&ordm; Expediente:</label>
                      <div class="col-lg-3 col-md-6 col-sm-6">
-                        <input type="text" id="nume_expe_pos" class="form-control font-weight-bolder" value="{{ $new ? '' : $ficha->nume_expe_pos }}" readonly>
+                        <input onkeypress="return event.charCode != 34" type="text" id="nume_expe_pos" class="form-control font-weight-bolder" value="{{ $new ? '' : $ficha->nume_expe_pos }}" readonly>
                      </div>
                   </div>--}}
                   
                   <div class="form-group row">
                      <label for="desc_tabl_det" class="col-lg-3 col-md-12 text-lg-right">Secci&oacute;n a la que postula:</label>
                      <div class="col-lg-9 col-md-12">
-                        <input type="text" id="desc_secc_sec" class="form-control" value="{{ $seccion->desc_tabl_det ?? '' }}" readonly>
-                        <input type="hidden" name="codi_secc_sec" value="{{ $seccion->codi_tabl_det ?? '' }}">
+                        <input onkeypress="return event.charCode != 34" type="text" id="desc_secc_sec" class="form-control" value="{{ $seccion->desc_tabl_det ?? '' }}" readonly>
+                        <input onkeypress="return event.charCode != 34" type="hidden" name="codi_secc_sec" value="{{ $seccion->codi_tabl_det ?? '' }}">
                      </div>
                   </div>
                   <div class="form-group row">
                      <label for="desc_espe_esp" class="col-lg-3 col-md-12 text-lg-right">Especialidad a la que postula:</label>
                      <div class="col-lg-9 col-md-12">
-                        <input type="text" id="desc_espe_esp" class="form-control" value="{{ $especialidad->desc_tabl_det ?? '' }}" readonly>
-                        <input type="hidden" name="codi_espe_esp" value="{{ $especialidad->codi_tabl_det ?? '' }}">
+                        <input onkeypress="return event.charCode != 34" type="text" id="desc_espe_esp" class="form-control" value="{{ $especialidad->desc_tabl_det ?? '' }}" readonly>
+                        <input onkeypress="return event.charCode != 34" type="hidden" name="codi_espe_esp" value="{{ $especialidad->codi_tabl_det ?? '' }}">
                      </div>
                   </div>
                </div>
@@ -56,7 +56,7 @@
                         <div class="form-group row">
                            <label for="apel_pate_per" class="col-lg-6 col-md-12 text-lg-right">Apellido paterno:</label>
                            <div class="col-lg-6 col-md-12">
-                              <input class="form-control text-uppercase" type="text" name="apel_pate_per" id="apel_pate_per" value="{{ $new ? old('apel_pate_per') : $ficha->apel_pate_per }}" required autocomplete="nope">
+                              <input onkeypress="return event.charCode != 34" class="form-control text-uppercase" type="text" name="apel_pate_per" id="apel_pate_per" value="{{ $new ? old('apel_pate_per') : $ficha->apel_pate_per }}" required autocomplete="nope">
                            </div>
                         </div>
                      </div>
@@ -64,7 +64,7 @@
                         <div class="form-group row">
                            <label for="apel_mate_per" class="col-lg-6 col-md-12 text-lg-right">Apellido materno:</label>
                            <div class="col-lg-6 col-md-12">
-                              <input class="form-control text-uppercase" type="text" name="apel_mate_per" id="apel_mate_per" value="{{ $new ? old('apel_mate_per') : $ficha->apel_mate_per }}" required autocomplete="nope">
+                              <input onkeypress="return event.charCode != 34" class="form-control text-uppercase" type="text" name="apel_mate_per" id="apel_mate_per" value="{{ $new ? old('apel_mate_per') : $ficha->apel_mate_per }}" required autocomplete="nope">
                            </div>
                         </div>
                      </div>
@@ -73,7 +73,7 @@
                   <div class="form-group row">
                      <label for="nomb_pers_per" class="col-lg-3 col-md-12 text-lg-right">Nombres:</label>
                      <div class="col-lg-9 col-md-12">
-                         <input class="form-control text-uppercase" type="text" name="nomb_pers_per" id="nomb_pers_per" value="{{ $new ? old('nomb_pers_per') : $ficha->nomb_pers_per }}" required autocomplete="nope">
+                         <input onkeypress="return event.charCode != 34" class="form-control text-uppercase" type="text" name="nomb_pers_per" id="nomb_pers_per" value="{{ $new ? old('nomb_pers_per') : $ficha->nomb_pers_per }}" required autocomplete="nope">
                      </div>
                   </div>
 
@@ -102,11 +102,11 @@
                            <label for="fech_naci_fmt" class="col-lg-6 col-md-12 text-lg-right">Fecha de nacimiento:</label>
                            <div class="col-lg-6 col-md-12">
 								@if(isset($fnacimiento))
-								<input type="text" class="form-control" id="fech_naci_fmt" value="{{ date('d/m/Y', strtotime($fnacimiento)) }}" readonly>
+								<input onkeypress="return event.charCode != 34" type="text" class="form-control" id="fech_naci_fmt" value="{{ date('d/m/Y', strtotime($fnacimiento)) }}" readonly>
 								<input type="hidden" name="fech_naci_per" value="{{ date('Y-m-d', strtotime($fnacimiento)) }}">
 								<input type="hidden" name="edad_calc_pos" value="{{ $edad }}">
 								@else
-									<input type="text" class="form-control" id="fech_naci_fmt" value="" readonly>
+									<input onkeypress="return event.charCode != 34" type="text" class="form-control" id="fech_naci_fmt" value="" readonly>
 									<input type="hidden" name="fech_naci_per" value="">
 									<input type="hidden" name="edad_calc_pos" value="">
 							  @endif
@@ -148,7 +148,7 @@
                         <div class="form-group row">
                            <label for="telf_fijo_per" class="col-lg-6 col-md-12 text-lg-right">Tel&eacute;fono fijo:</label>
                            <div class="col-lg-6 col-md-12">
-                              <input class="form-control" type="text" name="telf_fijo_per" id="telf_fijo_per" value="{{ $new ? old('telf_fijo_per') : $ficha->telf_fijo_per }}" autocomplete="nope">
+                              <input onkeypress="return event.charCode != 34" class="form-control" type="text" name="telf_fijo_per" id="telf_fijo_per" value="{{ $new ? old('telf_fijo_per') : $ficha->telf_fijo_per }}" autocomplete="nope">
                            </div>
                         </div>
                      </div>
@@ -156,7 +156,7 @@
                         <div class="form-group row">
                            <label for="telf_celu_per" class="col-lg-6 col-md-12 text-lg-right">Tel&eacute;fono celular:</label>
                            <div class="col-lg-6 col-md-12">
-                              <input class="form-control" type="text" name="telf_celu_per" id="telf_celu_per" value="{{ $new ? old('telf_celu_per') : $ficha->telf_celu_per }}" autocomplete="nope">
+                              <input onkeypress="return event.charCode != 34" class="form-control" type="text" name="telf_celu_per" id="telf_celu_per" value="{{ $new ? old('telf_celu_per') : $ficha->telf_celu_per }}" autocomplete="nope">
                            </div>
                         </div>
                      </div>
@@ -218,7 +218,7 @@
                   <div class="form-group row" id="docentes2div" {{ 'C'==($new ? old('tipo_prep_pos') : $ficha->tipo_prep_pos) ?  "style=display:none" : '' }} {{ null==($new ? old('tipo_prep_pos') : $ficha->tipo_prep_pos) ?  "style=display:none" : '' }}>
                      <label for="desc_prep_pos" class="col-lg-3 col-md-12 text-lg-right">Especialidad / Profesor:</label>
                      <div class="col-lg-9 col-md-12">
-                        <input class="form-control text-uppercase" type="text" name="desc_prep_pos" id="desc_prep_pos" value="{{ $new ? old('desc_prep_pos') : $ficha->desc_prep_pos }}" autocomplete="nope"
+                        <input onkeypress="return event.charCode != 34" class="form-control text-uppercase" type="text" name="desc_prep_pos" id="desc_prep_pos" value="{{ $new ? old('desc_prep_pos') : $ficha->desc_prep_pos }}" autocomplete="nope"
                         {{ 'A'==($new ? old('tipo_prep_pos') : $ficha->tipo_prep_pos) ? "required" : '' }}{{ 'O'==($new ? old('tipo_prep_pos') : $ficha->tipo_prep_pos) ? "required" : '' }}>
                      </div>
                   </div>
@@ -258,14 +258,14 @@
                   <!-- <div class="form-group row">
                      <label for="flag_corr_pos" class="col-lg-3 col-md-12 text-lg-right">&#191;Requiere correpetidor&#63;:</label>
                      <div class="col-lg-9 col-md-12">
-                        <input type="checkbox" class="d-none" name="flag_corr_pos" id="flag_corr_pos" value="S" data-on="Sí" data-off="No" data-onstyle="success" data-offstyle="danger" {{ 'S'==($new ? old('flag_corr_pos') : $ficha->flag_corr_pos) ? 'checked' : '' }}>
+                        <input  type="checkbox" class="d-none" name="flag_corr_pos" id="flag_corr_pos" value="S" data-on="Sí" data-off="No" data-onstyle="success" data-offstyle="danger" {{ 'S'==($new ? old('flag_corr_pos') : $ficha->flag_corr_pos) ? 'checked' : '' }}>
                      </div>
                   </div>
 
                   <div class="form-group row {{ 'S'==($new ? old('flag_corr_pos') : $ficha->flag_corr_pos) ?: 'd-none' }}" id="divCorrepetidor">
                      <label for="nomb_corr_pos" class="col-lg-3 col-md-12 text-lg-right">Nombre del correpetidor:</label>
                      <div class="col-lg-9 col-md-12">
-                        <input class="form-control text-uppercase" type="text" name="nomb_corr_pos" id="nomb_corr_pos" value="{{ $new ? old('nomb_corr_pos') : $ficha->nomb_corr_pos }}" autocomplete="nope">
+                        <input onkeypress="return event.charCode != 34" class="form-control text-uppercase" type="text" name="nomb_corr_pos" id="nomb_corr_pos" value="{{ $new ? old('nomb_corr_pos') : $ficha->nomb_corr_pos }}" autocomplete="nope">
                      </div>
                   </div> -->
                   <!-- 2021 -->
@@ -282,7 +282,7 @@
                      <div class="form-group row">
                         <label for="apel_nomb_apd" class="col-lg-3 col-md-12 text-lg-right">Nombres y apellidos:</label>
                         <div class="col-lg-9 col-md-12">
-                           <input class="form-control text-uppercase" type="text" name="apel_nomb_apd" id="apel_nomb_apd" value="{{ $new ? old('apel_nomb_apd') : $ficha->apel_nomb_apd }}" autocomplete="nope">
+                           <input onkeypress="return event.charCode != 34" class="form-control text-uppercase" type="text" name="apel_nomb_apd" id="apel_nomb_apd" value="{{ $new ? old('apel_nomb_apd') : $ficha->apel_nomb_apd }}" autocomplete="nope">
                         </div>
                      </div>
 
@@ -291,7 +291,7 @@
                            <div class="form-group row">
                               <label for="nume_docu_apd" class="col-lg-6 col-md-12 text-lg-right">DNI:</label>
                               <div class="col-lg-6 col-md-12">
-                                 <input class="form-control" type="text" name="nume_docu_apd" id="nume_docu_apd" value="{{ $new ? old('nume_docu_apd') : $ficha->nume_docu_apd }}" autocomplete="nope">
+                                 <input onkeypress="return event.charCode != 34" class="form-control" type="text" name="nume_docu_apd" id="nume_docu_apd" value="{{ $new ? old('nume_docu_apd') : $ficha->nume_docu_apd }}" autocomplete="nope">
                               </div>
                            </div>
                         </div>
@@ -299,7 +299,7 @@
                            <div class="form-group row">
                               <label for="telf_fijo_apd" class="col-lg-6 col-md-12 text-lg-right">Tel&eacute;fono:</label>
                               <div class="col-lg-6 col-md-12">
-                                 <input class="form-control" type="text" name="telf_fijo_apd" id="telf_fijo_apd" value="{{ $new ? old('telf_fijo_apd') : $ficha->telf_fijo_apd }}" autocomplete="nope">
+                                 <input onkeypress="return event.charCode != 34" class="form-control" type="text" name="telf_fijo_apd" id="telf_fijo_apd" value="{{ $new ? old('telf_fijo_apd') : $ficha->telf_fijo_apd }}" autocomplete="nope">
                               </div>
                            </div>
                         </div>
@@ -334,7 +334,7 @@
                            <label for="foto1" class="btn btn-primary m-0 mt-3 d-block" style="cursor:pointer;">
                               <i class="fas fa-upload pr-2"></i>Seleccionar...
                            </label>
-                           <input id="foto1" type="file" name="foto_post_per" accept="image/*" style="display:none;" data-img="imgFoto1" class="form-control">
+                           <input id="foto1" type="file" name="foto_post_per" accept="image/png,image/jpg" style="display:none;" data-img="imgFoto1" class="form-control">
                            @if ($new)
                               <input type="hidden" name="arch_foto_per" value=".">
                            @else
@@ -366,7 +366,7 @@
                            <label for="foto2" class="btn btn-primary m-0 mt-3 d-block" style="cursor:pointer;">
                               <i class="fas fa-upload pr-2"></i>Seleccionar...
                            </label>
-                           <input id="foto2" type="file" name="file_docu_pos" accept="image/*" style="display:none;" data-img="imgFoto2">
+                           <input id="foto2" type="file" name="file_docu_pos" accept="image/png,image/jpg" style="display:none;" data-img="imgFoto2">
                            @if ($new)
                               <input type="hidden" name="arch_docu_per" value=".">
                            @else
