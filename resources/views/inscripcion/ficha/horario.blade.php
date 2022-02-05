@@ -81,6 +81,7 @@
                                 @endif
                             </div>
                         </div>
+
                         @if ($v->flag_jura == 'N' && $v->fecha_comp <= Carbon\Carbon::now() && $v->estado == 'P' && ($v->req_estado == 'E' || $v->req_estado == null || $v->req_estado == 'I'))
                             <form action="{{ route('BeginExamen') }}" method="POST">
                                 @csrf
@@ -96,7 +97,7 @@
                             </form>
                         @else
                             <div style="padding-bottom: 20px" class='centrar-content'>
-                               {{--   <button disabled class="btn btn-success">Ingresar</button>--}}
+                                <p>{{ $v->flag_jura."  ".$v->fecha_comp."  ". $v->estado."  ".$v->req_estado }}</p>
                             </div>
                         @endif
                     </div>
