@@ -95,9 +95,12 @@
                                 </div>
                             </form>
                         @else
+                        @if ($v->flag_jura != 'N')
                             <div style="padding-bottom: 20px" class='centrar-content'>
                                 <button disabled class="btn btn-success">Ingresar</button>
                             </div>
+                        @endif
+                            
                         @endif
                     </div>
                 </div>
