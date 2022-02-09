@@ -268,7 +268,7 @@ class ExamenController extends Controller
             DB::beginTransaction();
             $postulante->nota=round($nota,2);
             $postulante->estado='E';   
-            $postulante->respuestas=$respuestastexto;           
+            //$postulante->respuestas=$respuestastexto;           
             $postulante->update();
             DB::commit();
             
