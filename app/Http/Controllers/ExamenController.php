@@ -269,7 +269,7 @@ class ExamenController extends Controller
                 $resp=new Respuesta();
                 $resp->key=$key;
                 $resp->respuesta=$value;
-                $resp->id_postulante=$$request->id_postulante;
+                $resp->id_postulante=$request->id_postulante;
             }
         }
         $postulante= Postulante::find($request->id_postulante);
