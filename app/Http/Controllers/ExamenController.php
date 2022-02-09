@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Model\ExamenPostulante;
 use App\Models\Audiotmp;
 use App\Models\Postulante;
+use App\Models\Respuesta;
 use App\Traits\Tables;
 use Exception;
 use Illuminate\Http\Request;
@@ -258,9 +259,18 @@ class ExamenController extends Controller
                 $nota=$nota+20/count($correctas);
             }
         }
-        $respuestastexto='';
         foreach ($respuestas as $key => $value) {
-            $respuestastexto=$respuestastexto.$key.": ".$value.". \n";
+            $resp=Respuesta::where('key',$key)
+                            ->where('id_postulante',$request->id_postulante);
+            if ($resp->count()>0) {
+                $resp=$resp->first();
+                $resp->respuesta=$value;
+            }else{
+                $resp=new Respuesta();
+                $resp->key=$key;
+                $resp->respuesta=$value;
+                $resp->id_postulante=$$request->id_postulante;
+            }
         }
         $postulante= Postulante::find($request->id_postulante);
         session()->forget(['examen','minutos','segundos','id_examen_postulante']);
