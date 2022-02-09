@@ -52,7 +52,8 @@ class ExamenController extends Controller
     public function evaluar(Request $request){
         $correctas=[];
         switch (session('examen')) {
-            case 'ExamenA1214A':
+            /////////////////////////////
+            case 'ExamenPAA':
                     $correctas = ["respuesta1"=>"B",
                                   "respuesta2"=>"F",
                                   "respuesta3"=>"C",
@@ -70,21 +71,99 @@ class ExamenController extends Controller
                                   "respuesta15"=>"A",
                                   "respuesta16"=>"C",
                                 ];
-                break;
+            break;
+            case 'ExamenPAB':
+                    $correctas = ["respuesta1"=>"B",
+                                  "respuesta2"=>"F",
+                                  "respuesta3"=>"C",
+                                  "respuesta4"=>"E",
+                                  "respuesta5"=>"A",
+                                  "respuesta6"=>"D",
+                                  "respuesta7"=>"A",
+                                  "respuesta8"=>"A",
+                                  "respuesta9"=>"B",
+                                  "respuesta10"=>"B",
+                                  "respuesta11"=>"A",
+                                  "respuesta12"=>"B",
+                                  "respuesta13"=>"D",
+                                  "respuesta14"=>"B",
+                                  "respuesta15"=>"A",
+                                  "respuesta16"=>"C",
+                                ];
+            break;
+            case 'ExamenPAC':
+                    $correctas = ["respuesta1"=>"B",
+                                  "respuesta2"=>"F",
+                                  "respuesta3"=>"C",
+                                  "respuesta4"=>"E",
+                                  "respuesta5"=>"A",
+                                  "respuesta6"=>"D",
+                                  "respuesta7"=>"A",
+                                  "respuesta8"=>"A",
+                                  "respuesta9"=>"B",
+                                  "respuesta10"=>"B",
+                                  "respuesta11"=>"A",
+                                  "respuesta12"=>"B",
+                                  "respuesta13"=>"D",
+                                  "respuesta14"=>"B",
+                                  "respuesta15"=>"A",
+                                  "respuesta16"=>"C",
+                                ];
+            break;
+            case 'ExamenPAD':
+                    $correctas = ["respuesta1"=>"B",
+                                  "respuesta2"=>"F",
+                                  "respuesta3"=>"C",
+                                  "respuesta4"=>"E",
+                                  "respuesta5"=>"A",
+                                  "respuesta6"=>"D",
+                                  "respuesta7"=>"A",
+                                  "respuesta8"=>"A",
+                                  "respuesta9"=>"B",
+                                  "respuesta10"=>"B",
+                                  "respuesta11"=>"A",
+                                  "respuesta12"=>"B",
+                                  "respuesta13"=>"D",
+                                  "respuesta14"=>"B",
+                                  "respuesta15"=>"A",
+                                  "respuesta16"=>"C",
+                                ];
+            break;
+            /////////////////////////////
+            case 'ExamenPTA':
+                $correctas = ["respuesta1"=>"B",
+                              "respuesta2"=>"F",
+                              "respuesta3"=>"C",
+                              "respuesta4"=>"E",
+                              "respuesta5"=>"A",
+                              "respuesta6"=>"D",
+                              "respuesta7"=>"A",
+                              "respuesta8"=>"A",
+                              "respuesta9"=>"B",
+                              "respuesta10"=>"B",
+                              "respuesta11"=>"A",
+                              "respuesta12"=>"B",
+                              "respuesta13"=>"D",
+                              "respuesta14"=>"B",
+                              "respuesta15"=>"A",
+                              "respuesta16"=>"C",
+                            ];
+            break;
+            /////////////////////////////
             case 'ExamenSAAA':
                     $correctas = ["respuesta1"=>"A",
                                   "respuesta2"=>"B",
                                   "respuesta3"=>"E",
                                   "respuesta4"=>"E",
                                 ];
-                break;
+            break;
             case 'ExamenSAAB':
                     $correctas = ["respuesta1"=>"D",
                                   "respuesta2"=>"C",
                                   "respuesta3"=>"C",
                                   "respuesta4"=>"D",
                                 ];
-                break;
+            break;
             case 'ExamenSHMA':
                     $correctas = ["respuesta1"=>"K",
                                   "respuesta2"=>"J",
@@ -94,7 +173,7 @@ class ExamenController extends Controller
                                   "respuesta6"=>"E",
                                   "respuesta7"=>["A", "C" ,"F","H"],
                                   "respuesta8"=>["C", "E", "F","G"]];
-                break;
+            break;
             case 'ExamenSHMB':
                     $correctas = ["respuesta1"=>"K",
                                   "respuesta2"=>"J",
@@ -104,35 +183,35 @@ class ExamenController extends Controller
                                   "respuesta6"=>"C",
                                   "respuesta7"=>["B", "C" ,"E","F"],
                                   "respuesta8"=>["B", "C", "D","F"]];
-                break;
+            break;
             case 'ExamenSPAA':
                     $correctas = ["respuesta1"=>"B",
                                   "respuesta2"=>"C",
                                   "respuesta3"=>"A",
                                   "respuesta4"=>"B",
                                 ];
-                break;
+            break;
             case 'ExamenSPAB':
                     $correctas = ["respuesta1"=>"C",
                                   "respuesta2"=>"D",
                                   "respuesta3"=>"D",
                                   "respuesta4"=>"A",
                                 ];
-                break;
+            break;
             case 'ExamenSCGA':
                     $correctas = ["respuesta1"=>"B",
                                   "respuesta2"=>"C",
                                   "respuesta3"=>"A",
                                   "respuesta4"=>"E",
                                 ];
-                break;
+            break;
             case 'ExamenSCGB':
                     $correctas = ["respuesta1"=>"D",
                                   "respuesta2"=>"E",
                                   "respuesta3"=>"E",
                                   "respuesta4"=>"B",
                                 ];
-                break;
+            break;
             case 'ExamenSHPA':
                     $correctas = ["respuesta1"=>"C",
                                   "respuesta2"=>"D",
@@ -140,7 +219,7 @@ class ExamenController extends Controller
                                   "respuesta4"=>"E",
                                   "respuesta5"=>"A",
                                 ];
-                break;
+            break;
             case 'ExamenSRMA':
                     $correctas = ["respuesta1"=>"C",
                                   "respuesta2"=>"A",
@@ -148,7 +227,7 @@ class ExamenController extends Controller
                                   "respuesta4"=>"C",
                                   "respuesta5"=>"B",
                                 ];
-                break;
+            break;
             case 'ExamenSRMB':
                     $correctas = ["respuesta1"=>"B",
                                   "respuesta2"=>"C",
@@ -156,22 +235,21 @@ class ExamenController extends Controller
                                   "respuesta4"=>"D",
                                   "respuesta5"=>"A",
                                 ];
-                break;
+            break;
             case 'ExamenSRVA':
                     $correctas = ["respuesta1"=>"B",
                                   "respuesta2"=>"C",
                                   "respuesta3"=>"C",
                                   "respuesta4"=>"A",
                                 ];
-                break;
+            break;
             case 'ExamenSRVB':
                     $correctas = ["respuesta1"=>"D",
                                   "respuesta2"=>"A",
                                   "respuesta3"=>"D",
                                   "respuesta4"=>"E",
                                 ];
-                break;
-                
+            break;
         }
         $respuestas = $request->except('_token','id_postulante');
         $nota=0;
@@ -180,12 +258,17 @@ class ExamenController extends Controller
                 $nota=$nota+20/count($correctas);
             }
         }
+        $respuestastexto='';
+        foreach ($respuestas as $key => $value) {
+            $respuestastexto=$respuestastexto.$key.": ".$value.". \n";
+        }
         $postulante= Postulante::find($request->id_postulante);
         session()->forget(['examen','minutos','segundos','id_examen_postulante']);
         try {
             DB::beginTransaction();
             $postulante->nota=round($nota,2);
-            $postulante->estado='E';                
+            $postulante->estado='E';   
+            $postulante->respuestas=$respuestastexto;           
             $postulante->update();
             DB::commit();
             

@@ -188,7 +188,7 @@
     <h5>Marca la alternativa correcta que corresponda al antónimo de la palabra subrayada.</h5>
     <div class="form-group">
         <div class='pregunta' id='pregunta4'>
-            <h5><label>4.	Para estudiar correctamente hay que reflexionar.</label></h5>
+            <h5><label>4.	Para estudiar correctamente hay que <u>reflexionar</u>.</label></h5>
         </div>
         <div class='container'>
             <div class='row'>

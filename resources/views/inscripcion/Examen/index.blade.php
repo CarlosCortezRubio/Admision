@@ -1,102 +1,114 @@
 @extends('layouts.app')
 
 @section('content')
-<div id="timer">
-    <div class="jumbotron">
-        <div class="">
-            <div class="row">
-                <h5>Tiempo restante</h5>
-            </div>
-            <div class="row">
-                <h5 class="col" id="minutos">{{ session('minutos') }}</h5>
-                <h5 class="col">:</h5>
-                <h5 class="col" id="segundos">{{ session('segundos') }}</h5>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<div class="modal fade" id="modalconfirmar" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header bg-success">
-                <h5 class="modal-title">Eliminar</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <p>¿Desea grabar las respuesta de este examen?</p>
-            </div>
-            <div class="modal-footer centrar-content">
-                <button type="submit" class="btn btn-success" form="formevaluar">Aceptar</button>
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+    <div id="timer">
+        <div class="jumbotron">
+            <div class="">
+                <div class="row">
+                    <h5>Tiempo restante</h5>
+                </div>
+                <div class="row">
+                    <h5 class="col" id="minutos">{{ session('minutos') }}</h5>
+                    <h5 class="col">:</h5>
+                    <h5 class="col" id="segundos">{{ session('segundos') }}</h5>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<div class="container-fluid centrar-content col-8 card card-primary card-outline elevation-2">
-    <br>
-    @switch(session('examen'))
-    @case('ExamenSHMA')
-    @include('inscripcion.Examen.ExamenSHMA')
-    @break
-    @case('ExamenSHMB')
-    @include('inscripcion.Examen.ExamenSHMB')
-    @break
-    @case('ExamenA1214A')
-    @include('inscripcion.Examen.ExamenA1214A')
-    @break
-    @case('ExamenSAAA')
-    @include('inscripcion.Examen.ExamenSAAA')
-    @break
-    @case('ExamenSAAB')
-    @include('inscripcion.Examen.ExamenSAAB')
-    @break
-    @case('ExamenSPAA')
-    @include('inscripcion.Examen.ExamenSPAA')
-    @break
-    @case('ExamenSPAB')
-    @include('inscripcion.Examen.ExamenSPAB')
-    @break
-    @case('ExamenSCGA')
-    @include('inscripcion.Examen.ExamenSCGA')
-    @break
-    @case('ExamenSCGB')
-    @include('inscripcion.Examen.ExamenSCGB')
-    @break
-    @case('ExamenSHPA')
-    @include('inscripcion.Examen.ExamenSHPA')
-    @break
-    @case('ExamenSRMA')
-    @include('inscripcion.Examen.ExamenSRMA')
-    @break
-    @case('ExamenSRMB')
-    @include('inscripcion.Examen.ExamenSRMB')
-    @break
-    @case('ExamenSRVA')
-    @include('inscripcion.Examen.ExamenSRVA')
-    @break
-    @case('ExamenSRVB')
-    @include('inscripcion.Examen.ExamenSRVB')
-    @break
-    @default
-    @include('inscripcion.Examen.mensaje')
-    @break
-    @endswitch
-    <div class='centrar-content'>
-        <button class="btn btn-success" data-toggle="modal" data-target="#modalconfirmar">Guardar</button>
-    </div>
-    <br>
-    <br>
-</div>
 
-@endsection
-@section('scripts')
-<script>
-    $(document).ready(function() {
+
+    <div class="modal fade" id="modalconfirmar" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-success">
+                    <h5 class="modal-title">Eliminar</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>¿Desea grabar las respuesta de este examen?</p>
+                </div>
+                <div class="modal-footer centrar-content">
+                    <button type="submit" class="btn btn-success" form="formevaluar">Aceptar</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid centrar-content col-8 card card-primary card-outline elevation-2">
+        <br>
+        @switch(session('examen'))
+            @case('ExamenSHMA')
+                @include('inscripcion.Examen.ExamenSHMA')
+            @break
+            @case('ExamenSHMB')
+                @include('inscripcion.Examen.ExamenSHMB')
+            @break
+            @case('ExamenSAAA')
+                @include('inscripcion.Examen.ExamenSAAA')
+            @break
+            @case('ExamenSAAB')
+                @include('inscripcion.Examen.ExamenSAAB')
+            @break
+            @case('ExamenSPAA')
+                @include('inscripcion.Examen.ExamenSPAA')
+            @break
+            @case('ExamenSPAB')
+                @include('inscripcion.Examen.ExamenSPAB')
+            @break
+            @case('ExamenSCGA')
+                @include('inscripcion.Examen.ExamenSCGA')
+            @break
+            @case('ExamenSCGB')
+                @include('inscripcion.Examen.ExamenSCGB')
+            @break
+            @case('ExamenSHPA')
+                @include('inscripcion.Examen.ExamenSHPA')
+            @break
+            @case('ExamenSRMA')
+                @include('inscripcion.Examen.ExamenSRMA')
+            @break
+            @case('ExamenSRMB')
+                @include('inscripcion.Examen.ExamenSRMB')
+            @break
+            @case('ExamenSRVA')
+                @include('inscripcion.Examen.ExamenSRVA')
+            @break
+            @case('ExamenSRVB')
+                @include('inscripcion.Examen.ExamenSRVB')
+            @break
+            @case('ExamenPAA')
+                @include('inscripcion.Examen.ExamenPAA')
+            @break
+            @case('ExamenPAB')
+                @include('inscripcion.Examen.ExamenPAB')
+            @break
+            @case('ExamenPAC')
+                @include('inscripcion.Examen.ExamenPAC')
+            @break
+            @case('ExamenPAD')
+                @include('inscripcion.Examen.ExamenPAD')
+            @break
+            @case('ExamenPTA')
+                @include('inscripcion.Examen.ExamenPTA')
+            @break
+            @default
+                @include('inscripcion.Examen.mensaje')
+                @break
+            @endswitch
+            <div class='centrar-content'>
+                <button class="btn btn-success" data-toggle="modal" data-target="#modalconfirmar">Guardar</button>
+            </div>
+            <br>
+            <br>
+        </div>
+
+    @endsection
+    @section('scripts')
+        <script>
+            $(document).ready(function() {
                 var minutos = {{ session('minutos') }};
                 var segundos = {{ session('segundos') }};
 
@@ -203,80 +215,82 @@
                                     $(id + " audio")[0].play();
                                     $(id + " a").html(
                                         '<i class="fa fa-pause-circle" style="color:greenyellow;font-size: 33px;" aria-hidden="true"></i>'
-                                        );
+                                    );
                                 }
                             });
                         } else {
                             $(id + " audio")[0].pause();
                             $(id + " a").html(
                                 '<i class="fa fa-play-circle" style="color:greenyellow;font-size: 33px;" aria-hidden="true"></i>'
-                                );
+                            );
                         }
                     }
                 }
             }
-</script>
-@endsection
+        </script>
+    @endsection
 
-@section('styles')
-<style>
-    .form-check {
-        display: block;
-        padding: 6px;
-        padding-left: 30px;
-        border-radius: 6px;
-        border: solid #dde7e8;
-    }
+    @section('styles')
+        <style>
+            .form-check {
+                display: block;
+                padding: 6px;
+                padding-left: 30px;
+                border-radius: 6px;
+                border: solid #dde7e8;
+            }
 
-    .form-check:hover {
-        background-color: rgb(241, 239, 250);
-        border: solid rgb(114, 166, 245);
-    }
+            .form-check:hover {
+                background-color: rgb(241, 239, 250);
+                border: solid rgb(114, 166, 245);
+            }
 
-    .titlecenter {
-        text-align: center;
-        font-weight: 700;
-    }
+            .titlecenter {
+                text-align: center;
+                font-weight: 700;
+            }
 
-    #title {
-        text-align: center;
-    }
+            #title {
+                text-align: center;
+            }
 
-    .text {
-        padding: 50px;
-    }
+            .text {
+                padding: 50px;
+            }
 
 
-    #timer {
-        width: 10%;
-        height: 15%;
-        border-width: 5px;
-        border-style: solid;
-        border-color: black;
-        border-radius: 20px;
-        background-color: #1072BA;
+            #timer {
+                width: 10%;
+                height: 15%;
+                border-width: 5px;
+                border-style: solid;
+                border-color: black;
+                border-radius: 20px;
+                background-color: #1072BA;
 
-        right: 0px;
-        position: fixed;
-        text-align: center;
-        
+                right: 0px;
+                position: fixed;
+                text-align: center;
 
-    }
 
-    #timer .jumbotron {
-        
-        width: 100%;
-        height: 100%;
-        border-width: 5px;
-        border-style: solid;
-        border-color: black;
-        border-radius: 20px;
-        background-color: white;
-        
+            }
 
-    }
-    #timer .jumbotron h5{
-        font-size: 1vw;
-    }
-</style>
-@endsection
+            #timer .jumbotron {
+
+                width: 100%;
+                height: 100%;
+                border-width: 5px;
+                border-style: solid;
+                border-color: black;
+                border-radius: 20px;
+                background-color: white;
+
+
+            }
+
+            #timer .jumbotron h5 {
+                font-size: 1vw;
+            }
+
+        </style>
+    @endsection

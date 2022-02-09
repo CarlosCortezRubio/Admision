@@ -187,7 +187,7 @@
     <h5>Marca la alternativa correcta que corresponda al antónimo de la palabra subrayada.</h5>
     <div class="form-group">
         <div class='pregunta' id='pregunta4'>
-            <h5><label>4.	La interpretación musical debe ser refinada.</label></h5>
+            <h5><label>4.	La interpretación musical debe ser <u>refinada</u>.</label></h5>
         </div>
         <div class='container'>
             <div class='row'>
