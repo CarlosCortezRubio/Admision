@@ -483,11 +483,12 @@ class ExamenController extends Controller
         $nota=0;
         foreach ($correctas as $key => $value) {
             if (substr($key,0,-1)=='respuesta' && array_key_exists($key, $respuestas) && $value==$respuestas[$key]) {
-               // if(array_key_exists($key, $peso)){
-               //     $nota=$nota+$peso[$key];
-               // }else{
+                if(array_key_exists($key, $peso)){
+                    $nota=$nota+$peso[$key];
+                }else{
                     $nota=$nota+20/count($correctas);
-               // }
+                }
+                echo $peso[$key];
             }
         }
         return $nota;
