@@ -498,7 +498,7 @@ class ExamenController extends Controller
         //echo "<br>";
         //var_dump($peso);
         //echo "<br>";
-        return $nota;
+        //return $nota;
         $postulante= Postulante::find($request->id_postulante);
         try {
             DB::beginTransaction();
