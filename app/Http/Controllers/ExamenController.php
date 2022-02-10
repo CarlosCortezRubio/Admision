@@ -482,22 +482,22 @@ class ExamenController extends Controller
         $respuestas = $request->except('_token','id_postulante');
         $nota=0;
         foreach ($correctas as $key => $value) {
-            if (substr($key,0,-1)=='respuesta' && array_key_exists($key, $respuestas) && $value==$respuestas[$key]) {
-                //if(array_key_exists($key, $peso)){
+            if (array_key_exists($key, $respuestas) && $value==$respuestas[$key]) {
+                if(array_key_exists($key, $peso)){
                     $nota=$nota+$peso[$key];
-                //}else{
-                //    $nota=$nota+20/count($correctas);
-                //}
-                echo $key." : ".$respuestas[$key]." : ".$peso[$key];
-                echo "<br>";
+                }else{
+                    $nota=$nota+20/count($correctas);
+                }
+                //echo $key." : ".$respuestas[$key]." : ".$peso[$key];
+                //echo "<br>";
             }
         }
-        var_dump($respuestas);
-        echo "<br>";
-        var_dump($correctas);
-        echo "<br>";
-        var_dump($peso);
-        echo "<br>";
+        //var_dump($respuestas);
+        //echo "<br>";
+        //var_dump($correctas);
+        //echo "<br>";
+        //var_dump($peso);
+        //echo "<br>";
         return $nota;
         $postulante= Postulante::find($request->id_postulante);
         try {
