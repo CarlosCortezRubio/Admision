@@ -366,7 +366,7 @@
                     <div class='col-1'></div>
                     <div class="form-check  col">
                         <input type="radio" class="respuesta9 form-check-input" value="A" id="0901" name="respuesta9">
-                        <label class="respuesta9 form-check-label justify-content-center" for="0901">Fa Mayor</label>
+                        <label class="respuesta9 form-check-label justify-content-center" for="0901">Mi Mayor</label>
                     </div>
                     <div class='col-1'></div>
                 </div>
@@ -374,7 +374,7 @@
                     <div class='col-1'></div>
                     <div class="form-check col">
                         <input type="radio" class="respuesta9 form-check-input" value="B" id="0902" name="respuesta9">
-                        <label class="respuesta9 form-check-label justify-content-center" for="0902">Fa Menor antigua o
+                        <label class="respuesta9 form-check-label justify-content-center" for="0902">Mi Menor antigua o
                             natural</label>
                     </div>
                     <div class='col-1'></div>
@@ -383,7 +383,7 @@
                     <div class='col-1'></div>
                     <div class="form-check col">
                         <input type="radio" class="respuesta9 form-check-input" value="C" id="0903" name="respuesta9">
-                        <label class="respuesta9 form-check-label justify-content-center" for="0903">Fa Menor
+                        <label class="respuesta9 form-check-label justify-content-center" for="0903">Mi Menor
                             armónica</label>
                     </div>
                     <div class='col-1'></div>
@@ -392,7 +392,7 @@
                     <div class='col-1'></div>
                     <div class="form-check col">
                         <input type="radio" class="respuesta7 form-check-input" value="D" id="0904" name="respuesta9">
-                        <label class="respuesta9 form-check-label justify-content-center" for="0904">Fa Menor melódica
+                        <label class="respuesta9 form-check-label justify-content-center" for="0904">Mi Menor melódica
                             ascendente</label>
                     </div>
                     <div class='col-1'></div>
