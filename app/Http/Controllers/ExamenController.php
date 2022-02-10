@@ -488,7 +488,8 @@ class ExamenController extends Controller
                 //}else{
                 //    $nota=$nota+20/count($correctas);
                 //}
-                //echo $peso[$key];
+                echo $peso[$key];
+                echo "<br>"
             }
         }
         var_dump($respuestas);
