@@ -488,9 +488,10 @@ class ExamenController extends Controller
                 }else{
                     $nota=$nota+20/count($correctas);
                 }
-                echo $peso[$key];
+                //echo $peso[$key];
             }
         }
+        var_dump($respuestas);
         return $nota;
         $postulante= Postulante::find($request->id_postulante);
         try {
