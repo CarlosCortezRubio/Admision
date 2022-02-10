@@ -490,6 +490,7 @@ class ExamenController extends Controller
                 }
             }
         }
+        return $nota;
         $postulante= Postulante::find($request->id_postulante);
         try {
             DB::beginTransaction();
