@@ -11,6 +11,7 @@ use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 
 class ExamenController extends Controller
 {
@@ -489,29 +490,29 @@ class ExamenController extends Controller
                 }
             }
         }
-        foreach ($respuestas as $key => $value) {
-            $resp=Respuesta::where('key',$key)
-                            ->where('id_postulante',$request->id_postulante);
-            if ($resp->count()>0) {
-                $resp=$resp->first();
-                $resp->respuesta=$value;
-            }else{
-                $resp=new Respuesta();
-                $resp->key=$key;
-                $resp->respuesta=$value;
-                $resp->id_postulante=$request->id_postulante;
-            }
-        }
         $postulante= Postulante::find($request->id_postulante);
-        session()->forget(['examen','minutos','segundos','id_examen_postulante']);
         try {
             DB::beginTransaction();
+            foreach ($respuestas as $key => $value) {
+                $resp=Respuesta::where('key',$key)
+                                ->where('id_postulante',$request->id_postulante);
+                if ($resp->count()>0) {
+                    $resp=$resp->first();
+                    $resp->respuesta=$value;
+                    $resp->update();
+                }else{
+                    $resp=new Respuesta();
+                    $resp->key=$key;
+                    $resp->respuesta=$value;
+                    $resp->id_postulante=$request->id_postulante;
+                    $resp->save();
+                }
+            }
             $postulante->nota=round($nota,2);
-            $postulante->estado='E';   
-            //$postulante->respuestas=$respuestastexto;           
+            $postulante->estado='E';          
             $postulante->update();
             DB::commit();
-            
+            session()->forget(['examen','minutos','segundos','id_examen_postulante']);
         } catch (Exception $e) {
             DB::rollBack();
             dd($e);
