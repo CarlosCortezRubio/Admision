@@ -494,6 +494,9 @@ class ExamenController extends Controller
         var_dump($respuestas);
         echo "<br>";
         var_dump($correctas);
+        echo "<br>";
+        var_dump($peso);
+        echo "<br>";
         return $nota;
         $postulante= Postulante::find($request->id_postulante);
         try {
