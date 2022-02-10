@@ -673,21 +673,21 @@
                     <div class="form-check  col">
                         <input type="radio" class="respuesta15 form-check-input" value="A" id="1501"
                             name="respuesta15">
-                        <label class="respuesta15 form-check-label justify-content-center" for="1501">Solb mayor</label>
+                        <label class="respuesta15 form-check-label justify-content-center" for="1501">Mayor</label>
                     </div>
                 </div>
                 <div class='col-6'>
                     <div class="form-check col">
                         <input type="radio" class="respuesta15 form-check-input" value="B" id="1502"
                             name="respuesta15">
-                        <label class="respuesta15 form-check-label justify-content-center" for="1502">Do menor</label>
+                        <label class="respuesta15 form-check-label justify-content-center" for="1502">Menor</label>
                     </div>
                 </div>
                 <div class='col-6'>
                     <div class="form-check col">
                         <input type="radio" class="respuesta15 form-check-input" value="C" id="1503"
                             name="respuesta15">
-                        <label class="respuesta15 form-check-label justify-content-center" for="1503">Solb aumentado</label>
+                        <label class="respuesta15 form-check-label justify-content-center" for="1503">Aumentado</label>
                     </div>
                 </div>
                 <div class='col-6'>
@@ -695,7 +695,7 @@
                         <input type="radio" class="respuesta15 form-check-input" value="D" id="1504"
                             name="respuesta15">
                         <label class="respuesta15 form-check-label justify-content-center"
-                            for="1504">Do disminuido</label>
+                            for="1504">Disminuido</label>
                     </div>
                 </div>
             </div>
@@ -715,21 +715,21 @@
                     <div class="form-check col">
                         <input type="radio" class="respuesta16 form-check-input" value="A" id="1601"
                             name="respuesta16">
-                        <label class="respuesta16 form-check-label justify-content-center" for="1601">Re mayor</label>
+                        <label class="respuesta16 form-check-label justify-content-center" for="1601">Mayor</label>
                     </div>
                 </div>
                 <div class='col-6'>
                     <div class="form-check col">
                         <input type="radio" class="respuesta16 form-check-input" value="B" id="1602"
                             name="respuesta16">
-                        <label class="respuesta16 form-check-label justify-content-center" for="1602">Re menor</label>
+                        <label class="respuesta16 form-check-label justify-content-center" for="1602">Menor</label>
                     </div>
                 </div>
                 <div class='col-6'>
                     <div class="form-check col">
                         <input type="radio" class="respuesta16 form-check-input" value="C" id="1603"
                             name="respuesta16">
-                        <label class="respuesta16 form-check-label justify-content-center" for="1603">Re aumentado</label>
+                        <label class="respuesta16 form-check-label justify-content-center" for="1603">Aumentado</label>
                     </div>
                 </div>
                 <div class='col-6'>
@@ -737,7 +737,7 @@
                         <input type="radio" class="respuesta16 form-check-input" value="D" id="1604"
                             name="respuesta16">
                         <label class="respuesta16 form-check-label justify-content-center"
-                            for="1604">Re disminuido</label>
+                            for="1604">Disminuido</label>
                     </div>
                 </div>
             </div>
@@ -756,7 +756,7 @@
                     <div class="form-check  col">
                         <input type="radio" class="respuesta17 form-check-input" value="A" id="1701"
                             name="respuesta17">
-                        <label class="respuesta17 form-check-label justify-content-center" for="1701">Reb mayor</label>
+                        <label class="respuesta17 form-check-label justify-content-center" for="1701">Mayor</label>
                     </div>
                     <div class='col-1'></div>
                 </div>
@@ -765,7 +765,7 @@
                     <div class="form-check col">
                         <input type="radio" class="respuesta17 form-check-input" value="B" id="1702"
                             name="respuesta17">
-                        <label class="respuesta17 form-check-label justify-content-center" for="1702">Sol menor</label>
+                        <label class="respuesta17 form-check-label justify-content-center" for="1702">Menor</label>
                     </div>
                     <div class='col-1'></div>
                 </div>
@@ -774,7 +774,7 @@
                     <div class="form-check col">
                         <input type="radio" class="respuesta17 form-check-input" value="C" id="1703"
                             name="respuesta17">
-                        <label class="respuesta17 form-check-label justify-content-center" for="1703">Sol aumentado</label>
+                        <label class="respuesta17 form-check-label justify-content-center" for="1703">Aumentado</label>
                     </div>
                     <div class='col-1'></div>
                 </div>
@@ -784,7 +784,7 @@
                         <input type="radio" class="respuesta17 form-check-input" value="D" id="1704"
                             name="respuesta17">
                         <label class="respuesta17 form-check-label justify-content-center"
-                            for="1704">Sol disminuido</label>
+                            for="1704">Disminuido</label>
                     </div>
                     <div class='col-1'></div>
                 </div>
@@ -810,21 +810,21 @@
                     <div class="form-check  col">
                         <input type="radio" class="respuesta18 form-check-input" value="A" id="1801"
                             name="respuesta18">
-                        <label class="respuesta18 form-check-label justify-content-center" for="1801">Sol# mayor</label>
+                        <label class="respuesta18 form-check-label justify-content-center" for="1801">Mayor</label>
                     </div>
                 </div>
                 <div class='col-6'>
                     <div class="form-check col">
                         <input type="radio" class="respuesta18 form-check-input" value="B" id="1802"
                             name="respuesta18">
-                        <label class="respuesta18 form-check-label justify-content-center" for="1802">Sol# menor</label>
+                        <label class="respuesta18 form-check-label justify-content-center" for="1802">Menor</label>
                     </div>
                 </div>
                 <div class='col-6'>
                     <div class="form-check col">
                         <input type="radio" class="respuesta18 form-check-input" value="C" id="1803"
                             name="respuesta18">
-                        <label class="respuesta18 form-check-label justify-content-center" for="1803">Sol# aumentado</label>
+                        <label class="respuesta18 form-check-label justify-content-center" for="1803">Aumentado</label>
                     </div>
                 </div>
                 <div class='col-6'>
@@ -832,7 +832,7 @@
                         <input type="radio" class="respuesta18 form-check-input" value="D" id="1804"
                             name="respuesta18">
                         <label class="respuesta18 form-check-label justify-content-center"
-                            for="1804">Sol# disminuido</label>
+                            for="1804">Disminuido</label>
                     </div>
                 </div>
             </div>
@@ -852,20 +852,20 @@
                     <div class="form-check col">
                         <input type="radio" class="respuesta19 form-check-input" value="A" id="1901"
                             name="respuesta19">
-                        <label class="respuesta19 form-check-label justify-content-center" for="1901">La mayor</label>
+                        <label class="respuesta19 form-check-label justify-content-center" for="1901">Mayor</label>
                     </div>
                 </div>
                 <div class='col-6'>
                     <div class="form-check col">
                         <input type="radio" class="respuesta19 form-check-input" value="B" id="1902"
                             name="respuesta19">
-                        <label class="respuesta19 form-check-label justify-content-center" for="1902">La menor</label>
+                        <label class="respuesta19 form-check-label justify-content-center" for="1902">Menor</label>
                     </div>
                 </div>
                 <div class='col-6'>
                     <div class="form-check col">
                         <input type="radio" class="respuesta2 form-check-input" value="C" id="1903" name="respuesta19">
-                        <label class="respuesta19 form-check-label justify-content-center" for="1903">La aumentado</label>
+                        <label class="respuesta19 form-check-label justify-content-center" for="1903">Aumentado</label>
                     </div>
                 </div>
                 <div class='col-6'>
@@ -873,7 +873,7 @@
                         <input type="radio" class="respuesta19 form-check-input" value="D" id="1904"
                             name="respuesta19">
                         <label class="respuesta19 form-check-label justify-content-center"
-                            for="1904">La disminuido</label>
+                            for="1904">Disminuido</label>
                     </div>
                 </div>
             </div>
@@ -892,7 +892,7 @@
                     <div class="form-check  col">
                         <input type="radio" class="respuesta20 form-check-input" value="A" id="2001"
                             name="respuesta20">
-                        <label class="respuesta20 form-check-label justify-content-center" for="2001">Fa mayor</label>
+                        <label class="respuesta20 form-check-label justify-content-center" for="2001">Mayor</label>
                     </div>
                     <div class='col-1'></div>
                 </div>
@@ -901,7 +901,7 @@
                     <div class="form-check col">
                         <input type="radio" class="respuesta20 form-check-input" value="B" id="2002"
                             name="respuesta20">
-                        <label class="respuesta20 form-check-label justify-content-center" for="2002">Fa menor</label>
+                        <label class="respuesta20 form-check-label justify-content-center" for="2002">Menor</label>
                     </div>
                     <div class='col-1'></div>
                 </div>
@@ -910,7 +910,7 @@
                     <div class="form-check col">
                         <input type="radio" class="respuesta20 form-check-input" value="C" id="2003"
                             name="respuesta20">
-                        <label class="respuesta20 form-check-label justify-content-center" for="2003">Fa aumentado</label>
+                        <label class="respuesta20 form-check-label justify-content-center" for="2003">Aumentado</label>
                     </div>
                     <div class='col-1'></div>
                 </div>
@@ -920,7 +920,7 @@
                         <input type="radio" class="respuesta20 form-check-input" value="D" id="2004"
                             name="respuesta20">
                         <label class="respuesta20 form-check-label justify-content-center"
-                            for="2004">Fa disminuido</label>
+                            for="2004">Disminuido</label>
                     </div>
                     <div class='col-1'></div>
                 </div>
