@@ -94,16 +94,25 @@
             @case('ExamenPTA')
                 @include('inscripcion.Examen.ExamenPTA')
             @break
+            @case('ExamenPTB')
+                @include('inscripcion.Examen.ExamenPTB')
+            @break
+            @case('ExamenPTC')
+                @include('inscripcion.Examen.ExamenPTC')
+            @break
+            @case('ExamenPTD')
+                @include('inscripcion.Examen.ExamenPTD')
+            @break
             @default
                 @include('inscripcion.Examen.mensaje')
                 @break
-            @endswitch
-            <div class='centrar-content'>
-                <button class="btn btn-success" data-toggle="modal" data-target="#modalconfirmar">Guardar</button>
-            </div>
-            <br>
-            <br>
+        @endswitch
+        <div class='centrar-content'>
+            <button class="btn btn-success" data-toggle="modal" data-target="#modalconfirmar">Guardar</button>
         </div>
+        <br>
+        <br>
+    </div>
 
     @endsection
     @section('scripts')
