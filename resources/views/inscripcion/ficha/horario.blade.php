@@ -1,6 +1,6 @@
 <div class='container'>
     <div class='row centrar-content'>
-        @if ($horarios->count()==0)
+        @if ($horarios->count() == 0)
             <div class="container justify-content-center align-items-center">
                 <div class="card card-primary card-outline elevation-2">
                     <div class="card-body" style="text-align: center;">
@@ -18,12 +18,14 @@
                         <hr width="100%" size="5" noshade>
                     </div>
                     <div class='container'>
-                          <div class='row'>
+                       @if ($v->codi_secc_sec='05001')
+                        <div class='row'>
                             <div class="centrar-content container">
                                 <!-- <h6 cla>Nota</h6>-->
                                 <input type="text" value="{{ $v->nota }}" class="dial">
                             </div>
                         </div>
+                        @endif
                         <div class='row'>
                             <div class="card-columns">
                                 <div class="card">

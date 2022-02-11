@@ -141,6 +141,7 @@ class FichaController extends Controller
                                'au.descripcion as aula',
                                'ps.id_postulante',
                                'pe.id_programacion_examen',
+                               'sigpos.codi_secc_sec',
                                'exd.flag_jura')
                                ->orderBy('ps.estado')->get();
          
