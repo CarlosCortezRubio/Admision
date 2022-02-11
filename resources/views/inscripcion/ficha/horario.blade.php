@@ -86,7 +86,7 @@
                         {{ $v->fecha_comp }}
                         <br>
                         {{ Carbon\Carbon::now() }}
-                        @if ($v->flag_jura == 'N' && /*$v->fecha_comp*/'2022-02-11 16:11:00' <= Carbon\Carbon::now() && $v->estado == 'P' && ($v->req_estado == 'E' || $v->req_estado == null || $v->req_estado == 'I'))
+                        @if ($v->flag_jura == 'N' && $v->fecha_comp <= Carbon\Carbon::now() && $v->estado == 'P' && ($v->req_estado == 'E' || $v->req_estado == null || $v->req_estado == 'I'))
                             <form action="{{ route('BeginExamen') }}" method="POST">
                                 @csrf
                                 <input type="text" class="d-none" name='id_examen'
