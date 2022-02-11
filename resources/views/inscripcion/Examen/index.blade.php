@@ -108,7 +108,7 @@
                 @break
         @endswitch
         <div class='centrar-content'>
-            <button class="btn btn-success" data-toggle="modal" data-target="#modalconfirmar">Guardar</button>
+            <button class="btn btn-success" data-toggle="modal" data-target="#modalconfirmar">Enviar</button>
         </div>
         <br>
         <br>

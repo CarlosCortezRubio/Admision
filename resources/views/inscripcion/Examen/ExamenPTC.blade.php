@@ -687,7 +687,7 @@
                     <div class="form-check col">
                         <input type="radio" class="respuesta15 form-check-input" value="C" id="1503"
                             name="respuesta15">
-                        <label class="respuesta15 form-check-label justify-content-center" for="1503">Aumentado</label>
+                        <label class="respuesta15 form-check-label justify-content-center" for="1503">Aumentada</label>
                     </div>
                 </div>
                 <div class='col-6'>
@@ -695,7 +695,7 @@
                         <input type="radio" class="respuesta15 form-check-input" value="D" id="1504"
                             name="respuesta15">
                         <label class="respuesta15 form-check-label justify-content-center"
-                            for="1504">Disminuido</label>
+                            for="1504">Disminuida</label>
                     </div>
                 </div>
             </div>
@@ -729,7 +729,7 @@
                     <div class="form-check col">
                         <input type="radio" class="respuesta16 form-check-input" value="C" id="1603"
                             name="respuesta16">
-                        <label class="respuesta16 form-check-label justify-content-center" for="1603">Aumentado</label>
+                        <label class="respuesta16 form-check-label justify-content-center" for="1603">Aumentada</label>
                     </div>
                 </div>
                 <div class='col-6'>
@@ -737,7 +737,7 @@
                         <input type="radio" class="respuesta16 form-check-input" value="D" id="1604"
                             name="respuesta16">
                         <label class="respuesta16 form-check-label justify-content-center"
-                            for="1604">Disminuido</label>
+                            for="1604">Disminuida</label>
                     </div>
                 </div>
             </div>
@@ -774,7 +774,7 @@
                     <div class="form-check col">
                         <input type="radio" class="respuesta17 form-check-input" value="C" id="1703"
                             name="respuesta17">
-                        <label class="respuesta17 form-check-label justify-content-center" for="1703">Aumentado</label>
+                        <label class="respuesta17 form-check-label justify-content-center" for="1703">Aumentada</label>
                     </div>
                     <div class='col-1'></div>
                 </div>
@@ -784,7 +784,7 @@
                         <input type="radio" class="respuesta17 form-check-input" value="D" id="1704"
                             name="respuesta17">
                         <label class="respuesta17 form-check-label justify-content-center"
-                            for="1704">Disminuido</label>
+                            for="1704">Disminuida</label>
                     </div>
                     <div class='col-1'></div>
                 </div>
@@ -824,7 +824,7 @@
                     <div class="form-check col">
                         <input type="radio" class="respuesta18 form-check-input" value="C" id="1803"
                             name="respuesta18">
-                        <label class="respuesta18 form-check-label justify-content-center" for="1803">Aumentado</label>
+                        <label class="respuesta18 form-check-label justify-content-center" for="1803">Aumentada</label>
                     </div>
                 </div>
                 <div class='col-6'>
@@ -832,7 +832,7 @@
                         <input type="radio" class="respuesta18 form-check-input" value="D" id="1804"
                             name="respuesta18">
                         <label class="respuesta18 form-check-label justify-content-center"
-                            for="1804">Disminuido</label>
+                            for="1804">Disminuida</label>
                     </div>
                 </div>
             </div>
@@ -865,7 +865,7 @@
                 <div class='col-6'>
                     <div class="form-check col">
                         <input type="radio" class="respuesta2 form-check-input" value="C" id="1903" name="respuesta19">
-                        <label class="respuesta19 form-check-label justify-content-center" for="1903">Aumentado</label>
+                        <label class="respuesta19 form-check-label justify-content-center" for="1903">Aumentada</label>
                     </div>
                 </div>
                 <div class='col-6'>
@@ -873,7 +873,7 @@
                         <input type="radio" class="respuesta19 form-check-input" value="D" id="1904"
                             name="respuesta19">
                         <label class="respuesta19 form-check-label justify-content-center"
-                            for="1904">Disminuido</label>
+                            for="1904">Disminuida</label>
                     </div>
                 </div>
             </div>
@@ -910,7 +910,7 @@
                     <div class="form-check col">
                         <input type="radio" class="respuesta20 form-check-input" value="C" id="2003"
                             name="respuesta20">
-                        <label class="respuesta20 form-check-label justify-content-center" for="2003">Aumentado</label>
+                        <label class="respuesta20 form-check-label justify-content-center" for="2003">Aumentada</label>
                     </div>
                     <div class='col-1'></div>
                 </div>
@@ -920,7 +920,7 @@
                         <input type="radio" class="respuesta20 form-check-input" value="D" id="2004"
                             name="respuesta20">
                         <label class="respuesta20 form-check-label justify-content-center"
-                            for="2004">Disminuido</label>
+                            for="2004">Disminuida</label>
                     </div>
                     <div class='col-1'></div>
                 </div>
