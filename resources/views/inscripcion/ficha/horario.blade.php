@@ -18,14 +18,14 @@
                         <hr width="100%" size="5" noshade>
                     </div>
                     <div class='container'>
-                       @if ($v->codi_secc_sec=='05001')
+                       {{--@if ($v->codi_secc_sec=='05001')
                         <div class='row'>
                             <div class="centrar-content container">
                                 <!-- <h6 cla>Nota</h6>-->
                                 <input type="text" value="{{ $v->nota }}" class="dial">
                             </div>
                         </div>
-                        @endif
+                        @endif--}}
                         <div class='row'>
                             <div class="card-columns">
                                 <div class="card">
