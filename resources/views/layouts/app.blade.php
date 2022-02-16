@@ -151,8 +151,8 @@
    <script>
       $(document).ready(function() {
         $('.dial').knob({
-          'min':0,
-          'max':20,
+          'min':0.00,
+          'max':20.00,
           'width':"100%",
           'height':"100%",
           'fgColor':"#66CC66",
