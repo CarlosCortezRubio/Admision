@@ -490,8 +490,11 @@ class ExamenController extends Controller
                 }
                 //echo $key." : ".$respuestas[$key]." : ".$peso[$key];
                 //echo "<br>";
+            }else{
+             // Log::info(array_key_exists($key, $respuestas) $value==$respuestas[$key]);
             }
         }
+
         //var_dump($respuestas);
         //echo "<br>";
         //var_dump($correctas);
@@ -518,7 +521,7 @@ class ExamenController extends Controller
                 }
             }
             $postulante->nota=round($nota,2);
-            $postulante->estado='E';          
+            $postulante->estado='E';      
             $postulante->update();
             DB::commit();
             session()->forget(['examen','minutos','segundos','id_examen_postulante']);
