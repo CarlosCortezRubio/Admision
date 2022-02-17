@@ -790,7 +790,7 @@
                 <h4>Los audios mostrados en este examen se reproducirán solamente una vez.</h4>
             </div>
             <div class="modal-footer centrar-content">
-                <button type="submit" class="btn btn-success" form="formularioupd">Aceptar</button>
+                <button class="btn btn-success" data-dismiss="modal" aria-label="Close">Aceptar</button>
             </div>
         </div>
     </div>

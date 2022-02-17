@@ -40,6 +40,31 @@
     <div class="container-fluid centrar-content col-8 card card-primary card-outline elevation-2">
         <br>
         @switch(session('examen'))
+            @case('ExamenT1214A')
+                @include('inscripcion.Examen.ExamenT1214A')
+            @break
+            @case('ExamenT1214B')
+                @include('inscripcion.Examen.ExamenT1214B')
+            @break
+            @case('ExamenT1517B')
+                @include('inscripcion.Examen.ExamenT1517B')
+            @break
+            @case('ExamenT1517C')
+                @include('inscripcion.Examen.ExamenT1517C')
+            @break
+
+            @case('ExamenA1517B')
+                @include('inscripcion.Examen.ExamenA1517B')
+            @break
+            @case('ExamenA1517C')
+                @include('inscripcion.Examen.ExamenA1517C')
+            @break
+            @case('ExamenA1214A')
+                @include('inscripcion.Examen.ExamenA1214A')
+            @break
+            @case('ExamenA1214B')
+                @include('inscripcion.Examen.ExamenA1214B')
+            @break
             @case('ExamenSHMA')
                 @include('inscripcion.Examen.ExamenSHMA')
             @break
