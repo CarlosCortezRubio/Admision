@@ -123,7 +123,7 @@ class FichaController extends Controller
                               ->orWhere('repost.nume_docu_sol', Auth::user()->ndocumento);
                      })
                      ->where('ps.nume_docu_sol',Auth::user()->ndocumento)
-                     ->whereNotIn('ps.estado',['I',/*'E'*/])
+                     ->whereNotIn('ps.estado',['I','E'])
                      ->where('pe.estado','A')
                      ->where('pr.esta_proc_adm','V')
                      ->where('au.estado','A')
