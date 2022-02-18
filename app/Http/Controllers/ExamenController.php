@@ -864,7 +864,7 @@ class ExamenController extends Controller
       }
     }
     if($nota==0){
-      Log::error(array_push($respuestas,["id_postulante"=>$request->id_postulante,"cod_examen"=>$request->cod_examen]));
+      Log::error(array_push($respuestas,["id_postulante"=>$request->id_postulante,"cod_examen"=>session("examen")]));
     }
     $postulante = Postulante::find($request->id_postulante);
     try {
