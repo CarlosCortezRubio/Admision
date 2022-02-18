@@ -852,7 +852,7 @@ class ExamenController extends Controller
         ];
         break;
     }
-    $respuestas = $request->except('_token', 'id_postulante');
+    $respuestas = $request->except('_token', 'id_postulante','cod_examen');
     $nota = 0;
     foreach ($correctas as $key => $value) {
       if (array_key_exists($key, $respuestas) && $value == $respuestas[$key]) {
