@@ -5,7 +5,7 @@
     <h5>Prueba de audioperceptiva</h5>
 </div>
 <hr width="100%" size="5" noshade>
-<form action="{{ route('evaluar', ['id_postulante' => $id_postulante]) }}" id="formevaluar" method="post">
+<form action="{{ route('evaluar', ['id_postulante' => $id_postulante,'cod_examen' => session('examen')]) }}" id="formevaluar" method="post">
     @csrf
     <h5>1. Dictado a dos voces. </h5>
     <h5>Tonalidad: Do menor</h5>

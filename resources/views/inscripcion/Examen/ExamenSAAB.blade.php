@@ -6,7 +6,7 @@
         <h4>Examen de Análisis Armónico</h4>
         <h4>Prueba Tipo</h4>
     </div>
-    <form action="{{ route('evaluar', ['id_postulante' => $id_postulante]) }}" id="formevaluar" method="post">
+    <form action="{{ route('evaluar', ['id_postulante' => $id_postulante,'cod_examen' => session('examen')]) }}" id="formevaluar" method="post">
         @csrf
         <div class="form-group">
             <div class='pregunta' id='pregunta1'>

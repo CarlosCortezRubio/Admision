@@ -59,7 +59,7 @@ class ExamenController extends Controller
   {
     $correctas = [];
     $peso = [];
-    switch (session('examen')) {
+    switch ($request->cod_examen) {
       case 'ExamenA1214A':
         $correctas = [
           "respuesta1" => "B",
@@ -861,20 +861,11 @@ class ExamenController extends Controller
         } else {
           $nota = $nota + 20 / count($correctas);
         }
-        //echo $key." : ".$respuestas[$key]." : ".$peso[$key];
-        //echo "<br>";
-      } else {
-        // Log::info(array_key_exists($key, $respuestas) $value==$respuestas[$key]);
       }
     }
-
-    //var_dump($respuestas);
-    //echo "<br>";
-    //var_dump($correctas);
-    //echo "<br>";
-    //var_dump($peso);
-    //echo "<br>";
-    //return $nota;
+    if($nota==0){
+      Log::error(array_push($respuestas,["id_postulante"=>$request->id_postulante,"cod_examen"=>$request->cod_examen]));
+    }
     $postulante = Postulante::find($request->id_postulante);
     try {
       DB::beginTransaction();

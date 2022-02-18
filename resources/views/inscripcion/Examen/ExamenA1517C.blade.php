@@ -7,7 +7,7 @@
     <h5>Examen de Audioperceptiva</h5>
     <hr width="100%" size="5" noshade>
 </div>
-<form action="{{ route('evaluar', ['id_postulante' => $id_postulante]) }}" id="formevaluar" method="post">
+<form action="{{ route('evaluar', ['id_postulante' => $id_postulante,'cod_examen' => session('examen')]) }}" id="formevaluar" method="post">
     @csrf
     <h5>1. Intervalos melódicos:</h5>
     <h5>Marque la opción correcta por cada intervalo (Cada intervalo sonará tres veces)</h5>

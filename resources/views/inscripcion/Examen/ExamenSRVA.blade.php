@@ -5,7 +5,7 @@
     <h4>Examen de Razonamiento verbal</h4>
 </div>
 <hr width="100%" size="5" noshade>
-<form action="{{ route('evaluar', ['id_postulante' => $id_postulante]) }}" id="formevaluar" method="post">
+<form action="{{ route('evaluar', ['id_postulante' => $id_postulante,'cod_examen' => session('examen')]) }}" id="formevaluar" method="post">
     @csrf
     <h4>Lee atentamente las preguntas y marca la alternativa que corresponde.</h4>
     <br>
