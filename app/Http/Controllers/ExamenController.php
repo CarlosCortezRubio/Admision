@@ -891,7 +891,7 @@ class ExamenController extends Controller
       session()->forget(['examen', 'minutos', 'segundos', 'id_examen_postulante']);
     } catch (Exception $e) {
       DB::rollBack();
-      dd($e);
+      Log::error($e->getMessage());
     }
     return redirect()->route('inscription');
   }
