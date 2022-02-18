@@ -18,7 +18,7 @@
                         <hr width="100%" size="5" noshade>
                     </div>
                     <div class='container'>
-                       @if ($v->codi_secc_sec=='05003')
+                       @if ($v->codi_secc_sec=='05003'|| $v->codi_secc_sec=='05002')
                         <div class='row'>
                             <div class="centrar-content container">
                                 <!-- <h6 cla>Nota</h6>-->
